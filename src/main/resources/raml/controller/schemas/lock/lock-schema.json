@@ -22,6 +22,9 @@
     "id": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
     },
+    "limit": {
+      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
+    },
     "documentationPath": {
       "$ref": "../../../api/schemas/common/path-schema.json"
     },
