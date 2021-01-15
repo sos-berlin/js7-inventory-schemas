@@ -5,7 +5,7 @@
   "type": "string",
   "enum": [
     "WorkflowPath",
-    "LockPath",
+    "LockId",
     "JobClassPath"
   ],
   "default": "WorkflowPath"

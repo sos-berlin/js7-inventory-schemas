@@ -4,11 +4,11 @@
   "javaType": "com.sos.jobscheduler.model.agent.DeleteAgentRef",
   "type": "object",
   "required": [
-  	"name"
+  	"id"
   ],
   
   "properties": {
-    "name": {
+    "id": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
     }
   },

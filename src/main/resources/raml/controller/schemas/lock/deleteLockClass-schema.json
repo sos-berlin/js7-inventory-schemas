@@ -7,21 +7,21 @@
     "com.sos.joc.model.common.IDeleteObject"
   ],
   "required": [
-    "path"
+    "id"
   ],
   "propertyOrder": [
     "TYPE",
-    "path"
+    "id"
   ],
   
-  "description": "delete object with fixed property 'TYPE':'LockPath'",
+  "description": "delete object with fixed property 'TYPE':'LockId'",
   "properties": {
     "TYPE": {
       "$ref": "../deploy/deleteType-schema.json",
-      "default": "LockPath" 
+      "default": "LockId" 
     },
-    "path": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+    "id": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
     }
   },
   "additionalProperties": false

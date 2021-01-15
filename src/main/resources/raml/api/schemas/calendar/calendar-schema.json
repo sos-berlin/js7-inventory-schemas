@@ -21,8 +21,8 @@
     "name": {
       "$ref": "../common/string255-schema.json"
     },
-    "documentationId": {
-      "$ref": "../common/nonNegativeLong-schema.json"
+    "documentationPath": {
+      "$ref": "../common/path-schema.json"
     },
     "type": {
       "$ref": "../inventory/common/calendarType-schema.json"

@@ -9,9 +9,8 @@
   ],
   "propertyOrder": [
     "TYPE",
-    "path",
-    "maxNonExclusive",
-    "capacity"
+    "id",
+    "limit"
   ],
   
   "description": "deploy object with fixed property 'TYPE':'Lock'",
@@ -20,20 +19,11 @@
       "$ref": "../deploy/deployType-schema.json",
       "default": "Lock" 
     },
-    "path": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
-    },
-    "versionId": {
+    "id": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
     },
-    "maxNonExclusive": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
-    },
-    "capacity": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
-    },
-    "documentationId": {
-      "$ref": "../../../api/schemas/common/nonNegativeLong-schema.json"
+    "documentationPath": {
+      "$ref": "../../../api/schemas/common/path-schema.json"
     },
     "title": {
       "$ref": "../../../api/schemas/common/string255-schema.json"

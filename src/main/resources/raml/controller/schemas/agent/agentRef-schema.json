@@ -4,12 +4,12 @@
   "javaType": "com.sos.jobscheduler.model.agent.AgentRef",
   "type": "object",
   "required": [
-    "name",
+    "id",
     "uri"
   ],
   
   "properties": {
-    "name": {
+    "id": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
     },
     "uri": {

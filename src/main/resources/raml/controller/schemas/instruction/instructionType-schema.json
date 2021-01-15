@@ -12,6 +12,7 @@
     "Fail",
     "Retry",
     "Publish",
-    "Await"
+    "Await",
+    "Lock"
   ]
 }

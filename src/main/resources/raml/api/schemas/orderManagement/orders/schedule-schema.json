@@ -24,8 +24,8 @@
 		"title": {
 			"$ref": "../../common/string255-schema.json"
 		},
-		"documentationId": {
-      		"$ref": "../../common/nonNegativeLong-schema.json"
+		"documentationPath": {
+      		"$ref": "../../common/path-schema.json"
     	},
 		"submitOrderToControllerWhenPlanned": {
 			"type": "boolean"

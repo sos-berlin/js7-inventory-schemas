@@ -42,8 +42,8 @@
     "title": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
     },
-    "documentationId": {
-      "$ref": "../../../api/schemas/common/nonNegativeLong-schema.json"
+    "documentationPath": {
+      "$ref": "../../../api/schemas/common/path-schema.json"
     },
     "jobs": {
       "$ref": "jobs-schema.json"
