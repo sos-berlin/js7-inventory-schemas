@@ -22,9 +22,6 @@
     },
     "id": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
-    },
-    "path": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
     }
   },
   "additionalProperties": false
