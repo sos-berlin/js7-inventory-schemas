@@ -21,7 +21,7 @@
       "default": "Junction" 
     },
     "path": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../../../api/schemas/common/string255-schema.json"
     },
     "versionId": {
       "$ref": "../../../api/schemas/common/string255-schema.json"

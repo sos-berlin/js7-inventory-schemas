@@ -21,7 +21,7 @@
       "default": "WorkflowPath" 
     },
     "path": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../../../api/schemas/common/string255-schema.json"
     }
   },
   "additionalProperties": false
