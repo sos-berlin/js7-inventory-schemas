@@ -9,7 +9,6 @@
     	"com.sos.joc.model.common.IReleaseObject"
   	],
   	"required": [
-		"path",
 		"workflowPath",
 		"calendars"
 	],
