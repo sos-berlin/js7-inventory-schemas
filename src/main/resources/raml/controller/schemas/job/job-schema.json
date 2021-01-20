@@ -38,6 +38,9 @@
     "defaultArguments": {
       "$ref": "../common/variables-schema.json"
     },
+    "env": {
+      "$ref": "env-schema.json"
+    },
     "title": {
       "$ref": "../../../api/schemas/common/string255-schema.json"
     },

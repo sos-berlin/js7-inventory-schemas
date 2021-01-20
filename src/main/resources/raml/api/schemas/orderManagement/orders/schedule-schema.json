@@ -18,7 +18,7 @@
 			"$ref": "../../common/path-schema.json"
 		},
 		"workflowPath": {
-			"$ref": "../../common/path-schema.json"
+			"$ref": "../../common/string255-schema.json"
 		},
 		"title": {
 			"$ref": "../../common/string255-schema.json"
