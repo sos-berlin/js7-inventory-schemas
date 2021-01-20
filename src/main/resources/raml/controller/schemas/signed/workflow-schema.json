@@ -1,0 +1,50 @@
+{
+  "title": "signed workflow",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.jobscheduler.model.signed.Workflow",
+  "type": "object",
+  "required": [
+    "TYPE",
+    "path",
+    "instructions",
+    "jobs"
+  ],
+  "propertyOrder": [
+    "TYPE",
+    "path",
+    "versionId",
+    "instructions",
+    "jobs"
+  ],
+  
+  "description": "deploy object with fixed property 'TYPE':'Workflow'",
+  "properties": {
+    "TYPE": {
+      "$ref": "../deploy/deployType-schema.json",
+      "default": "Workflow" 
+    },
+    "path": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    },
+    "versionId": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    },
+    "instructions": {
+      "type": "array",
+      "minItems" : 1,
+      "items": {
+      	"$ref": "../instruction/instruction-schema.json"
+      }
+    },
+    "title": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    },
+    "documentationPath": {
+      "$ref": "../../../api/schemas/common/path-schema.json"
+    },
+    "jobs": {
+      "$ref": "../workflow/jobs-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

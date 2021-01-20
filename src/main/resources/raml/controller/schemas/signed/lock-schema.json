@@ -1,0 +1,39 @@
+{
+  "title": "signed lock",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.jobscheduler.model.signed.Lock",
+  "type": "object",
+  "required": [
+    "TYPE",
+    "id",
+    "limit"
+  ],
+  "propertyOrder": [
+    "TYPE",
+    "id",
+    "limit"
+  ],
+  
+  "description": "deploy object with fixed property 'TYPE':'Lock'",
+  "properties": {
+    "TYPE": {
+      "$ref": "../deploy/deployType-schema.json",
+      "default": "Lock" 
+    },
+    "id": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 1
+    },
+    "documentationPath": {
+      "$ref": "../../../api/schemas/common/path-schema.json"
+    },
+    "title": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    }
+  },
+  "additionalProperties": false
+}
