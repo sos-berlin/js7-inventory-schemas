@@ -9,6 +9,9 @@
 			"calendarPath"
 		],
 		"properties": {
+			"calendarName": {
+				"$ref": "../common/string255-schema.json"
+			},
 			"calendarPath": {
 				"$ref": "../common/string255-schema.json"
 			}

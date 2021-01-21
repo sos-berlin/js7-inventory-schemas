@@ -20,6 +20,9 @@
 		"workflowPath": {
 			"$ref": "../../common/string255-schema.json"
 		},
+		"workflowName": {
+			"$ref": "../../common/string255-schema.json"
+		},
 		"title": {
 			"$ref": "../../common/string255-schema.json"
 		},
