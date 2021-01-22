@@ -7,7 +7,7 @@
 		"javaType": "com.sos.webservices.order.initiator.model.AssignedCalendars",
 		"type": "object",
 		"required": [
-			"calendarPath",
+			"calendarName",
 			"periods"
 		],
 		"properties": {

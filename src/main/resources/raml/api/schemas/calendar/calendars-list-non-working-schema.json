@@ -6,7 +6,7 @@
 		"javaType": "com.sos.webservices.order.initiator.model.AssignedNonWorkingCalendars",
 		"type": "object",
 		"required": [
-			"calendarPath"
+			"calendarName"
 		],
 		"properties": {
 			"calendarName": {
