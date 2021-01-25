@@ -14,13 +14,13 @@
   "description": "instruction with fixed property 'TYPE':'Lock'",
   "properties": {
     "lockId": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "lockedWorkflow": {
       "$ref": "instructions-schema.json"
     },
     "count": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
+      "$ref": "../common/nonNegativeInteger-schema.json"
     }
   },
   "additionalProperties": false

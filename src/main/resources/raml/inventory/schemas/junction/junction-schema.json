@@ -21,22 +21,22 @@
       "default": "Junction" 
     },
     "path": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "versionId": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "lifetime": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
+      "$ref": "../common/nonNegativeInteger-schema.json"
     },
     "orderId": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "documentationPath": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../common/path-schema.json"
     },
     "title": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     }
   },
   "additionalProperties": false

@@ -13,7 +13,7 @@
   ],
   "properties": {
     "agentId": {
-	  "$ref": "../../../api/schemas/common/string255-schema.json"
+	  "$ref": "../common/string255-schema.json"
 	},
 	"executable": {
 	  "$ref": "executableScript-schema.json"
@@ -27,13 +27,13 @@
       "default": 1
     },
     "timeout": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
+      "$ref": "../common/nonNegativeInteger-schema.json"
     },
     "graceTimeout": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
+      "$ref": "../common/nonNegativeInteger-schema.json"
     },
     "jobClass": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../common/path-schema.json"
     },
     "defaultArguments": {
       "$ref": "../common/variables-schema.json"
@@ -42,10 +42,10 @@
       "$ref": "env-schema.json"
     },
     "title": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "documentationPath": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../common/path-schema.json"
     },
     "logLevel": {
       "$ref": "jobLogLevel-schema.json"

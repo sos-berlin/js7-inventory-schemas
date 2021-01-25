@@ -23,7 +23,7 @@
       "default": "Lock" 
     },
     "id": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "limit": {
       "type": "integer",
@@ -31,10 +31,10 @@
       "default": 1
     },
     "documentationPath": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../common/path-schema.json"
     },
     "title": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     }
   },
   "additionalProperties": false

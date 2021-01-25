@@ -23,10 +23,10 @@
       "default": "JobClass" 
     },
     "path": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "versionId": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     },
     "maxProcesses": {
       "type": "integer",
@@ -34,13 +34,13 @@
       "default": 30
     },
     "priority": {
-      "$ref": "../../../api/schemas/common/string100-schema.json"
+      "$ref": "../common/string100-schema.json"
     },
     "documentationPath": {
-      "$ref": "../../../api/schemas/common/path-schema.json"
+      "$ref": "../common/path-schema.json"
     },
     "title": {
-      "$ref": "../../../api/schemas/common/string255-schema.json"
+      "$ref": "../common/string255-schema.json"
     }
   },
   "additionalProperties": false

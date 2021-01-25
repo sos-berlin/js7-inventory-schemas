@@ -21,13 +21,13 @@
   "description": "instruction with fixed property 'TYPE':'Try' (with a retry object in the catch)",
   "properties": {
     "maxTries": {
-      "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json",
+      "$ref": "../common/nonNegativeInteger-schema.json",
       "default": 1
     },
     "retryDelays": {
       "type": "array",
       "items": {
-        "$ref": "../../../api/schemas/common/nonNegativeInteger-schema.json"
+        "$ref": "../common/nonNegativeInteger-schema.json"
       }
     },
     "try": {
