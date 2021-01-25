@@ -1,0 +1,19 @@
+{
+  "title": "deployType",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.deploy.DeployType",
+  "type": "string",
+  "enum": [
+    "Workflow",
+    "JobClass",
+    "Lock",
+    "Junction"
+  ],
+  "javaEnumNames": [
+    "Workflow",
+    "JobClass",
+    "Lock",
+    "Junction"
+  ],
+  "default": "Workflow"
+}

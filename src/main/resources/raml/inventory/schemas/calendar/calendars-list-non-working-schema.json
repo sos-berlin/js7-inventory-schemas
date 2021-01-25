@@ -1,0 +1,20 @@
+{
+	"title": "Assigned Non Working Calendars List",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "array",
+	"items": {
+		"javaType": "com.sos.inventory.model.calendar.AssignedNonWorkingCalendars",
+		"type": "object",
+		"required": [
+			"calendarName"
+		],
+		"properties": {
+			"calendarName": {
+				"$ref": "../common/string255-schema.json"
+			},
+			"calendarPath": {
+				"$ref": "../common/string255-schema.json"
+			}
+		}
+	}
+}

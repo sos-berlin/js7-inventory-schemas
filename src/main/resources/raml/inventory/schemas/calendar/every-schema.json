@@ -1,0 +1,33 @@
+{
+  "title": "every",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.calendar.Repetition",
+  "type": "object",
+  "required": [
+    "repetition",
+    "step"
+  ],
+  "properties": {
+    "from": {
+      "$ref": "date-schema.json"
+    },
+    "to": {
+      "$ref": "date-schema.json"
+    },
+    "repetition": {
+      "javaType": "com.sos.inventory.model.calendar.RepetitionText",
+      "type": "string",
+      "enum": [
+        "DAILY",
+        "WEEKLY",
+        "MONTHLY",
+        "YEARLY"
+      ]
+    },
+    "step": {
+      "type": "integer",
+	  "minimum": 1,
+	  "default": 1
+    }
+  }
+}

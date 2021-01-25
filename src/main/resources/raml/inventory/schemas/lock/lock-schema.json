@@ -1,0 +1,41 @@
+{
+  "title": "lock",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.lock.Lock",
+  "type": "object",
+  "javaInterfaces" : [
+    "com.sos.joc.model.common.IConfigurationObject",
+    "com.sos.joc.model.common.IDeployObject"
+  ],
+  "required": [
+    "limit"
+  ],
+  "propertyOrder": [
+    "TYPE",
+    "id",
+    "limit"
+  ],
+  
+  "description": "deploy object with fixed property 'TYPE':'Lock'",
+  "properties": {
+    "TYPE": {
+      "$ref": "../deploy/deployType-schema.json",
+      "default": "Lock" 
+    },
+    "id": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    },
+    "limit": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 1
+    },
+    "documentationPath": {
+      "$ref": "../../../api/schemas/common/path-schema.json"
+    },
+    "title": {
+      "$ref": "../../../api/schemas/common/string255-schema.json"
+    }
+  },
+  "additionalProperties": false
+}
