@@ -30,10 +30,12 @@
       		"$ref": "../common/path-schema.json"
     	},
 		"submitOrderToControllerWhenPlanned": {
-			"type": "boolean"
+			"type": "boolean",
+			"default": false
 		},
 		"planOrderAutomatically": {
-			"type": "boolean"
+			"type": "boolean",
+			"default": false
 		},
 		"calendars": {
 			"$ref": "../calendar/calendars-list-schema.json"
