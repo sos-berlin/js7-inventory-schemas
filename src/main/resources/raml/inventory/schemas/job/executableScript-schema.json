@@ -19,12 +19,14 @@
 	"TYPE": {
 	  "type": "string",
 	  "enum" : [
-	  	"ExecutableScript"
+	  	"ExecutableScript",
+	  	"ScriptExecutable"
 	  ],
 	  "javaEnumNames": [
-        "ExecutableScript"
+        "ExecutableScript",
+        "ScriptExecutable"
       ],
-	  "default": "ExecutableScript"
+	  "default": "ScriptExecutable"
 	}
   },
   "additionalProperties": false
