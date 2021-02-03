@@ -1,0 +1,12 @@
+{
+  "title": "implicit end",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.ImplicitEnd",
+  "type": "object",
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+  
+  "description": "instruction with fixed property 'TYPE':'ImplicitEnd'",
+  "additionalProperties": false
+}

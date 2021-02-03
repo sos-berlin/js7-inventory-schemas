@@ -13,6 +13,7 @@
     "Retry",
     "Publish",
     "Await",
-    "Lock"
+    "Lock",
+    "ImplicitEnd"
   ]
 }
