@@ -1,0 +1,18 @@
+{
+  "title": "parameter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.workflow.Parameter",
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "$ref": "parameterType-schema.json"
+    },
+    "default": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
