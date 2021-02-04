@@ -44,7 +44,7 @@
 			"$ref": "../calendar/calendars-list-non-working-schema.json"
 		},
 		"variables": {
-			"$ref": "../common/nameValuePairs-schema.json"
+			"$ref": "../common/variables-schema.json"
 		}
 	}
 }
