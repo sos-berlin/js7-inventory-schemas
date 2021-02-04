@@ -11,7 +11,13 @@
       "$ref": "parameterType-schema.json"
     },
     "default": {
-      "type": "string"
+      "description": "this value has to have the data type of the 'type' attribute",
+      "anyOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" }
+      ],
+      "javaType": "java.lang.Object"
     }
   },
   "additionalProperties": false
