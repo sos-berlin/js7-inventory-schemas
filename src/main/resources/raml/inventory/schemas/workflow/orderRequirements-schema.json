@@ -1,7 +1,7 @@
 {
-  "title": "orderRequirements",
+  "title": "order or job requirements",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "javaType": "com.sos.inventory.model.workflow.OrderRequirements",
+  "javaType": "com.sos.inventory.model.workflow.Requirements",
   "type": "object",
   "properties": {
     "parameters": {

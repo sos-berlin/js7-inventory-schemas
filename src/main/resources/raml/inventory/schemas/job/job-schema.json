@@ -39,6 +39,9 @@
     "jobClass": {
       "$ref": "../common/path-schema.json"
     },
+    "jobRequirements": {
+    	"$ref": "../workflow/orderRequirements-schema.json"
+    },
     "defaultArguments": {
       "$ref": "../common/variables-schema.json"
     },
