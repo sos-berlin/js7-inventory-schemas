@@ -9,21 +9,23 @@
   ],
   "propertyOrder": [
     "TYPE",
-    "script"
+    "script",
+    "env"
   ],
   "properties": {
     "script": {
 	  "type": "string",
 	  "minLength": 1
 	},
+    "env": {
+      "$ref": "env-schema.json"
+    },
 	"TYPE": {
 	  "type": "string",
 	  "enum" : [
-	  	"ExecutableScript",
 	  	"ScriptExecutable"
 	  ],
 	  "javaEnumNames": [
-        "ExecutableScript",
         "ScriptExecutable"
       ],
 	  "default": "ScriptExecutable"
