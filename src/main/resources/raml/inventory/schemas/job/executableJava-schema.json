@@ -1,0 +1,25 @@
+{
+  "title": "java executable",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.job.ExecutableJava",
+  "type": "object",
+  "extends" : {
+    "$ref": "executable-schema.json"
+  },
+  "required": [
+  	"javaClass"
+  ],
+  "propertyOrder": [
+    "TYPE",
+    "javaClass"
+  ],
+  "description": "executable with fixed property 'TYPE':'JavaExecutable'",
+  "properties": {
+    "javaClass": {
+	  "type": "string",
+	  "minLength": 1
+	}
+  },
+  "additionalProperties": false
+}
+

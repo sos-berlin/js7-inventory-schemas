@@ -16,7 +16,7 @@
 	  "$ref": "../common/string255-schema.json"
 	},
 	"executable": {
-	  "$ref": "executableScript-schema.json"
+	  "$ref": "executable-schema.json"
 	},
     "returnCodeMeaning": {
       "$ref": "jobReturnCode-schema.json"

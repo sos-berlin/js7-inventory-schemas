@@ -3,8 +3,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.job.ExecutableScript",
   "type": "object",
+  "extends" : {
+    "$ref": "executable-schema.json"
+  },
   "required": [
-  	"TYPE",
   	"script"
   ],
   "propertyOrder": [
@@ -13,6 +15,7 @@
     "env",
     "v1Compatible"
   ],
+  "description": "executable with fixed property 'TYPE':'ScriptExecutable'",
   "properties": {
     "script": {
 	  "type": "string",
@@ -24,17 +27,7 @@
 	"v1Compatible": {
       "type": "boolean",
       "default": true
-    },
-    "TYPE": {
-	  "type": "string",
-	  "enum" : [
-	  	"ScriptExecutable"
-	  ],
-	  "javaEnumNames": [
-        "ScriptExecutable"
-      ],
-	  "default": "ScriptExecutable"
-	}
+    }
   },
   "additionalProperties": false
 }
