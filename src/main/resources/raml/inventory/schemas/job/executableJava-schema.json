@@ -13,7 +13,7 @@
     "TYPE",
     "javaClass"
   ],
-  "description": "executable with fixed property 'TYPE':'JavaExecutable'",
+  "description": "executable with fixed property 'TYPE':'Java'",
   "properties": {
     "javaClass": {
 	  "type": "string",

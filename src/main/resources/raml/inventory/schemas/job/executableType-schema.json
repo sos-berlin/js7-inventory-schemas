@@ -5,11 +5,11 @@
   "type": "string",
   "enum": [
     "ScriptExecutable",
-    "JavaExecutable"
+    "Java"
   ],
   "javaEnumNames": [
     "ScriptExecutable",
-    "JavaExecutable"
+    "Java"
   ],
   "default": "ScriptExecutable"
 }
