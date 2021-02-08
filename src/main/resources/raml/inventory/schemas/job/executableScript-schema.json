@@ -10,7 +10,8 @@
   "propertyOrder": [
     "TYPE",
     "script",
-    "env"
+    "env",
+    "v1Compatible"
   ],
   "properties": {
     "script": {
@@ -20,7 +21,11 @@
     "env": {
       "$ref": "env-schema.json"
     },
-	"TYPE": {
+	"v1Compatible": {
+      "type": "boolean",
+      "default": true
+    },
+    "TYPE": {
 	  "type": "string",
 	  "enum" : [
 	  	"ScriptExecutable"
