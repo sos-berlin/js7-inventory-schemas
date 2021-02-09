@@ -16,7 +16,11 @@
 	  "$ref": "../common/string255-schema.json"
 	},
 	"executable": {
-	  "$ref": "executable-schema.json"
+	  "javaType": "com.sos.inventory.model.job.Executable",
+	  "oneOf": [
+	    { "$ref": "executableScript-schema.json" },
+	    { "$ref": "executableJava-schema.json" }
+	  ]
 	},
     "returnCodeMeaning": {
       "$ref": "jobReturnCode-schema.json"
