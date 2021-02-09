@@ -11,5 +11,5 @@
       "$ref": "executableType-schema.json"
     }
   },
-  "additionalProperties": false
+  "additionalProperties": true
 }
