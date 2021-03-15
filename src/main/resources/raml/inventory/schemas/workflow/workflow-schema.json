@@ -26,9 +26,6 @@
       "$ref": "../deploy/deployType-schema.json",
       "default": "Workflow" 
     },
-    "path": {
-      "$ref": "../common/string255-schema.json"
-    },
     "versionId": {
       "$ref": "../common/string255-schema.json"
     },

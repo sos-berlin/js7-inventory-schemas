@@ -21,16 +21,10 @@
 			"$ref": "../deploy/deployType-schema.json",
 			"default": "Lock"
 		},
-		"id": {
-			"$ref": "../common/string255-schema.json"
-		},
 		"limit": {
 			"type": "integer",
 			"minimum": 0,
 			"default": 1
-		},
-		"path": {
-			"$ref": "../common/path-schema.json"
 		},
 		"documentationPath": {
 			"$ref": "../common/path-schema.json"

@@ -8,7 +8,6 @@
     "com.sos.joc.model.common.IDeployObject"
   ],
   "required": [
-    "id",
     "workflowPath",
     "agentId"
   ],
@@ -28,9 +27,6 @@
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
       "default": "FileOrderSource" 
-    },
-    "id": {
-      "$ref": "../common/string255-schema.json"
     },
     "workflowPath": {
       "$ref": "../common/string255-schema.json"
