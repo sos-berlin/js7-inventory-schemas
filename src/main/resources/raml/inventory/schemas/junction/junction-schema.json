@@ -9,7 +9,6 @@
   ],
   "propertyOrder": [
     "TYPE",
-    "path",
     "lifetime",
     "orderId"
   ],
@@ -19,12 +18,6 @@
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
       "default": "Junction" 
-    },
-    "path": {
-      "$ref": "../common/string255-schema.json"
-    },
-    "versionId": {
-      "$ref": "../common/string255-schema.json"
     },
     "lifetime": {
       "$ref": "../common/nonNegativeInteger-schema.json"

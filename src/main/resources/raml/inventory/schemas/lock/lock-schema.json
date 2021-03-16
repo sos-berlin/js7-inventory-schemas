@@ -12,7 +12,6 @@
 	],
 	"propertyOrder": [
 		"TYPE",
-		"id",
 		"limit"
 	],
 	"description": "deploy object with fixed property 'TYPE':'Lock'",

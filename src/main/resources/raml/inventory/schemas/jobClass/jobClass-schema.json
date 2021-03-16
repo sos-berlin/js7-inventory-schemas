@@ -9,8 +9,6 @@
   ],
   "propertyOrder": [
     "TYPE",
-    "path",
-    "versionId",
     "maxProcesses",
     "priority"
   ],
@@ -21,12 +19,6 @@
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
       "default": "JobClass" 
-    },
-    "path": {
-      "$ref": "../common/string255-schema.json"
-    },
-    "versionId": {
-      "$ref": "../common/string255-schema.json"
     },
     "maxProcesses": {
       "type": "integer",
