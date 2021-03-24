@@ -37,7 +37,13 @@
     	"$ref": "../common/string255-schema.json"
     },
     "pattern": {
-    	"$ref": "../common/string255-schema.json"
+    	"type": "string"
+    },
+    "timeZone": {
+		"$ref": "../common/string255-schema.json"
+	},
+    "delay": {
+      "$ref": "../common/nonNegativeLong-schema.json"
     },
     "title": {
       "$ref": "../common/string255-schema.json"
