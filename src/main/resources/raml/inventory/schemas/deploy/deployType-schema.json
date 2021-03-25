@@ -8,14 +8,14 @@
     "JobClass",
     "Lock",
     "Junction",
-    "FileOrderSource"
+    "FileWatch"
   ],
   "javaEnumNames": [
     "Workflow",
     "JobClass",
     "Lock",
     "Junction", 
-    "FileOrderSource"
+    "FileWatch"
   ],
   "default": "Workflow"
 }

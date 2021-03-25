@@ -9,32 +9,36 @@
   ],
   "required": [
     "workflowPath",
-    "agentId"
+    "agentId",
+    "directory"
   ],
   "propertyOrder": [
     "TYPE",
     "workflowPath",
     "agentId",
+    "directory",
     "pattern",
+    "timeZone",
+    "delay",
     "title",
     "documentationPath"
   ],
   
   
-  "description": "deploy object with fixed property 'TYPE':'FileOrderSource'",
+  "description": "deploy object with fixed property 'TYPE':'FileWatch'",
   "properties": {
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
-      "default": "FileOrderSource" 
+      "default": "FileWatch" 
     },
     "workflowPath": {
-      "$ref": "../common/string255-schema.json"
+      "$ref": "../common/string255Required-schema.json"
     },
     "agentId": {
-    	"$ref": "../common/string255-schema.json"
+    	"$ref": "../common/string255Required-schema.json"
     },
     "directory": {
-    	"$ref": "../common/string255-schema.json"
+    	"$ref": "../common/string255Required-schema.json"
     },
     "pattern": {
     	"type": "string"
