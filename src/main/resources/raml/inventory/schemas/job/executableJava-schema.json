@@ -13,9 +13,9 @@
     "TYPE",
     "javaClass"
   ],
-  "description": "executable with fixed property 'TYPE':'Java'",
+  "description": "executable with fixed property 'TYPE':'InternalExecutable'",
   "properties": {
-    "javaClass": {
+    "className": {
 	  "type": "string",
 	  "minLength": 1
 	}
