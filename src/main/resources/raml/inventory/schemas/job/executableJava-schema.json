@@ -18,7 +18,13 @@
     "className": {
 	  "type": "string",
 	  "minLength": 1
-	}
+	},
+	"jobArguments": {
+      "$ref": "../common/variables-schema.json"
+    },
+    "arguments": {
+      "$ref": "../common/variables-schema.json"
+    }
   },
   "additionalProperties": false
 }
