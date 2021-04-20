@@ -7,11 +7,11 @@
     "$ref": "executable-schema.json"
   },
   "required": [
-  	"javaClass"
+  	"className"
   ],
   "propertyOrder": [
     "TYPE",
-    "javaClass"
+    "className"
   ],
   "description": "executable with fixed property 'TYPE':'InternalExecutable'",
   "properties": {
