@@ -1,0 +1,36 @@
+{
+  "title": "JobResource",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.jobresource.JobResource",
+  "type": "object",
+  "javaInterfaces" : [
+    "com.sos.joc.model.common.IConfigurationObject",
+    "com.sos.joc.model.common.IDeployObject"
+  ],
+  "required": [
+	"env"
+  ],
+  "propertyOrder": [
+    "TYPE",
+    "env"
+  ],
+  
+  
+  "description": "deploy object with fixed property 'TYPE':'JobResource'",
+  "properties": {
+    "TYPE": {
+      "$ref": "../deploy/deployType-schema.json",
+      "default": "JobResource" 
+    },
+    "env": {
+      "$ref": "../job/env-schema.json"
+    },
+    "documentationPath": {
+      "$ref": "../common/path-schema.json"
+    },
+    "title": {
+      "$ref": "../common/string255-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

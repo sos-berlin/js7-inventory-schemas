@@ -8,14 +8,14 @@
     "com.sos.joc.model.common.IDeployObject"
   ],
   "required": [
-    "workflowPath",
-    "agentId",
+    "workflowName",
+    "agentName",
     "directory"
   ],
   "propertyOrder": [
     "TYPE",
-    "workflowPath",
-    "agentId",
+    "workflowName",
+    "agentName",
     "directory",
     "pattern",
     "timeZone",
@@ -28,14 +28,22 @@
   "description": "deploy object with fixed property 'TYPE':'FileWatch'",
   "properties": {
     "TYPE": {
-      "$ref": "../deploy/deployType-schema.json",
-      "default": "FileWatch" 
+		"$ref": "../deploy/deployType-schema.json",
+		"default": "FileWatch" 
     },
-    "workflowPath": {
-      "$ref": "../common/string255Required-schema.json"
+    "workflowName": {
+    	"alias": "workflowPath",
+    	"type": "string",
+    	"pattern": "^[^<>]*$",
+    	"maxLength": 255,
+    	"minLength": 1
     },
-    "agentId": {
-    	"$ref": "../common/string255Required-schema.json"
+    "agentName": {
+    	"alias": "agentId,agentPath",
+    	"type": "string",
+    	"pattern": "^[^<>]*$",
+    	"maxLength": 255,
+    	"minLength": 1
     },
     "directory": {
     	"$ref": "../common/string255Required-schema.json"

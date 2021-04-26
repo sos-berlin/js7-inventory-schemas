@@ -7,13 +7,17 @@
     "com.sos.joc.model.common.IConfigurationObject"
   ],
   "required": [
-    "agentId",
+    "agentName",
     "executable",
     "taskLimit"
   ],
   "properties": {
-    "agentId": {
-	  "$ref": "../common/string255-schema.json"
+    "agentName": {
+      "alias": "agentId,agentPath",
+	  "type": "string",
+      "pattern": "^[^<>]*$",
+      "maxLength": 255,
+      "minLength": 1
 	},
 	"executable": {
 	  "javaType": "com.sos.inventory.model.job.Executable",
@@ -41,6 +45,13 @@
     },
     "defaultArguments": {
       "$ref": "../common/variables-schema.json"
+    },
+    "jobResourceNames": {
+      "alias": "jobResourcePaths",
+      "type": "array",
+      "items": {
+        "type": "../../../inventory/schemas/common/string255-schema.json"
+      }
     },
     "title": {
       "$ref": "../common/string255-schema.json"

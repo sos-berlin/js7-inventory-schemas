@@ -4,7 +4,7 @@
   "javaType": "com.sos.inventory.model.instruction.Lock",
   "type": "object",
   "required": [
-  	"lockId",
+  	"lockName",
   	"lockedWorkflow"
   ],
   "extends" : {
@@ -13,8 +13,12 @@
   
   "description": "instruction with fixed property 'TYPE':'Lock'",
   "properties": {
-    "lockId": {
-      "$ref": "../common/string255-schema.json"
+    "lockName": {
+		"alias": "lockId,lockPath",
+		"type": "string",
+    	"pattern": "^[^<>]*$",
+    	"maxLength": 255,
+    	"minLength": 1
     },
     "lockedWorkflow": {
       "$ref": "instructions-schema.json"
