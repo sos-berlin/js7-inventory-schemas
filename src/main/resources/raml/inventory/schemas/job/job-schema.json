@@ -50,7 +50,7 @@
       "alias": "jobResourcePaths",
       "type": "array",
       "items": {
-        "type": "../../../inventory/schemas/common/string255-schema.json"
+        "$ref": "../common/string255-schema.json"
       }
     },
     "title": {
