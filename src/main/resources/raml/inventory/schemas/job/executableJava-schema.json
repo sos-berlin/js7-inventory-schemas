@@ -23,7 +23,7 @@
       "$ref": "../common/variables-schema.json"
     },
     "arguments": {
-      "$ref": "../common/variables-schema.json"
+      "$ref": "env-schema.json"
     }
   },
   "additionalProperties": false
