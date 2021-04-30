@@ -31,6 +31,13 @@
     "orderRequirements": {
     	"$ref": "orderRequirements-schema.json"
     },
+    "jobResourceNames": {
+      "alias": "jobResourcePaths",
+      "type": "array",
+      "items": {
+        "$ref": "../common/string255-schema.json"
+      }
+    },
     "instructions": {
       "type": "array",
       "minItems" : 1,

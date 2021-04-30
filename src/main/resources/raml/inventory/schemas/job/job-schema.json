@@ -40,6 +40,10 @@
     "graceTimeout": {
       "$ref": "../common/nonNegativeInteger-schema.json"
     },
+    "failOnErrWritten": {
+    	"type": "boolean",
+    	"default": false
+    },
     "jobClass": {
       "$ref": "../common/path-schema.json"
     },
