@@ -22,6 +22,9 @@
       "$ref": "../deploy/deployType-schema.json",
       "default": "JobResource" 
     },
+    "settings": {
+      "$ref": "../job/env-schema.json"
+    },
     "env": {
       "$ref": "../job/env-schema.json"
     },
