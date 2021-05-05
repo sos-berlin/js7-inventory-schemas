@@ -12,6 +12,7 @@
   ],
   "propertyOrder": [
     "TYPE",
+    "arguments",
     "env"
   ],
   
@@ -22,8 +23,14 @@
       "$ref": "../deploy/deployType-schema.json",
       "default": "JobResource" 
     },
-    "settings": {
-      "$ref": "../job/env-schema.json"
+    "arguments": {
+      "alias": "settings",
+      "description": "a map for arbitrary key-value pairs",
+  	  "javaType": "com.sos.inventory.model.job.Environment",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "env": {
       "$ref": "../job/env-schema.json"
