@@ -7,8 +7,9 @@
     "com.sos.joc.model.common.IConfigurationObject",
     "com.sos.joc.model.common.IDeployObject"
   ],
-  "required": [
-	"env"
+  "anyOf": [
+  	{ "required": ["env"] },
+  	{ "required": ["arguments"] }
   ],
   "propertyOrder": [
     "TYPE",
