@@ -27,7 +27,21 @@
 	"v1Compatible": {
       "type": "boolean",
       "default": false
-    }
+    },
+    "login": {
+		"type": "object",
+		"javaType": "com.sos.inventory.model.job.ExecutableScriptLogin",
+		"properties": {
+			"credentialKey": {
+				"type": "string"
+			},
+			"withUserProfile": {
+				"type": "boolean",
+				"default": false
+			}
+		},
+		"additionalProperties": false
+	}
   },
   "additionalProperties": false
 }
