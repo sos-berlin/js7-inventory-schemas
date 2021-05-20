@@ -60,8 +60,8 @@
     "title": {
       "$ref": "../common/string255-schema.json"
     },
-    "documentationPath": {
-      "$ref": "../common/path-schema.json"
+    "documentationName": {
+      "$ref": "../common/string255-schema.json"
     },
     "logLevel": {
       "$ref": "jobLogLevel-schema.json"

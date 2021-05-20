@@ -28,8 +28,8 @@
     "priority": {
       "$ref": "../common/string100-schema.json"
     },
-    "documentationPath": {
-      "$ref": "../common/path-schema.json"
+    "documentationName": {
+      "$ref": "../common/string255-schema.json"
     },
     "title": {
       "$ref": "../common/string255-schema.json"
