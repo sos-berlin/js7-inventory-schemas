@@ -12,6 +12,9 @@
     },
     "position": {
       "$ref": "../common/position-schema.json"
+    },
+    "positionString": {
+      "$ref": "../common/string255-schema.json"
     }
   },
   "additionalProperties": false
