@@ -1,74 +1,84 @@
 {
-  "title": "job",
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "javaType": "com.sos.inventory.model.job.Job",
-  "type": "object",
-  "javaInterfaces" : [
-    "com.sos.joc.model.common.IConfigurationObject"
-  ],
-  "required": [
-    "agentName",
-    "executable",
-    "taskLimit"
-  ],
-  "properties": {
-    "agentName": {
-      "alias": "agentId,agentPath",
-	  "type": "string",
-      "pattern": "^[^<>]*$",
-      "maxLength": 255,
-      "minLength": 1
+	"title": "job",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.Job",
+	"type": "object",
+	"javaInterfaces": [
+		"com.sos.joc.model.common.IConfigurationObject"
+	],
+	"required": [
+		"agentName",
+		"executable",
+		"taskLimit"
+	],
+	"properties": {
+		"agentName": {
+			"alias": "agentId,agentPath",
+			"type": "string",
+			"pattern": "^[^<>]*$",
+			"maxLength": 255,
+			"minLength": 1
+		},
+		"executable": {
+			"javaType": "com.sos.inventory.model.job.Executable",
+			"oneOf": [
+				{
+					"$ref": "executableScript-schema.json"
+				},
+				{
+					"$ref": "executableJava-schema.json"
+				}
+			]
+		},
+		"returnCodeMeaning": {
+			"$ref": "jobReturnCode-schema.json"
+		},
+		"taskLimit": {
+			"type": "integer",
+			"minimum": 1,
+			"default": 1
+		},
+		"timeout": {
+			"$ref": "../common/nonNegativeInteger-schema.json"
+		},
+		"graceTimeout": {
+			"$ref": "../common/nonNegativeInteger-schema.json"
+		},
+		"failOnErrWritten": {
+			"type": "boolean",
+			"default": false
+		},
+		"jobClass": {
+			"$ref": "../common/path-schema.json"
+		},
+		"defaultArguments": {
+			"$ref": "../common/variables-schema.json"
+		},
+		"jobResourceNames": {
+			"alias": "jobResourcePaths",
+			"type": "array",
+			"items": {
+				"$ref": "../common/string255-schema.json"
+			}
+		},
+		"title": {
+			"$ref": "../common/string255-schema.json"
+		},
+		"documentationName": {
+			"$ref": "../common/string255-schema.json"
+		},
+		"logLevel": {
+			"$ref": "jobLogLevel-schema.json"
+		},
+		"criticality": {
+			"$ref": "jobCriticality-schema.json"
+		},
+		"warnIfShorter": {
+			"$ref": "../common/nonNegativeInteger-schema.json"
+		},
+		"warnIfLonger": {
+			"$ref": "../common/nonNegativeInteger-schema.json"
+		}
 	},
-	"executable": {
-	  "javaType": "com.sos.inventory.model.job.Executable",
-	  "oneOf": [
-	    { "$ref": "executableScript-schema.json" },
-	    { "$ref": "executableJava-schema.json" }
-	  ]
-	},
-    "returnCodeMeaning": {
-      "$ref": "jobReturnCode-schema.json"
-    },
-    "taskLimit": {
-      "type": "integer",
-      "minimum": 1,
-      "default": 1
-    },
-    "timeout": {
-      "$ref": "../common/nonNegativeInteger-schema.json"
-    },
-    "graceTimeout": {
-      "$ref": "../common/nonNegativeInteger-schema.json"
-    },
-    "failOnErrWritten": {
-    	"type": "boolean",
-    	"default": false
-    },
-    "jobClass": {
-      "$ref": "../common/path-schema.json"
-    },
-    "defaultArguments": {
-      "$ref": "../common/variables-schema.json"
-    },
-    "jobResourceNames": {
-      "alias": "jobResourcePaths",
-      "type": "array",
-      "items": {
-        "$ref": "../common/string255-schema.json"
-      }
-    },
-    "title": {
-      "$ref": "../common/string255-schema.json"
-    },
-    "documentationName": {
-      "$ref": "../common/string255-schema.json"
-    },
-    "logLevel": {
-      "$ref": "jobLogLevel-schema.json"
-    },
-    "criticality": {
-      "$ref": "jobCriticality-schema.json"
-    }
-  },
-  "additionalProperties": false
+	"additionalProperties": false
 }
