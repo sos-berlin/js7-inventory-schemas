@@ -7,10 +7,20 @@
     "$ref": "instruction-schema.json"
   },
   
-  "description": "instruction with fixed property 'TYPE':'Fail' and optional outcome with fixed property 'TYPE':'Failed'",
+  "description": "instruction with fixed property 'TYPE':'Fail'",
   "properties": {
-    "outcome": {
-      "$ref": "outcome-schema.json"
+    "message": {
+      "type": "string"
+    },
+    "arguments": {
+      "alias": "namedValues",
+      "javaType": "com.sos.inventory.model.common.Variables",
+  	  "type": "object",
+  	  "additionalProperties": true
+    },
+    "uncatchable": {
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false

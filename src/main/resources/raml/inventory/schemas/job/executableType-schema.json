@@ -4,10 +4,12 @@
   "javaType": "com.sos.inventory.model.job.ExecutableType",
   "type": "string",
   "enum": [
+    "ShellScriptExecutable",
     "ScriptExecutable",
     "InternalExecutable"
   ],
   "javaEnumNames": [
+    "ShellScriptExecutable",
     "ScriptExecutable",
     "InternalExecutable"
   ]

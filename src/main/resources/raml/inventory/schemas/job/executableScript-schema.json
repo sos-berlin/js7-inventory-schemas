@@ -15,7 +15,7 @@
     "env",
     "v1Compatible"
   ],
-  "description": "executable with fixed property 'TYPE':'ScriptExecutable'",
+  "description": "executable with fixed property 'TYPE':'ShellScriptExecutable'",
   "properties": {
     "script": {
 	  "type": "string",
@@ -27,6 +27,9 @@
 	"v1Compatible": {
       "type": "boolean",
       "default": false
+    },
+    "returnCodeMeaning": {
+      "$ref": "jobReturnCode-schema.json"
     },
     "login": {
 		"type": "object",

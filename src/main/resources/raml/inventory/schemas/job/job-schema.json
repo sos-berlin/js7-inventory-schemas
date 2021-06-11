@@ -8,9 +8,9 @@
 	],
 	"required": [
 		"agentName",
-		"executable",
-		"taskLimit"
+		"executable"
 	],
+	"description": "returnCodeMeaning is deprecated: moved to ShellScriptExecutable",
 	"properties": {
 		"agentName": {
 			"alias": "agentId,agentPath",
@@ -33,7 +33,8 @@
 		"returnCodeMeaning": {
 			"$ref": "jobReturnCode-schema.json"
 		},
-		"taskLimit": {
+		"parallelism": {
+   	  		"alias": "taskLimit",
 			"type": "integer",
 			"minimum": 1,
 			"default": 1
