@@ -5,7 +5,8 @@
   "type": "object",
   "javaInterfaces" : [
     "com.sos.joc.model.common.IConfigurationObject",
-    "com.sos.joc.model.common.IDeployObject"
+    "com.sos.joc.model.common.IDeployObject",
+   	"com.sos.inventory.model.common.IInventoryObject"
   ],
   "required": [
     "workflowName",
@@ -14,6 +15,7 @@
   ],
   "propertyOrder": [
     "TYPE",
+    "version",
     "workflowName",
     "agentName",
     "directory",
@@ -30,6 +32,9 @@
     "TYPE": {
 		"$ref": "../deploy/deployType-schema.json",
 		"default": "FileWatch" 
+    },
+    "version": {
+      "$ref": "../common/version-schema.json"
     },
     "workflowName": {
     	"alias": "workflowPath",

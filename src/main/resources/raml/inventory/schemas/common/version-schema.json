@@ -1,0 +1,9 @@
+{
+  "title": "inventory repository version",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "inventory repository version",
+  "type": "string",
+  "pattern": "[0-9]+\\.[0-9]+\\.[0-9]+",
+  "default": "1.0.0",
+  "maxLength": 10
+}

@@ -5,10 +5,12 @@
   "type": "object",
   "javaInterfaces" : [
     "com.sos.joc.model.common.IConfigurationObject",
-    "com.sos.joc.model.common.IDeployObject"
+    "com.sos.joc.model.common.IDeployObject",
+   	"com.sos.inventory.model.common.IInventoryObject"
   ],
   "propertyOrder": [
     "TYPE",
+    "version",
     "maxProcesses",
     "priority"
   ],
@@ -19,6 +21,9 @@
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
       "default": "JobClass" 
+    },
+    "version": {
+      "$ref": "../common/version-schema.json"
     },
     "maxProcesses": {
       "type": "integer",

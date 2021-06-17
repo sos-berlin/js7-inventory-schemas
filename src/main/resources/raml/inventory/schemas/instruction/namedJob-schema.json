@@ -22,7 +22,7 @@
       "minLength": 1
     },
     "defaultArguments": {
-      "$ref": "../common/variables-schema.json"
+      "$ref": "../job/env-schema.json"
     }
   },
   "additionalProperties": false

@@ -12,7 +12,7 @@
     "message": {
       "type": "string"
     },
-    "arguments": {
+    "outcome": {
       "alias": "namedValues",
       "javaType": "com.sos.inventory.model.common.Variables",
   	  "type": "object",

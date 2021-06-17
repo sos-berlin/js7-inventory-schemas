@@ -5,7 +5,8 @@
   "type": "object",
   "javaInterfaces" : [
     "com.sos.joc.model.common.IConfigurationObject",
-    "com.sos.joc.model.common.IDeployObject"
+    "com.sos.joc.model.common.IDeployObject",
+   	"com.sos.inventory.model.common.IInventoryObject"
   ],
   "required": [
     "instructions",
@@ -13,6 +14,7 @@
   ],
   "propertyOrder": [
     "TYPE",
+    "version",
     "versionId",
     "instructions",
     "jobs"
@@ -24,6 +26,9 @@
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
       "default": "Workflow" 
+    },
+    "version": {
+      "$ref": "../common/version-schema.json"
     },
     "versionId": {
       "$ref": "../common/string255-schema.json"

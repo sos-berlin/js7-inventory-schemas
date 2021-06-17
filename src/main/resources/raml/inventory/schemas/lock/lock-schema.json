@@ -5,13 +5,15 @@
 	"type": "object",
 	"javaInterfaces": [
 		"com.sos.joc.model.common.IConfigurationObject",
-		"com.sos.joc.model.common.IDeployObject"
+		"com.sos.joc.model.common.IDeployObject",
+   		"com.sos.inventory.model.common.IInventoryObject"
 	],
 	"required": [
 		"limit"
 	],
 	"propertyOrder": [
 		"TYPE",
+		"version",
 		"limit"
 	],
 	"description": "deploy object with fixed property 'TYPE':'Lock'",
@@ -20,6 +22,9 @@
 			"$ref": "../deploy/deployType-schema.json",
 			"default": "Lock"
 		},
+    	"version": {
+      		"$ref": "../common/version-schema.json"
+    	},
 		"limit": {
 			"type": "integer",
 			"minimum": 0,

@@ -5,7 +5,8 @@
   "type": "object",
   "javaInterfaces" : [
     "com.sos.joc.model.common.IConfigurationObject",
-    "com.sos.joc.model.common.IDeployObject"
+    "com.sos.joc.model.common.IDeployObject",
+   	"com.sos.inventory.model.common.IInventoryObject"
   ],
   "anyOf": [
   	{ "required": ["env"] },
@@ -13,6 +14,7 @@
   ],
   "propertyOrder": [
     "TYPE",
+    "version",
     "arguments",
     "env"
   ],
@@ -23,6 +25,9 @@
     "TYPE": {
       "$ref": "../deploy/deployType-schema.json",
       "default": "JobResource" 
+    },
+    "version": {
+      "$ref": "../common/version-schema.json"
     },
     "arguments": {
       "alias": "settings",
