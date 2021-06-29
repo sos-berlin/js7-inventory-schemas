@@ -33,7 +33,7 @@
     "versionId": {
       "$ref": "../common/string255-schema.json"
     },
-    "orderRequirements": {
+    "orderPreparation": {
     	"$ref": "orderRequirements-schema.json"
     },
     "jobResourceNames": {

@@ -18,6 +18,9 @@
         { "type": "boolean" }
       ],
       "javaType": "java.lang.Object"
+    },
+    "final": {
+      "type": "string"
     }
   },
   "additionalProperties": false

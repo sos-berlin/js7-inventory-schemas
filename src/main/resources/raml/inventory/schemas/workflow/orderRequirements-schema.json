@@ -3,9 +3,14 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.workflow.Requirements",
   "type": "object",
+  "alias": "orderRequirements",
   "properties": {
     "parameters": {
       "$ref": "parameters-schema.json"
+    },
+    "allowUndeclared": {
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false
