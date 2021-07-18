@@ -1,0 +1,28 @@
+{
+  "title": "PostNotice",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.PostNotice",
+  "type": "object",
+  "required": [
+  	"boardName"
+  ],
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+  
+  "description": "instruction with fixed property 'TYPE':'PostNotice'",
+  "propertyOrder": [
+  	"TYPE",
+    "boardName"
+  ],
+  "properties": {
+    "boardName": {
+    	"alias": "boardPath",
+    	"type": "string",
+    	"pattern": "^[^<>]*$",
+    	"maxLength": 255,
+    	"minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

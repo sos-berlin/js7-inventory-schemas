@@ -9,7 +9,8 @@
     "Lock",
     "Junction",
     "FileWatch",
-    "JobResource"
+    "JobResource",
+    "Board"
   ],
   "javaEnumNames": [
     "Workflow",
@@ -17,7 +18,8 @@
     "Lock",
     "Junction", 
     "FileWatch",
-    "JobResource"
+    "JobResource",
+    "Board"
   ],
   "default": "Workflow"
 }

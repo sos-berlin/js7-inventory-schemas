@@ -11,10 +11,10 @@
     "Finish",
     "Fail",
     "Retry",
-    "Publish",
-    "Await",
     "Lock",
     "Prompt",
+    "PostNotice",
+    "ReadNotice",
     "ImplicitEnd"
   ]
 }
