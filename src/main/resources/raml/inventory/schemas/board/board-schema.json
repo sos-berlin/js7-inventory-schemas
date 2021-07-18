@@ -14,6 +14,7 @@
   ],
   "propertyOrder": [
     "TYPE",
+    "version",
     "toNotice",
     "endOfLife",
     "readingOrderToNoticeId",
@@ -39,6 +40,9 @@
     "readingOrderToNoticeId": {
     	"description": "Expression that returns a NoticeId for the ReadNotice statement.",
     	"type": "string"
+    },
+    "version": {
+      "$ref": "../common/version-schema.json"
     },
     "title": {
       "$ref": "../common/string255-schema.json"
