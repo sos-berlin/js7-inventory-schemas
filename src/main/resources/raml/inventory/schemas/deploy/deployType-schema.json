@@ -7,7 +7,6 @@
     "Workflow",
     "JobClass",
     "Lock",
-    "Junction",
     "FileWatch",
     "JobResource",
     "Board"
@@ -16,7 +15,6 @@
     "Workflow",
     "JobClass",
     "Lock",
-    "Junction", 
     "FileWatch",
     "JobResource",
     "Board"
