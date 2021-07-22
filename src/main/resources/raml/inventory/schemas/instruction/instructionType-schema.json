@@ -14,6 +14,7 @@
     "Lock",
     "Prompt",
     "PostNotice",
+    "ExpectNotice",
     "ReadNotice",
     "ImplicitEnd"
   ]
