@@ -39,7 +39,7 @@
     	"type": "string"
 	},
     "expectOrderToNoticeId": {
-    	"description": "Expression that returns a NoticeId for the ReadNotice statement.",
+    	"description": "Expression that returns a NoticeId for the ExpectNotice statement.",
     	"alias": "readingOrderToNoticeId",
     	"type": "string"
     },
