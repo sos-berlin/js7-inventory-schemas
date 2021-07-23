@@ -9,15 +9,15 @@
    	"com.sos.inventory.model.common.IInventoryObject"
   ],
   "required": [
-    "toNotice",
-    "readingOrderToNoticeId"
+    "postOrderToNoticeId",
+    "expectOrderToNoticeId"
   ],
   "propertyOrder": [
     "TYPE",
     "version",
-    "toNotice",
+    "postOrderToNoticeId",
     "endOfLife",
-    "readingOrderToNoticeId",
+    "expectOrderToNoticeId",
     "title",
     "documentationName"
   ],
