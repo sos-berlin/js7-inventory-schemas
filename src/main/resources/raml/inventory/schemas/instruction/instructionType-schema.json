@@ -8,6 +8,7 @@
     "If",
     "Try",
     "Fork",
+    "ForkList",
     "Finish",
     "Fail",
     "Retry",
@@ -15,7 +16,6 @@
     "Prompt",
     "PostNotice",
     "ExpectNotice",
-    "ReadNotice",
     "ImplicitEnd"
   ]
 }
