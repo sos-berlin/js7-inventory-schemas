@@ -1,0 +1,17 @@
+{
+	"title": "Variable-Set",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.schedule.VariableSet",
+	"type": "object",
+	"description": "A varibble set for a schedule",
+ 	 
+	"properties": {
+		"orderName": {
+			"$ref": "../common/string255-schema.json"
+		},
+		"variables": {
+			"$ref": "../common/variables-schema.json"
+		}
+	}
+}
+ 

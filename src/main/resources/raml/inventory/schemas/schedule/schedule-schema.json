@@ -1,7 +1,7 @@
 {
 	"title": "Schedule",
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"javaType": "com.sos.inventory.model.Schedule",
+	"javaType": "com.sos.inventory.model.schedule.Schedule",
 	"type": "object",
 	"description": "The order template for scheduling orders to Controller",
  	"javaInterfaces" : [
@@ -47,6 +47,14 @@
 		"nonWorkingCalendars": {
 			"$ref": "../calendar/calendars-list-non-working-schema.json"
 		},
+		
+		"variableSets": {
+				"type": "array",
+				"items": {
+					"$ref": "variableSet-schema.json"
+				}
+			},
+		
 		"variables": {
 			"$ref": "../common/variables-schema.json"
 		}
