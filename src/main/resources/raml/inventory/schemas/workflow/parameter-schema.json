@@ -15,7 +15,8 @@
       "anyOf": [
         { "type": "string" },
         { "type": "number" },
-        { "type": "boolean" }
+        { "type": "boolean" },
+        { "type": "array" }
       ],
       "javaType": "java.lang.Object"
     },

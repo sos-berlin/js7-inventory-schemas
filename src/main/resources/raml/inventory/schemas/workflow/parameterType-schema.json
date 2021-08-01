@@ -6,11 +6,13 @@
   "enum": [
     "String",
     "Number",
-    "Boolean"
+    "Boolean",
+    "Array"
   ],
   "javaEnumNames": [
     "String",
     "Number",
-    "Boolean"
+    "Boolean",
+    "Array"
   ]
 }
