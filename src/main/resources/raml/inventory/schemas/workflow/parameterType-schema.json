@@ -7,12 +7,12 @@
     "String",
     "Number",
     "Boolean",
-    "Array"
+    "List"
   ],
   "javaEnumNames": [
     "String",
     "Number",
     "Boolean",
-    "Array"
+    "List"
   ]
 }

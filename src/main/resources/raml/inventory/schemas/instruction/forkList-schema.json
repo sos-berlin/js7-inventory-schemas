@@ -4,6 +4,7 @@
   "javaType": "com.sos.inventory.model.instruction.ForkList",
   "type": "object",
   "required": [
+  	"children",
   	"workflow"
   ],
   "extends" : {
@@ -15,7 +16,7 @@
     "children": {
     	"type": "string"
     },
-  	"childToArguments": {
+  	"childToId": {
     	"type": "string"
     },
     "workflow": {
