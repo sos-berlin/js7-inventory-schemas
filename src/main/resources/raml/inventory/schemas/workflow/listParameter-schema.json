@@ -1,0 +1,16 @@
+{
+  "title": "list parameter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.workflow.ListParameter",
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "description": "parameter type only Number, Boolean or String",
+  "properties": {
+    "type": {
+      "$ref": "listParameterType-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

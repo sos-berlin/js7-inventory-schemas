@@ -6,6 +6,7 @@
   "required": [
     "type"
   ],
+  "description": "parameters only for parameter type 'List'",
   "properties": {
     "type": {
       "$ref": "parameterType-schema.json"
@@ -22,6 +23,9 @@
     },
     "final": {
       "type": "string"
+    },
+    "listParameters": {
+      "$ref": "listParameters-schema.json"
     }
   },
   "additionalProperties": false
