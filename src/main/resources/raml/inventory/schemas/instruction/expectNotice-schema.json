@@ -4,7 +4,7 @@
   "javaType": "com.sos.inventory.model.instruction.ExpectNotice",
   "type": "object",
   "required": [
-  	"boardName"
+  	"noticeBoardName"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
@@ -13,11 +13,11 @@
   "description": "instruction with fixed property 'TYPE':'ExpectNotice'",
   "propertyOrder": [
   	"TYPE",
-    "boardName"
+    "noticeBoardName"
   ],
   "properties": {
-    "boardName": {
-    	"alias": "boardPath",
+    "noticeBoardName": {
+    	"alias": "boardPath,boardName",
     	"type": "string",
     	"pattern": "^[^<>]*$",
     	"maxLength": 255,
