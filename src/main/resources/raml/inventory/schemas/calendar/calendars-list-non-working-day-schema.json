@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "array",
 	"items": {
-		"javaType": "com.sos.inventory.model.calendar.AssignedNonWorkingCalendars",
+		"javaType": "com.sos.inventory.model.calendar.AssignedNonWorkingDayCalendars",
 		"type": "object",
 		"required": [
 			"calendarName"

@@ -43,8 +43,8 @@
 		"calendars": {
 			"$ref": "../calendar/calendars-list-schema.json"
 		},
-		"nonWorkingCalendars": {
-			"$ref": "../calendar/calendars-list-non-working-schema.json"
+		"nonWorkingDayCalendars": {
+			"$ref": "../calendar/calendars-list-non-working-day-schema.json"
 		},
 		"variableSets": {
 			"type": "array",
