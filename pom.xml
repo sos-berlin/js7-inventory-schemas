@@ -104,6 +104,15 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<!-- for release:prepare -->
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<updateVersionsToSnapshot>true</updateVersionsToSnapshot>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
