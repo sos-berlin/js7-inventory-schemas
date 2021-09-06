@@ -1,0 +1,20 @@
+{
+	"title": "admission time period",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.AdmissionTimePeriod",
+	"type": "object",
+	"properties": {
+		"TYPE": {
+			"type": "string"
+		}, 
+		"secondOfWeek" : {
+			"description": "in seconds",
+			"type" : "integer"
+		},
+		"duration" : {
+			"description": "in seconds",
+			"type" : "integer"
+		}
+	},
+	"additionalProperties": false
+}

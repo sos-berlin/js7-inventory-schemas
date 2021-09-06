@@ -30,6 +30,9 @@
 				}
 			]
 		},
+		"admissionTimeScheme" : {
+			"$ref" : "admissionTimeScheme-schema.json" 
+		},
 		"returnCodeMeaning": {
 			"$ref": "jobReturnCode-schema.json"
 		},

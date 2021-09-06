@@ -58,7 +58,11 @@
     },
     "jobs": {
       "$ref": "jobs-schema.json"
-    }
+    },
+	"timeZone": {
+	  "type": "string",
+	  "default": "Etc/UTC"
+	}
   },
   "additionalProperties": false
 }
