@@ -16,6 +16,7 @@
     "Prompt",
     "PostNotice",
     "ExpectNotice",
-    "ImplicitEnd"
+    "ImplicitEnd",
+    "AddOrder"
   ]
 }
