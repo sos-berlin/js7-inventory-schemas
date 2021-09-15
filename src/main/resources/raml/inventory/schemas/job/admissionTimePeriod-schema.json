@@ -5,15 +5,16 @@
 	"type": "object",
 	"properties": {
 		"TYPE": {
+			"description": "only yet 'WeekdayPeriod'",
 			"type": "string"
 		}, 
 		"secondOfWeek" : {
 			"description": "in seconds",
-			"type" : "integer"
+			"$ref" : "../common/nonNegativeInteger-schema.json"
 		},
 		"duration" : {
 			"description": "in seconds",
-			"type" : "integer"
+			"$ref" : "../common/nonNegativeInteger-schema.json"
 		}
 	},
 	"additionalProperties": false

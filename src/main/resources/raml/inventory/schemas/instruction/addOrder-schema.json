@@ -4,9 +4,8 @@
   "javaType": "com.sos.inventory.model.instruction.AddOrder",
   "type": "object",
   "required": [
-  	"orderId",
-  	"workflowPath",
-  	"deleteWhenTerminated"
+  	"orderName",
+  	"workflowName"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
@@ -15,21 +14,24 @@
   "description": "instruction with fixed property 'TYPE':'AdOrder'",
   "propertyOrder": [
   	"TYPE",
-    "orderId",
-    "workflowPath"
+    "orderName",
+    "workflowName"
   ],
   "properties": {
-  	"orderId" : {
-  		"type" : "string"
+  	"orderName" : {
+  		"type": "string",
+  		"maxLength": 30
   	},
-  	"workflowPath" : {
+  	"workflowName" : {
+  		"alias": "workflowPath",
   		"type" : "string"
   	},
     "arguments": {
-    	"$ref": "../common/variables-schema.json"
+    	"$ref": "../job/env-schema.json"
     },
     "deleteWhenTerminated" : {
-    	"type" : "boolean"
+    	"type" : "boolean",
+    	"default": true
 	}
   },
   "additionalProperties": false

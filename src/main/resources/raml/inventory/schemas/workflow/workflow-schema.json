@@ -16,6 +16,11 @@
     "TYPE",
     "version",
     "versionId",
+    "timeZone",
+    "title",
+    "documentationName",
+    "orderPreparation",
+    "jobResourceNames",
     "instructions",
     "jobs"
   ],
@@ -33,7 +38,17 @@
     "versionId": {
       "$ref": "../common/string255-schema.json"
     },
-    "orderPreparation": {
+    "timeZone": {
+	  "type": "string",
+	  "default": "Etc/UTC"
+	},
+	"title": {
+      "$ref": "../common/string255-schema.json"
+    },
+    "documentationName": {
+      "$ref": "../common/string255-schema.json"
+    },
+	"orderPreparation": {
     	"$ref": "orderRequirements-schema.json"
     },
     "jobResourceNames": {
@@ -50,19 +65,9 @@
       	"$ref": "../instruction/instruction-schema.json"
       }
     },
-    "title": {
-      "$ref": "../common/string255-schema.json"
-    },
-    "documentationName": {
-      "$ref": "../common/string255-schema.json"
-    },
     "jobs": {
       "$ref": "jobs-schema.json"
-    },
-	"timeZone": {
-	  "type": "string",
-	  "default": "Etc/UTC"
-	}
+    }
   },
   "additionalProperties": false
 }
