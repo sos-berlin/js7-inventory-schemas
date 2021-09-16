@@ -4,14 +4,13 @@
   "javaType": "com.sos.inventory.model.instruction.AddOrder",
   "type": "object",
   "required": [
-  	"orderName",
   	"workflowName"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
   },
   
-  "description": "instruction with fixed property 'TYPE':'AdOrder'",
+  "description": "instruction with fixed property 'TYPE':'AddOrder'",
   "propertyOrder": [
   	"TYPE",
     "orderName",
@@ -27,7 +26,7 @@
   		"type" : "string"
   	},
     "arguments": {
-    	"$ref": "../job/env-schema.json"
+    	"$ref": "../common/variables-schema.json"
     },
     "deleteWhenTerminated" : {
     	"type" : "boolean",
