@@ -28,9 +28,9 @@
     "arguments": {
     	"$ref": "../common/variables-schema.json"
     },
-    "deleteWhenTerminated" : {
+    "remainWhenTerminated" : {
     	"type" : "boolean",
-    	"default": true
+    	"default": false
 	}
   },
   "additionalProperties": false

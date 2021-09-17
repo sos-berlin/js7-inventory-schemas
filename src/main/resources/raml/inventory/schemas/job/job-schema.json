@@ -33,6 +33,10 @@
 		"admissionTimeScheme" : {
 			"$ref" : "admissionTimeScheme-schema.json" 
 		},
+		"skipIfNoAdmissionForOrderDay": {
+			"type": "boolean",
+			"default": false
+		},
 		"returnCodeMeaning": {
 			"$ref": "jobReturnCode-schema.json"
 		},
