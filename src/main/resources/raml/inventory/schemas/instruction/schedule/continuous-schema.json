@@ -1,0 +1,29 @@
+{
+  "title": "Continuous",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.schedule.Continuous",
+  "type": "object",
+  "required": [
+  	"pause"
+  ],
+  "extends" : {
+    "$ref": "repeat-schema.json"
+  },
+  
+  "description": "repeat with fixed property 'TYPE':'Continuous'",
+  "propertyOrder": [
+  	"TYPE",
+    "pause",
+    "limit"
+  ],
+  "properties": {
+  	"pause" : {
+  		"description": "in seconds",
+		"$ref" : "../../common/nonNegativeLong-schema.json"
+  	},
+  	"limit" : {
+  		"$ref" : "../../common/nonNegativeInteger-schema.json"
+  	}
+  },
+  "additionalProperties": false
+}

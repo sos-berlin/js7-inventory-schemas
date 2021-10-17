@@ -1,0 +1,11 @@
+{
+  "title": "repeatType",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.schedule.RepeatType",
+  "type": "string",
+  "enum": [
+    "Ticking",
+    "Continuous",
+    "Periodic"
+  ]
+}

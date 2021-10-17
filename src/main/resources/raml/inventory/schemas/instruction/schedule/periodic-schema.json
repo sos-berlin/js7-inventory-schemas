@@ -1,0 +1,33 @@
+{
+  "title": "Periodic",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.schedule.Periodic",
+  "type": "object",
+  "required": [
+  	"period"
+  ],
+  "extends" : {
+    "$ref": "repeat-schema.json"
+  },
+  
+  "description": "repeat with fixed property 'TYPE':'Periodic'",
+  "propertyOrder": [
+  	"TYPE",
+    "period",
+    "offsets"
+  ],
+  "properties": {
+  	"period" : {
+  		"description": "in seconds",
+		"$ref" : "../../common/nonNegativeLong-schema.json"
+  	},
+  	"offsets" : {
+  		"description": "in seconds",
+  		"type": "array",
+  		"items": {
+  			"$ref" : "../../common/nonNegativeLong-schema.json"
+  		}
+  	}
+  },
+  "additionalProperties": false
+}

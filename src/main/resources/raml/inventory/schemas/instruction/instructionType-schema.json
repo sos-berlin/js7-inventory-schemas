@@ -17,6 +17,7 @@
     "PostNotice",
     "ExpectNotice",
     "ImplicitEnd",
-    "AddOrder"
+    "AddOrder",
+    "Cycle"
   ]
 }

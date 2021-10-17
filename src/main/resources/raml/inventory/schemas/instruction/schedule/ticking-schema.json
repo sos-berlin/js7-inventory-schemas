@@ -1,0 +1,25 @@
+{
+  "title": "Ticking",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.schedule.Ticking",
+  "type": "object",
+  "required": [
+  	"interval"
+  ],
+  "extends" : {
+    "$ref": "repeat-schema.json"
+  },
+  
+  "description": "repeat with fixed property 'TYPE':'Ticking'",
+  "propertyOrder": [
+  	"TYPE",
+    "interval"
+  ],
+  "properties": {
+  	"interval" : {
+  		"description": "in seconds",
+		"$ref" : "../../common/nonNegativeLong-schema.json"
+  	}
+  },
+  "additionalProperties": false
+}

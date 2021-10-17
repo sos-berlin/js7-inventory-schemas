@@ -1,0 +1,19 @@
+{
+	"title": "Cycle Schedule",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.instruction.schedule.CycleSchedule",
+	"type": "object",
+	"required": [
+		"schemes"
+	],
+	"properties": {
+		"schemes" : {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref" : "scheme-schema.json"
+			} 
+		}
+	},
+	"additionalProperties": false
+}

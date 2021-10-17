@@ -1,0 +1,15 @@
+{
+  "title": "abstract Repeat",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.schedule.Repeat",
+  "type": "object",
+  "required": [
+    "TYPE"
+  ],
+  "properties": {
+    "TYPE": {
+      "$ref": "repeatType-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

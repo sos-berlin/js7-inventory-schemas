@@ -10,11 +10,11 @@
 		}, 
 		"secondOfWeek" : {
 			"description": "in seconds",
-			"$ref" : "../common/nonNegativeInteger-schema.json"
+			"$ref" : "../common/nonNegativeLong-schema.json"
 		},
 		"duration" : {
 			"description": "in seconds",
-			"$ref" : "../common/nonNegativeInteger-schema.json"
+			"$ref" : "../common/nonNegativeLong-schema.json"
 		}
 	},
 	"additionalProperties": false

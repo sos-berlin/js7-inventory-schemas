@@ -1,0 +1,18 @@
+{
+	"title": "Scheme",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.instruction.schedule.Scheme",
+	"type": "object",
+	"required": [
+		"repeat"
+	],
+	"properties": {
+		"repeat": {
+			"$ref" : "repeat-schema.json"
+		},
+		"admissionTimeScheme" : {
+			"$ref" : "../../job/admissionTimeScheme-schema.json"
+		}
+	},
+	"additionalProperties": false
+}
