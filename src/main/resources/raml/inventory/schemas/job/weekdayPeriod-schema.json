@@ -1,0 +1,20 @@
+{
+	"title": "admission time WeekdayPeriod",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.WeekdayPeriod",
+	"type": "object",
+	"required": [
+		"secondOfWeek"
+	],
+	"extends" : {
+    	"$ref": "admissionTimePeriod-schema.json"
+  	},
+  	"description": "admission time period with fixed property 'TYPE':'WeekdayPeriod'",
+	"properties": {
+		"secondOfWeek" : {
+			"description": "in seconds",
+			"$ref" : "../common/nonNegativeLong-schema.json"
+		}
+	},
+	"additionalProperties": false
+}

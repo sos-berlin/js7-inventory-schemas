@@ -8,10 +8,6 @@
 			"description": "only yet 'WeekdayPeriod'",
 			"type": "string"
 		}, 
-		"secondOfWeek" : {
-			"description": "in seconds",
-			"$ref" : "../common/nonNegativeLong-schema.json"
-		},
 		"duration" : {
 			"description": "in seconds",
 			"$ref" : "../common/nonNegativeLong-schema.json"

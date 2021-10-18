@@ -1,0 +1,20 @@
+{
+	"title": "admission time DailyPeriod",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.DailyPeriod",
+	"type": "object",
+	"required": [
+		"secondOfDay"
+	],
+	"extends" : {
+    	"$ref": "admissionTimePeriod-schema.json"
+  	},
+  	"description": "admission time period with fixed property 'TYPE':'DailyPeriod'",
+	"properties": {
+		"secondOfDay" : {
+			"description": "in seconds",
+			"$ref" : "../common/nonNegativeLong-schema.json"
+		}
+	},
+	"additionalProperties": false
+}
