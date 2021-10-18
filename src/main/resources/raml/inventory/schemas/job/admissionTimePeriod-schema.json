@@ -5,8 +5,7 @@
 	"type": "object",
 	"properties": {
 		"TYPE": {
-			"description": "only yet 'WeekdayPeriod'",
-			"type": "string"
+			"$ref" : "admissionTimePeriodType-schema.json"
 		}, 
 		"duration" : {
 			"description": "in seconds",
