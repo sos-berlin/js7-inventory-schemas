@@ -13,7 +13,10 @@
 	"properties": {
 		"secondOfWeek" : {
 			"description": "in seconds",
-			"$ref" : "../common/nonNegativeLong-schema.json"
+			"type" : "integer",
+			"format":"utc-millisec",
+			"minimum": 0,
+			"maximum": 604800
 		}
 	},
 	"additionalProperties": false
