@@ -4,7 +4,8 @@
   "javaType": "com.sos.inventory.model.instruction.schedule.Continuous",
   "type": "object",
   "required": [
-  	"pause"
+  	"pause",
+  	"limit"
   ],
   "extends" : {
     "$ref": "repeat-schema.json"
@@ -22,7 +23,9 @@
 		"$ref" : "../../common/nonNegativeLong-schema.json"
   	},
   	"limit" : {
-  		"$ref" : "../../common/nonNegativeInteger-schema.json"
+  		"type": "integer",
+  		"minimum": 1,
+  		"default": 1
   	}
   },
   "additionalProperties": false

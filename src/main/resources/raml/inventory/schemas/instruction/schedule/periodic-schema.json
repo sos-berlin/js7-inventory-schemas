@@ -4,7 +4,8 @@
   "javaType": "com.sos.inventory.model.instruction.schedule.Periodic",
   "type": "object",
   "required": [
-  	"period"
+  	"period",
+  	"offsets"
   ],
   "extends" : {
     "$ref": "repeat-schema.json"
@@ -24,6 +25,7 @@
   	"offsets" : {
   		"description": "in seconds",
   		"type": "array",
+  		"minItems": 1,
   		"items": {
   			"$ref" : "../../common/nonNegativeLong-schema.json"
   		}
