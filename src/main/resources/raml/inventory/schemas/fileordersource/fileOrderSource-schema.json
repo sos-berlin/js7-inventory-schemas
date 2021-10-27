@@ -8,16 +8,28 @@
     "com.sos.joc.model.common.IDeployObject",
    	"com.sos.inventory.model.common.IInventoryObject"
   ],
-  "required": [
-    "workflowName",
-    "agentName",
-    "directory"
+  "anyOf": [
+        {
+            "required": [
+                "workflowName",
+    			"agentName",
+    			"directoryExpr"
+            ]
+        },
+        {
+            "required": [
+                "workflowName",
+    			"agentName",
+    			"directory"
+            ]
+        }
   ],
   "propertyOrder": [
     "TYPE",
     "version",
     "workflowName",
     "agentName",
+    "directoryExpr",
     "directory",
     "pattern",
     "timeZone",
@@ -49,6 +61,9 @@
     	"pattern": "^[^<>]*$",
     	"maxLength": 255,
     	"minLength": 1
+    },
+    "directoryExpr": {
+    	"$ref": "../common/string255Required-schema.json"
     },
     "directory": {
     	"$ref": "../common/string255Required-schema.json"
