@@ -1,0 +1,12 @@
+{
+	"title": "job notification",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.notification.JobNotification",
+	"type": "object",
+	"properties": {
+		"mail": {
+			"$ref": "notification-mail-schema.json"
+		}
+	},
+	"additionalProperties": false
+}
