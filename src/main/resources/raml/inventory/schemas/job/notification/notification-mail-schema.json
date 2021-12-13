@@ -12,6 +12,10 @@
 		},
 		"bcc": {
 			"$ref": "notification-mail-recipients-schema.json"
+		},
+		"suppress": {
+			"type": "boolean",
+			"default": false
 		}
 	},
 	"additionalProperties": false
