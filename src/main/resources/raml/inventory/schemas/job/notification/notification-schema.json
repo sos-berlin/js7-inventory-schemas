@@ -4,6 +4,12 @@
 	"javaType": "com.sos.inventory.model.job.notification.JobNotification",
 	"type": "object",
 	"properties": {
+		"types": {
+			"type": "array",
+			"items": {
+				"$ref": "enum-type-schema.json"
+			}
+		},
 		"mail": {
 			"$ref": "notification-mail-schema.json"
 		}

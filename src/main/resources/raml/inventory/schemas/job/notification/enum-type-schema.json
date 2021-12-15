@@ -1,0 +1,11 @@
+{
+  "title": "notification type",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.job.notification.JobNotificationType",
+  "type": "string",
+  "enum": [
+    "ERROR",
+    "SUCCESS",
+    "WARNING"
+  ]
+}
