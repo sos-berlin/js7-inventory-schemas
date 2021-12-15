@@ -83,10 +83,10 @@
 			"$ref": "jobCriticality-schema.json"
 		},
 		"warnIfShorter": {
-			"$ref": "../common/nonNegativeInteger-schema.json"
+			"$ref": "../common/nonNegativeIntegerOrPercentage-schema.json"
 		},
 		"warnIfLonger": {
-			"$ref": "../common/nonNegativeInteger-schema.json"
+			"$ref": "../common/nonNegativeIntegerOrPercentage-schema.json"
 		},
 		"notification": {
 			"$ref": "notification/notification-schema.json"
