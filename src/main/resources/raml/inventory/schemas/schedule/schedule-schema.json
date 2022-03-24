@@ -3,16 +3,26 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"javaType": "com.sos.inventory.model.schedule.Schedule",
 	"type": "object",
-	"description": "The order template for scheduling orders to Controller",
+	"description": "The order template for scheduling orders to Controller. workflowName is deprecated",
 	"javaInterfaces": [
 		"com.sos.joc.model.common.IConfigurationObject",
 		"com.sos.joc.model.common.IReleaseObject",
 		"com.sos.inventory.model.common.IInventoryObject"
 	],
-	"required": [
-		"workflowName",
-		"calendars"
-	],
+	"anyOf": [
+        {
+            "required": [
+                "workflowName",
+                "calendars"
+            ]
+        },
+        {
+            "required": [
+                "workflowNames",
+                "calendars"
+            ]
+        }
+    ],
 	"properties": {
 		"version": {
 			"$ref": "../common/version-schema.json"
@@ -20,11 +30,14 @@
 		"path": {
 			"$ref": "../common/path-schema.json"
 		},
-		"workflowPath": {
-			"$ref": "../common/string255-schema.json"
-		},
 		"workflowName": {
 			"$ref": "../common/string255-schema.json"
+		},
+		"workflowNames": {
+			"type": "array",
+			"items": {
+				"$ref": "../common/string255-schema.json"
+			}
 		},
 		"title": {
 			"$ref": "../common/string255-schema.json"
@@ -54,4 +67,3 @@
 		}
 	}
 }
- 
