@@ -6,7 +6,6 @@
   "required": [
     "type"
   ],
-  "description": "parameters only for parameter type 'List'",
   "properties": {
     "type": {
       "$ref": "parameterType-schema.json"
@@ -26,6 +25,14 @@
     },
     "listParameters": {
       "$ref": "listParameters-schema.json"
+    },
+    "facet": {
+      "description": "a regular expression to check the value of the parameter",
+      "type": "string"
+    },
+    "message": {
+      "description": "a message if the value doesn't match the facet",
+      "type": "string"
     }
   },
   "additionalProperties": false
