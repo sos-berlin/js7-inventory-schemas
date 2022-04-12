@@ -3,5 +3,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "ISO date YYYY-MM-DD",
   "type": "string",
+  "minLength": 1,
   "format": "date"
 }

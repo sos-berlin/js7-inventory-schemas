@@ -5,7 +5,8 @@
   "type": "object",
   "required": [
     "repetition",
-    "step"
+    "step",
+    "from"
   ],
   "properties": {
     "from": {
