@@ -34,9 +34,13 @@
     "login": {
 		"type": "object",
 		"javaType": "com.sos.inventory.model.job.ExecutableScriptLogin",
+		"required": [
+		  "credentialKey"
+		],
 		"properties": {
 			"credentialKey": {
-				"type": "string"
+				"type": "string",
+				"minLength": 1
 			},
 			"withUserProfile": {
 				"type": "boolean",
