@@ -5,6 +5,7 @@
   "type": "object",
   "required": [
   	"children",
+  	"childToId",
   	"workflow"
   ],
   "extends" : {
@@ -14,10 +15,12 @@
   "description": "instruction with fixed property 'TYPE':'ForkList'",
   "properties": {
     "children": {
-    	"type": "string"
+    	"type": "string",
+    	"minLength": 1
     },
   	"childToId": {
-    	"type": "string"
+    	"type": "string",
+    	"minLength": 1
     },
     "workflow": {
     	"$ref": "instructions-schema.json"

@@ -3,14 +3,18 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.instruction.Prompt",
   "type": "object",
+  "required": [
+  	"question"
+  ],
   "extends" : {
     "$ref": "instruction-schema.json"
   },
-  
+    
   "description": "instruction with fixed property 'TYPE':'Prompt'",
   "properties": {
-    "question": {
-		"type": "string"
+  	"question": {
+		"type": "string",
+		"minLength": 1
     }
   },
   "additionalProperties": false
