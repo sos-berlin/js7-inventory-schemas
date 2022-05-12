@@ -27,11 +27,11 @@
       "$ref": "listParameters-schema.json"
     },
     "facet": {
-      "description": "deprecated; use facets",
+      "description": "a regular expression to check the value of the parameter",
       "type": "string"
     },
-    "facets": {
-      "description": "regular expressions to check the value of the parameter",
+    "list": {
+      "description": "enumeration of possible parameter values",
       "type": "array",
       "items": {
       	"type": "string"
