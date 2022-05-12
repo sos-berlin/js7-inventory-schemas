@@ -27,8 +27,15 @@
       "$ref": "listParameters-schema.json"
     },
     "facet": {
-      "description": "a regular expression to check the value of the parameter",
+      "description": "deprecated; use facets",
       "type": "string"
+    },
+    "facets": {
+      "description": "regular expressions to check the value of the parameter",
+      "type": "array",
+      "items": {
+      	"type": "string"
+      }
     },
     "message": {
       "description": "a message if the value doesn't match the facet",
