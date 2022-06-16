@@ -65,18 +65,6 @@
 			"items": {
 				"$ref": "variableSet-schema.json"
 			}
-		},
-		"startPosition": {
-     		"$ref": "position-schema.json"
-    	},
-		"startPositionString": {
-     		"$ref": "../common/string255-schema.json"
-    	},
-    	"endPosition": {
-     		"$ref": "position-schema.json"
-    	},
-    	"endPositionString": {
-     		"$ref": "../common/string255-schema.json"
-    	}
+		}
 	}
 }

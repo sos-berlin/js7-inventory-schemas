@@ -3,7 +3,7 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"javaType": "com.sos.inventory.model.schedule.VariableSet",
 	"type": "object",
-	"description": "A varibble set for a schedule",
+	"description": "A variable set for a schedule incl. optional start and end position",
  	 
 	"properties": {
 		"orderName": {
@@ -11,7 +11,13 @@
 		},
 		"variables": {
 			"$ref": "../common/variables-schema.json"
-		}
+		},
+		"startPosition": {
+     		"$ref": "position-schema.json"
+    	},
+		"endPosition": {
+     		"$ref": "position-schema.json"
+    	}
 	}
 }
  
