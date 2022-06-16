@@ -15,7 +15,9 @@
     "Lock",
     "Prompt",
     "PostNotice",
+    "PostNotices",
     "ExpectNotice",
+    "ExpectNotices",
     "ImplicitEnd",
     "AddOrder",
     "Cycle"
