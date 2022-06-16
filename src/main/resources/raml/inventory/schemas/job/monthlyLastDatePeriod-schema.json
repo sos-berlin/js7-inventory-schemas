@@ -1,0 +1,23 @@
+{
+	"title": "admission time MonthlyLastDatePeriod",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.MonthlyLastDatePeriod",
+	"type": "object",
+	"required": [
+		"lastSecondOfMonth"
+	],
+	"extends" : {
+    	"$ref": "admissionTimePeriod-schema.json"
+  	},
+  	"description": "admission time period with fixed property 'TYPE':'MonthlyLastDatePeriod'",
+	"properties": {
+		"lastSecondOfMonth" : {
+			"description": "in seconds",
+			"type" : "integer",
+			"format":"utc-millisec",
+			"minimum": -2678400,
+			"maximum": 0
+		}
+	},
+	"additionalProperties": false
+}

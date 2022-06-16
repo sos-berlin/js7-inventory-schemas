@@ -1,0 +1,23 @@
+{
+	"title": "admission time MonthlyDatePeriod",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.MonthlyDatePeriod",
+	"type": "object",
+	"required": [
+		"secondOfMonth"
+	],
+	"extends" : {
+    	"$ref": "admissionTimePeriod-schema.json"
+  	},
+  	"description": "admission time period with fixed property 'TYPE':'MonthlyDatePeriod'",
+	"properties": {
+		"secondOfMonth" : {
+			"description": "in seconds",
+			"type" : "integer",
+			"format":"utc-millisec",
+			"minimum": 0,
+			"maximum": 2678400
+		}
+	},
+	"additionalProperties": false
+}

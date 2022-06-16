@@ -1,0 +1,22 @@
+{
+	"title": "admission time MonthlyWeekdayPeriod",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.MonthlyWeekdayPeriod",
+	"type": "object",
+	"required": [
+		"secondOfWeeks"
+	],
+	"extends" : {
+    	"$ref": "admissionTimePeriod-schema.json"
+  	},
+  	"description": "admission time period with fixed property 'TYPE':'MonthlyWeekdayPeriod'",
+	"properties": {
+		"secondOfWeeks" : {
+			"description": "in seconds",
+			"type" : "integer",
+			"format":"utc-millisec",
+			"minimum": 0
+		}
+	},
+	"additionalProperties": false
+}

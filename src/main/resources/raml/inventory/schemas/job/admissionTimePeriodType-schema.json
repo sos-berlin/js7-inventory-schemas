@@ -4,6 +4,10 @@
   "javaType": "com.sos.inventory.model.job.AdmissionTimePeriodType",
   "type": "string",
   "enum": [
+  	"MonthlyDatePeriod",
+  	"MonthlyLastDatePeriod",
+  	"MonthlyWeekdayPeriod",
+  	"MonthlyLastWeekdayPeriod",
     "WeekdayPeriod",
     "DailyPeriod"
   ]
