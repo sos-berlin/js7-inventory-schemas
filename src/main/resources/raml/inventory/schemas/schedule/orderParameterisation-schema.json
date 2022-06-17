@@ -1,9 +1,9 @@
 {
-	"title": "Variable-Set",
+	"title": "orderParameterisation",
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"javaType": "com.sos.inventory.model.schedule.VariableSet",
+	"javaType": "com.sos.inventory.model.schedule.OrderParameterisation",
 	"type": "object",
-	"description": "A variable set for a schedule incl. optional start and end position",
+	"description": "Parameterisation with variable set for a schedule and optional start and end position",
  	 
 	"properties": {
 		"orderName": {

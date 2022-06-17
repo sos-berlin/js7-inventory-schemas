@@ -60,10 +60,11 @@
 		"nonWorkingDayCalendars": {
 			"$ref": "../calendar/calendars-list-non-working-day-schema.json"
 		},
-		"variableSets": {
+		"orderParameterisations": {
+			"alias": "variableSets",
 			"type": "array",
 			"items": {
-				"$ref": "variableSet-schema.json"
+				"$ref": "orderParameterisation-schema.json"
 			}
 		}
 	}
