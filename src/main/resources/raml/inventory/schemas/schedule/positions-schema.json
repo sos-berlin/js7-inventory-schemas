@@ -9,8 +9,11 @@
 		"startPosition": {
      		"$ref": "position-schema.json"
     	},
-		"endPosition": {
-     		"$ref": "position-schema.json"
+		"endPositions": {
+			"type": "array",
+			"items": {
+     			"$ref": "position-schema.json"
+     		}
     	}
 	}
 }
