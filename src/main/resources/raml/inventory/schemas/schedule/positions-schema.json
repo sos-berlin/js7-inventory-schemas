@@ -1,0 +1,17 @@
+{
+	"title": "positions",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.schedule.OrderPositions",
+	"type": "object",
+	"description": "start and end position",
+ 	 
+	"properties": {
+		"startPosition": {
+     		"$ref": "position-schema.json"
+    	},
+		"endPosition": {
+     		"$ref": "position-schema.json"
+    	}
+	}
+}
+ 

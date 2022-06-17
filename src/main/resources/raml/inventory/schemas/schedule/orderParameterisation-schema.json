@@ -12,11 +12,8 @@
 		"variables": {
 			"$ref": "../common/variables-schema.json"
 		},
-		"startPosition": {
-     		"$ref": "position-schema.json"
-    	},
-		"endPosition": {
-     		"$ref": "position-schema.json"
+		"positions": {
+     		"$ref": "positions-schema.json"
     	}
 	}
 }
