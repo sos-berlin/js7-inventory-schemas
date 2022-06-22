@@ -4,7 +4,7 @@
   "javaType": "com.sos.inventory.model.instruction.ExpectNotices",
   "type": "object",
   "required": [
-  	"noticeBoardName"
+  	"noticeBoardNames"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"

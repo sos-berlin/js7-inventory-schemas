@@ -4,7 +4,7 @@
   "javaType": "com.sos.inventory.model.instruction.PostNotices",
   "type": "object",
   "required": [
-  	"noticeBoardName"
+  	"noticeBoardNames"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
@@ -19,6 +19,7 @@
     "noticeBoardNames": {
     	"alias": "boardPaths",
     	"type": "array",
+    	"minItems": 1,
     	"items": {
     		"type": "string",
     		"pattern": "^[^<>]*$",
