@@ -1,0 +1,18 @@
+{
+  "title": "instruction state",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.InstructionState",
+  "type": "object",
+  "required": [
+    "severity",
+    "_text"
+  ],
+  "properties": {
+    "severity": {
+      "type": "integer"
+    },
+    "_text": {
+      "$ref": "instructionStateText-schema.json"
+    }
+  }
+}

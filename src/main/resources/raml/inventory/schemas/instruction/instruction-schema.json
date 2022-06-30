@@ -15,6 +15,9 @@
     },
     "positionString": {
       "$ref": "../common/string255-schema.json"
+    },
+    "state": {
+      "$ref": "instructionState-schema.json"
     }
   },
   "additionalProperties": false
