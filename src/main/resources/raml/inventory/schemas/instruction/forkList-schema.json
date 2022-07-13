@@ -23,10 +23,7 @@
     	"minLength": 1
     },
     "workflow": {
-    	"$ref": "instructions-schema.json"
-    },
-    "result": {
-    	"$ref": "../job/env-schema.json"
+    	"$ref": "branchWorkflow-schema.json"
     },
     "joinIfFailed": {
     	"type": "boolean",
