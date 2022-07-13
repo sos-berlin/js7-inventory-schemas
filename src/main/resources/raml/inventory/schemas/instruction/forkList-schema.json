@@ -25,6 +25,9 @@
     "workflow": {
     	"$ref": "instructions-schema.json"
     },
+    "result": {
+    	"$ref": "../job/env-schema.json"
+    },
     "joinIfFailed": {
     	"type": "boolean",
 		"default": false
