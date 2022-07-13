@@ -9,8 +9,7 @@
    	"com.sos.inventory.model.common.IInventoryObject"
   ],
   "required": [
-    "instructions",
-    "jobs"
+    "instructions"
   ],
   "propertyOrder": [
     "TYPE",
