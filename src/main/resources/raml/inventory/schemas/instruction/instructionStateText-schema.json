@@ -5,7 +5,8 @@
   "type": "string",
   "enum": [
     "SKIPPED",
-    "STOPPED"
+    "STOPPED",
+    "STOPPED_AND_SKIPPED"
   ]
 }
 
