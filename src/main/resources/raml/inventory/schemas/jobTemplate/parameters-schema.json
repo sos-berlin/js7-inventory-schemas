@@ -1,0 +1,9 @@
+{
+  "title": "parameters",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.jobtemplate.Parameters",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "parameter-schema.json"
+  }
+}

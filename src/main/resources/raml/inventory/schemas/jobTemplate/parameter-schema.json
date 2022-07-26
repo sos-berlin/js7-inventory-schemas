@@ -1,0 +1,42 @@
+{
+  "title": "parameter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.jobtemplate.Parameter",
+  "type": "object",
+  "required": [
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "$ref": "parameterType-schema.json"
+    },
+    "default": {
+      "description": "this value has to have the data type of the 'type' attribute",
+      "anyOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" }
+      ],
+      "javaType": "java.lang.Object"
+    },
+    "description": {
+      "$ref": "../common/noScript-schema.json"
+    },
+    "facet": {
+      "description": "a regular expression to check the value of the parameter",
+      "type": "string"
+    },
+    "list": {
+      "description": "enumeration of possible parameter values",
+      "type": "array",
+      "items": {
+      	"type": "string"
+      }
+    },
+    "message": {
+      "description": "a message if the value doesn't match the facet",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}
