@@ -67,8 +67,11 @@
 			"type": "boolean",
 			"default": false
 		},
-		"jobClass": {
-			"$ref": "../common/path-schema.json"
+		"jobClassName": {
+			"$ref": "../common/string255-schema.json"
+		},
+		"jobTemplateName": {
+			"$ref": "../common/string255-schema.json"
 		},
 		"defaultArguments": {
 			"$ref": "env-schema.json"
