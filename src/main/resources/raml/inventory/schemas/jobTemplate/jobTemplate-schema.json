@@ -54,6 +54,9 @@
 		"parameters": {
       		"$ref": "parameters-schema.json"
     	},
+		"defaultArguments": {
+			"$ref": "env-schema.json"
+		},
     	"jobResourceNames": {
 			"type": "array",
 			"items": {
