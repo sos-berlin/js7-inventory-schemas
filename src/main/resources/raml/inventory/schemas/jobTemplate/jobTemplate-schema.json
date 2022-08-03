@@ -51,7 +51,7 @@
 			"type": "boolean",
 			"default": false
 		},
-		"parameters": {
+		"arguments": {
       		"$ref": "parameters-schema.json"
     	},
 		"defaultArguments": {
