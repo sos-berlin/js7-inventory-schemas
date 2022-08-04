@@ -45,6 +45,7 @@
 			"default": false
 		},
 		"returnCodeMeaning": {
+			"description": "deprecated: moved to ShellScriptExecutable",
 			"$ref": "jobReturnCode-schema.json"
 		},
 		"parallelism": {

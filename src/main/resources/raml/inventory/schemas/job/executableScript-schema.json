@@ -32,22 +32,7 @@
       "$ref": "jobReturnCode-schema.json"
     },
     "login": {
-		"type": "object",
-		"javaType": "com.sos.inventory.model.job.ExecutableScriptLogin",
-		"required": [
-		  "credentialKey"
-		],
-		"properties": {
-			"credentialKey": {
-				"type": "string",
-				"minLength": 1
-			},
-			"withUserProfile": {
-				"type": "boolean",
-				"default": false
-			}
-		},
-		"additionalProperties": false
+		"$ref": "executableScriptLogin-schema.json"
 	}
   },
   "additionalProperties": false

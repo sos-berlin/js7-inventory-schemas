@@ -1,8 +1,11 @@
 {
-  "title": "job",
+  "title": "job return code meaning",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.job.JobReturnCode",
   "type": "object",
+  "extends" : {
+    "$ref": "jobReturnCodeWarning-schema.json"
+  },
   "oneOf": [
     { "required": [ "success" ] }, 
     { "required": [ "failure" ] }
