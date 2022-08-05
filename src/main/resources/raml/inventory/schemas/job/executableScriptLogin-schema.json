@@ -1,0 +1,21 @@
+{
+	"title": "executable script login",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"javaType": "com.sos.inventory.model.job.ExecutableScriptLogin",
+	"required": [
+		"credentialKey"
+	],
+	"properties": {
+		"credentialKey": {
+			"type": "string",
+			"minLength": 1
+		},
+		"withUserProfile": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"additionalProperties": false
+}
+

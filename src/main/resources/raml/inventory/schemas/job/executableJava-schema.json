@@ -22,6 +22,9 @@
 	"jobArguments": {
       "$ref": "../common/variables-schema.json"
     },
+    "returnCodeMeaning": {
+      "$ref": "jobReturnCodeWarning-schema.json"
+    },
     "arguments": {
       "$ref": "env-schema.json"
     }
