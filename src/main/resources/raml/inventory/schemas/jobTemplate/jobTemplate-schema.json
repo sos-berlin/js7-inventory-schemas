@@ -83,6 +83,9 @@
 		},
 		"notification": {
 			"$ref": "../job/notification/notification-schema.json"
+		},
+		"hash": {
+			"$ref": "../common/string255-schema.json"
 		}
 	},
 	"additionalProperties": false
