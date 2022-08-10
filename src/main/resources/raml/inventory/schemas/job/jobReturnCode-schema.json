@@ -6,9 +6,10 @@
   "extends" : {
     "$ref": "jobReturnCodeWarning-schema.json"
   },
-  "oneOf": [
+  "anyOf": [
     { "required": [ "success" ] }, 
-    { "required": [ "failure" ] }
+    { "required": [ "failure" ] },
+    { "required": [ "warning" ] }
   ],
   "properties": {
     "success": {
