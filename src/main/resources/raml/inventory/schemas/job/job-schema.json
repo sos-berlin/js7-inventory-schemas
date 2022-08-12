@@ -73,7 +73,7 @@
 		},
 		"jobTemplate": {
 			"type": "object",
-			"javaType": "com.sos.inventory.model.job.JobTemplate",
+			"javaType": "com.sos.inventory.model.job.JobTemplateRef",
 			"properties": {
 				"name": {
 					"$ref": "../common/string255-schema.json"
@@ -81,7 +81,8 @@
 				"hash": {
 					"$ref": "../common/string255-schema.json"
 				}
-			}
+			},
+			"additionalProperties": false
 		},
 		"defaultArguments": {
 			"$ref": "env-schema.json"
