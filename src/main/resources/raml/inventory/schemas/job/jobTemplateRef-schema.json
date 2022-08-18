@@ -1,0 +1,15 @@
+{
+	"title": "JobTemplateRef",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"javaType": "com.sos.inventory.model.job.JobTemplateRef",
+	"properties": {
+		"name": {
+			"$ref": "../common/string255Required-schema.json"
+		},
+		"hash": {
+			"$ref": "../common/string255-schema.json"
+		}
+	},
+	"additionalProperties": false
+}
