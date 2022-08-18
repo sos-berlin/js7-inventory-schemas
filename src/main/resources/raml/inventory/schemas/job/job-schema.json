@@ -69,20 +69,10 @@
 			"default": false
 		},
 		"jobClassName": {
-			"$ref": "../common/string255-schema.json"
+			"$ref": "jobTemplateRef-schema.json"
 		},
 		"jobTemplate": {
-			"type": "object",
-			"javaType": "com.sos.inventory.model.job.JobTemplateRef",
-			"properties": {
-				"name": {
-					"$ref": "../common/string255-schema.json"
-				},
-				"hash": {
-					"$ref": "../common/string255-schema.json"
-				}
-			},
-			"additionalProperties": false
+			"$ref": "env-schema.json"
 		},
 		"defaultArguments": {
 			"$ref": "env-schema.json"
