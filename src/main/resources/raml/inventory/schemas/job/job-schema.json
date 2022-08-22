@@ -73,10 +73,10 @@
 			"default": false
 		},
 		"jobClassName": {
-			"$ref": "jobTemplateRef-schema.json"
+			"$ref": "../common/string255-schema.json"
 		},
 		"jobTemplate": {
-			"$ref": "env-schema.json"
+			"$ref": "jobTemplateRef-schema.json"
 		},
 		"defaultArguments": {
 			"$ref": "env-schema.json"
