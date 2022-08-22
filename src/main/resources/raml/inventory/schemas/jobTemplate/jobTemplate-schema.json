@@ -51,6 +51,10 @@
 			"type": "boolean",
 			"default": false
 		},
+		"warnOnErrWritten": {
+			"type": "boolean",
+			"default": false
+		},
 		"arguments": {
       		"$ref": "parameters-schema.json"
     	},
