@@ -5,20 +5,16 @@
   "type": "object",
   "properties": {
     "singleStart": {
-      "type": "string",
-      "pattern": "^[0-9:]*$"
+      "$ref": "hhmmss-schema.json"
     },
     "begin": {
-      "type": "string",
-      "pattern": "^[0-9:]*$"
+      "$ref": "hhmmss-schema.json"
     },
     "end": {
-      "type": "string",
-      "pattern": "^[0-9:]*$"
+      "$ref": "hhmmss-schema.json"
     },
     "repeat": {
-      "type": "string",
-      "pattern": "^[0-9:]*$"
+      "$ref": "hhmmss-schema.json"
     },
     "whenHoliday": {
       "$ref": "whenHoliday-schema.json"
