@@ -3,9 +3,19 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.instruction.Lock",
   "type": "object",
-  "required": [
-  	"lockName",
-  	"lockedWorkflow"
+  "anyOf": [
+        {
+            "required": [
+                "lockName",
+  				"lockedWorkflow"
+            ]
+        },
+        {
+            "required": [
+                "demands",
+  				"lockedWorkflow"
+            ]
+        }
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
@@ -14,17 +24,43 @@
   "description": "instruction with fixed property 'TYPE':'Lock'",
   "properties": {
     "lockName": {
-		"alias": "lockId,lockPath",
+		"desription": "DEPRECATED since 2.5.0",
+        "alias": "lockId,lockPath",
 		"type": "string",
     	"pattern": "^[^<>]*$",
     	"maxLength": 255,
     	"minLength": 1
     },
-    "lockedWorkflow": {
-      "$ref": "instructions-schema.json"
-    },
     "count": {
-      "$ref": "../common/nonNegativeInteger-schema.json"
+        "desription": "DEPRECATED since 2.5.0",
+        "$ref": "../common/nonNegativeInteger-schema.json"
+    },
+    "lockedWorkflow": {
+        "$ref": "instructions-schema.json"
+    },
+    "demands" : {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+      		"type": "object",
+      		"javaType": "com.sos.inventory.model.instruction.LockDemand",
+      		"required": [
+      			"lockName"	
+      		],
+      		"properties": {
+      			"lockName": {
+      				"alias": "lockId,lockPath",
+					"type": "string",
+    				"pattern": "^[^<>]*$",
+    				"maxLength": 255,
+    				"minLength": 1
+      			},
+      			"count": {
+        			"$ref": "../common/nonNegativeInteger-schema.json"
+    			}
+    		},
+    		"additionalProperties": false
+        }	
     }
   },
   "additionalProperties": false
