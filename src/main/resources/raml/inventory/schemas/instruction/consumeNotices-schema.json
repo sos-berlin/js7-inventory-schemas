@@ -1,0 +1,33 @@
+{
+  "title": "ConsumeNotices",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.ConsumeNotices",
+  "type": "object",
+  "required": [
+  	"noticeBoardNames",
+  	"subworkflow"
+  ],
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+  
+  "description": "instruction with fixed property 'TYPE':'ConsumeNotices'",
+  "propertyOrder": [
+  	"TYPE",
+    "noticeBoardNames",
+    "subworkflow"
+  ],
+  "properties": {
+    "noticeBoardNames": {
+    	"alias": "boardPaths",
+    	"type": "string",
+    	"pattern": "^[^<>]*$",
+    	"maxLength": 255,
+    	"minLength": 1
+    },
+    "subworkflow": {
+    	"$ref": "instructions-schema.json"	
+    }
+  },
+  "additionalProperties": false
+}

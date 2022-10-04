@@ -18,6 +18,7 @@
     "PostNotices",
     "ExpectNotice",
     "ExpectNotices",
+    "ConsumeNotices",
     "ImplicitEnd",
     "AddOrder",
     "Cycle"
