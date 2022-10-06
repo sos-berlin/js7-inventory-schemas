@@ -14,5 +14,6 @@
     "_text": {
       "$ref": "instructionStateText-schema.json"
     }
-  }
+  },
+  "additionalProperties": false
 }
