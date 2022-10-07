@@ -1,0 +1,22 @@
+{
+	"title": "admission time SpecificDatePeriod",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.job.SpecificDatePeriod",
+	"type": "object",
+	"required": [
+		"secondsSinceLocalEpoch"
+	],
+	"extends" : {
+    	"$ref": "admissionTimePeriod-schema.json"
+  	},
+  	"description": "admission time period with fixed property 'TYPE':'SpecificDatePeriod'",
+	"properties": {
+		"secondsSinceLocalEpoch" : {
+			"description": "epoch seconds",
+			"type" : "integer",
+			"format":"utc-millisec",
+			"minimum": 0
+		}
+	},
+	"additionalProperties": false
+}

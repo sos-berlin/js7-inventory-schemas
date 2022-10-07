@@ -9,6 +9,7 @@
   	"MonthlyWeekdayPeriod",
   	"MonthlyLastWeekdayPeriod",
     "WeekdayPeriod",
-    "DailyPeriod"
+    "DailyPeriod",
+    "SpecificDatePeriod"
   ]
 }
