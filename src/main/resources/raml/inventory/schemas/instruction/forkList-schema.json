@@ -22,7 +22,14 @@
     	"type": "string",
     	"minLength": 1
     },
-    "workflow": {
+    "agentName": {
+		"alias": "agentId,agentPath",
+		"type": "string",
+		"pattern": "^[^<>]*$",
+		"maxLength": 255,
+		"minLength": 1
+	},
+	"workflow": {
     	"$ref": "branchWorkflow-schema.json"
     },
     "joinIfFailed": {
