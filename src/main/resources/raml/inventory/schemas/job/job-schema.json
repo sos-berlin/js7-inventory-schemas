@@ -48,6 +48,7 @@
 			"$ref" : "admissionTimeScheme-schema.json" 
 		},
 		"skipIfNoAdmissionForOrderDay": {
+			"alias": "skipIfNoAdmissionStartForOrderDay",
 			"type": "boolean",
 			"default": false
 		},
