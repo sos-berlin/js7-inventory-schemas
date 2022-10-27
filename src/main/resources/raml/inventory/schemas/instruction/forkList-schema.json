@@ -3,10 +3,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.instruction.ForkList",
   "type": "object",
-  "required": [
-  	"children",
-  	"childToId",
-  	"workflow"
+  "anyOf": [
+  	{"required": [ "children", "childToId", "workflow" ]},
+  	{"required": [ "agentName", "subagentSelectionId", "workflow" ]},
+  	{"required": [ "agentName", "subagentClusterIdExpr", "workflow" ]}
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
@@ -28,6 +28,24 @@
 		"pattern": "^[^<>]*$",
 		"maxLength": 255,
 		"minLength": 1
+	},
+	"subagentClusterId": {
+		"alias": "subagentSelectionId",
+		"type": "string",
+  		"pattern": "^[^<>]*$",
+  		"maxLength": 255,
+  		"minLength": 1
+	},
+	"subagentClusterIdExpr": {
+		"alias": "subagentSelectionIdExpr",
+		"type": "string",
+  		"pattern": "^[^<>]*$",
+  		"maxLength": 255,
+  		"minLength": 1
+	},
+	"subagentIdVariable": {
+		"type": "string",
+  		"default": "js7ForkListSubagentId"
 	},
 	"workflow": {
     	"$ref": "branchWorkflow-schema.json"

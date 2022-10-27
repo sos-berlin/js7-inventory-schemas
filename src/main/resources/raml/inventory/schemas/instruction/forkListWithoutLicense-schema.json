@@ -1,0 +1,34 @@
+{
+  "title": "ForkList",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.ForkListWithoutLicense",
+  "type": "object",
+  "required": [ 
+  	"children", 
+  	"childToId", 
+  	"workflow" 
+  ],
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+  
+  "description": "instruction with fixed property 'TYPE':'ForkList'",
+  "properties": {
+    "children": {
+    	"type": "string",
+    	"minLength": 1
+    },
+  	"childToId": {
+    	"type": "string",
+    	"minLength": 1
+    },
+	"workflow": {
+    	"$ref": "branchWorkflow-schema.json"
+    },
+    "joinIfFailed": {
+    	"type": "boolean",
+		"default": false
+    }
+  },
+  "additionalProperties": false
+}
