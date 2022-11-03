@@ -5,7 +5,7 @@
   "type": "object",
   "anyOf": [
   	{"required": [ "children", "childToId", "workflow" ]},
-  	{"required": [ "agentName", "subagentSelectionId", "workflow" ]},
+  	{"required": [ "agentName", "subagentClusterId", "workflow" ]},
   	{"required": [ "agentName", "subagentClusterIdExpr", "workflow" ]}
   ],
   "extends" : {
