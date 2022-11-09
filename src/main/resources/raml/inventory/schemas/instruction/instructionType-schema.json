@@ -21,6 +21,7 @@
     "ConsumeNotices",
     "ImplicitEnd",
     "AddOrder",
-    "Cycle"
+    "Cycle",
+    "StickySubagent"
   ]
 }
