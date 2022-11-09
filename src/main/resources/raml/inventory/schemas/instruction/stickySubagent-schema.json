@@ -20,6 +20,13 @@
 		"maxLength": 255,
 		"minLength": 1
 	},
+	"subagentClusterId": {
+		"alias": "subagentSelectionId",
+		"type": "string",
+  		"pattern": "^[^<>]*$",
+  		"maxLength": 255,
+  		"minLength": 1
+	},
 	"subagentClusterIdExpr": {
 		"alias": "subagentSelectionIdExpr",
 		"type": "string",
