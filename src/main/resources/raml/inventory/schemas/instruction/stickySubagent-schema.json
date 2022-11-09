@@ -4,7 +4,8 @@
   "javaType": "com.sos.inventory.model.instruction.StickySubagent",
   "type": "object",
   "required": [
-  	"agentName"
+  	"agentName",
+  	"subworkflow"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
