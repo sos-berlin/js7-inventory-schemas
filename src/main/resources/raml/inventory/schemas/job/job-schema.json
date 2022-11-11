@@ -33,6 +33,10 @@
   			"maxLength": 255,
   			"minLength": 1
 		},
+		"withSubagentClusterIdExpr": {
+			"type": "boolean",
+			"default": false	
+		},
 		"executable": {
 			"javaType": "com.sos.inventory.model.job.Executable",
 			"oneOf": [
