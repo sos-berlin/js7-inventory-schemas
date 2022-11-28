@@ -4,8 +4,7 @@
   "javaType": "com.sos.inventory.model.instruction.ConsumeNotices",
   "type": "object",
   "required": [
-  	"noticeBoardNames",
-  	"subworkflow"
+  	"noticeBoardNames"
   ],
   "extends" : {
     "$ref": "instruction-schema.json"
@@ -26,7 +25,7 @@
     	"minLength": 1
     },
     "subworkflow": {
-    	"$ref": "instructions-schema.json"	
+    	"$ref": "emptyInstructions-schema.json"	
     }
   },
   "additionalProperties": false
