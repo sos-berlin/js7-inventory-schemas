@@ -5,10 +5,19 @@
   "type": "object",
   "properties": {
     "warning": {
-      "type": "array",
-      "items": {
-        "type": "integer"
-      }
+      	"oneOf": [
+    		{
+      			"type": "array",
+      			"minItems": 1,
+      			"items": {
+        			"type": "integer"
+      			}
+      		},
+      		{
+      			"type": "string",
+      			"pattern": "^-?[0-9]+(\\.\\.-?[0-9]+)?(, *-?[0-9]+(\\.\\.-?[0-9]+)?)*$"
+      		}
+      	]
     }
   },
   "additionalProperties": false
