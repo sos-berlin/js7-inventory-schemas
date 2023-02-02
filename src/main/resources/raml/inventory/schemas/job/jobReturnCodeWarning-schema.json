@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "warning": {
-      	"oneOf": [
+      	"anyOf": [
     		{
       			"type": "array",
       			"minItems": 1,
