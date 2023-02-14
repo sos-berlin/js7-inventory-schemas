@@ -1,0 +1,94 @@
+{
+  "title": "Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.DeploymentDescriptor",
+  "description": "JS7 Deployment Descriptor Schema",
+  "type": "object",
+  "javaInterfaces": [
+    "com.sos.joc.model.common.IConfigurationObject",
+    "com.sos.joc.model.common.IReleaseObject",
+    "com.sos.inventory.model.common.IInventoryObject"
+  ],
+  "additionalProperties": false,
+  "anyOf": [
+    {
+      "required": [
+        "descriptor",
+        "agents"
+      ]
+    },
+    {
+      "required": [
+        "descriptor",
+        "controllers"
+      ]
+    },
+    {
+      "required": [
+        "descriptor",
+        "joc"
+      ]
+    }
+  ],
+  "properties": {
+    "descriptor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "descriptorId"
+      ],
+      "properties": {
+        "descriptorId": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]+$",
+          "maxLength": 100
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "account": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "scheduled": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "licenseKeyFile",
+        "licenseBinFile"
+      ],
+      "properties": {
+        "licenseKeyFile": {
+          "type": "string"
+        },
+        "licenseBinFile": {
+          "type": "string"
+        }
+      }
+    },
+    "agents": {
+      "$ref": "agentsDescriptor-schema.json"
+    },
+    "controllers": {
+      "type" : "object",
+      "javaType": "com.sos.inventory.model.descriptor.controller.Cluster",
+      "additionalProperties": {
+        "$ref": "controllerClusterDescriptor-schema.json"
+      }
+    },
+    "joc": {
+      "$ref": "jocClusterDescriptor-schema.json"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Deployment Descriptor Connection Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.common.Connection",
+  "description": "JS7 JOC Descriptor Connection Schema",
+  "type": "object",
+  "required": [
+    "host"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "host": {
+      "type": "string"
+    },
+    "port": {
+      "type": "integer"
+    }
+  }
+}
