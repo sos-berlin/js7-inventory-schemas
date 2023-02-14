@@ -1,0 +1,20 @@
+{
+  "title": "Deployment Descriptor Media Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.common.Media",
+  "description": "JS7 JOC Descriptor Media Schema",
+  "type": "object",
+  "required": [
+    "release",
+    "tarball"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "release": {
+      "type": "string"
+    },
+    "tarball": {
+      "type": "string"
+    }
+  }
+}

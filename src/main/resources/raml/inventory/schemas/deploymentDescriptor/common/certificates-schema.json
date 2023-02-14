@@ -1,0 +1,35 @@
+{
+  "title": "Deployment Descriptor Certificates Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.common.Certificates",
+  "description": "JS7 JOC Descriptor Certificates Schema",
+  "type": "object",
+  "required": [
+    "keyStore",
+    "keyStorePassword",
+    "keyPassword",
+    "trustStore",
+    "trustStorePassword"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "keyStore": {
+      "type": "string"
+    },
+    "keyStorePassword": {
+      "type": "string"
+    },
+    "keyPassword": {
+      "type": "string"
+    },
+    "keyAlias": {
+      "type": "string"
+    },
+    "trustStore": {
+      "type": "string"
+    },
+    "trustStorePassword": {
+      "type": "string"
+    }
+  }
+}

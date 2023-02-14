@@ -1,0 +1,10 @@
+{
+  "title": "Agents Item of a Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.agent.AgentsDescriptor",
+  "description": "JS7 Agents Descriptor Schema",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "agentDescriptor-schema.json"
+  }
+}

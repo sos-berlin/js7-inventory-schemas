@@ -1,0 +1,94 @@
+{
+  "title": "Joc Item of a Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.joc.JocDescriptor",
+  "description": "JS7 JOC Descriptor Schema",
+  "type": "object",
+  "required": [
+    "ordering",
+    "media",
+    "installation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "ordering": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99
+    },
+    "target": {
+      "type": "object",
+      "javaType": "com.sos.inventory.model.descriptor.joc.Target",
+      "required": [
+        "connection",
+        "authentication",
+        "packageLocation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "connection": {
+          "$ref": "common/connection-schema.json"
+        },
+        "authentication": {
+          "$ref": "common/authentication-schema.json"
+        },
+        "packageLocation": {
+          "type": "string"
+        },
+        "execPre": {
+          "type": "string"
+        },
+        "execPost": {
+          "type": "string"
+        },
+        "makeService": {
+          "type": "boolean"
+        }
+      }
+    },
+    "media": {
+      "$ref": "common/media-schema.json"
+    },
+    "installation": {
+      "$ref": "joc/jocInstallation-schema.json"
+    },
+    "configuration": {
+      "type": "object",
+      "javaType": "com.sos.inventory.model.descriptor.joc.Configuration",
+      "additionalProperties": false,
+      "properties": {
+        "responseDir": {
+          "type": "string"
+        },
+        "certificates": {
+          "$ref": "common/certificates-schema.json"
+        },
+        "jocCert": {
+          "type": "string"
+        },
+        "templates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "startFiles": {
+          "type": "object",
+          "javaType": "com.sos.inventory.model.descriptor.joc.StartFiles",
+          "additionalProperties": false,
+          "properties": {
+            "httpIni": {
+              "type": "string"
+            },
+            "httpsIni": {
+              "type": "string"
+            },
+            "sslIni": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

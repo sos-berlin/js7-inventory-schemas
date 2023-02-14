@@ -1,0 +1,26 @@
+{
+  "title": "Deployment Descriptor Authentication Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.common.Authentication",
+  "description": "JS7 JOC Descriptor Authentication Schema",
+  "type": "object",
+  "required": [
+    "method",
+    "user"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "type": "string",
+      "enum": [
+        "publickey"
+      ]
+    },
+    "user": {
+      "type": "string"
+    },
+    "keyFile": {
+      "type": "string"
+    }
+  }
+}

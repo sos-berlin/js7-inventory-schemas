@@ -1,0 +1,19 @@
+{
+  "title": "Controller Cluster Item of a Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.controller.ControllerClusterDescriptor",
+  "description": "JS7 Controller Cluster Descriptor Schema",
+  "type": "object",
+  "required": [
+    "jocRef"
+  ],
+  "properties": {
+    "jocRef": {
+      "type": "string",
+      "description": "jocClusterId of the JOC the controller should be managed by."
+    }
+  },
+  "additionalProperties": {
+      "$ref": "controllerDescriptor-schema.json"
+  }
+}
