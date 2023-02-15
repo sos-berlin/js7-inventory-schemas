@@ -1,0 +1,49 @@
+{
+  "title": "Agent Item of a Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.agent.AgentDescriptor",
+  "description": "JS7 Agent Descriptor Schema",
+  "type": "object",
+  "required": [
+    "agentId",
+    "media",
+    "installation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "agentId": {
+      "type": "string"
+    },
+    "target": {
+      "$ref": "../common/target-schema.json"
+    },
+    "media": {
+      "$ref": "../common/media-schema.json"
+    },
+    "installation": {
+      "$ref": "../common/installation-schema.json"
+    },
+    "configuration": {
+      "type": "object",
+      "javaType": "com.sos.inventory.model.descriptor.agent.Configuration",
+      "required": [
+        "controllerRef"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "controllerRef": {
+          "type": "string"
+        },
+        "certificates": {
+          "$ref": "../common/certificates-schema.json"
+        },
+        "templates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

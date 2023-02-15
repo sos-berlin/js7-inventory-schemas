@@ -13,8 +13,7 @@
         "httpPort",
         "home",
         "data",
-        "setupDir",
-        "securityLevel"
+        "setupDir"
       ]
     },
     {
@@ -22,8 +21,7 @@
         "httpsPort",
         "home",
         "data",
-        "setupDir",
-        "securityLevel"
+        "setupDir"
       ]
     }
   ],
