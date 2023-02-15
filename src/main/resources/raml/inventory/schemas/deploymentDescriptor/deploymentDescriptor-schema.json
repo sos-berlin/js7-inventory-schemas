@@ -78,17 +78,16 @@
       }
     },
     "agents": {
-      "$ref": "agentsDescriptor-schema.json"
-    },
-    "controllers": {
-      "type" : "object",
-      "javaType": "com.sos.inventory.model.descriptor.controller.Cluster",
-      "additionalProperties": {
-        "$ref": "controllerClusterDescriptor-schema.json"
+      "type": "array",
+      "items": {
+        "$ref": "agent/agentDescriptor-schema.json"
       }
     },
+    "controllers": {
+      "$ref": "controller/controllerClusterDescriptor-schema.json"
+    },
     "joc": {
-      "$ref": "jocClusterDescriptor-schema.json"
+      "$ref": "joc/jocClusterDescriptor-schema.json"
     }
   }
 }

@@ -2,7 +2,7 @@
   "title": "Deployment Descriptor Certificates Schema",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.descriptor.common.Certificates",
-  "description": "JS7 JOC Descriptor Certificates Schema",
+  "description": "JS7 Deployment Descriptor Certificates Schema",
   "type": "object",
   "required": [
     "keyStore",

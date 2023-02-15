@@ -1,0 +1,42 @@
+{
+  "title": "Controller Item of a Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.controller.ControllerDescriptor",
+  "description": "JS7 Controller Descriptor Schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "media",
+    "installation"
+  ],
+  "properties": {
+    "target": {
+      "$ref": "../common/target-schema.json"
+    },
+    "media": {
+      "$ref": "../common/media-schema.json"
+    },
+    "installation": {
+      "$ref": "../common/installation-schema.json"
+    },
+    "configuration": {
+      "type": "object",
+      "javaType": "com.sos.inventory.model.descriptor.controller.Configuration",
+      "additionalProperties": false,
+      "properties": {
+        "certificates": {
+          "$ref": "../common/certificates-schema.json"
+        },
+        "controllerCert": {
+          "type": "string"
+        },
+        "templates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

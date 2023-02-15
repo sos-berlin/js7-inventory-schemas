@@ -5,52 +5,29 @@
   "description": "JS7 JOC Descriptor Schema",
   "type": "object",
   "required": [
+    "instanceId",
     "ordering",
     "media",
     "installation"
   ],
   "additionalProperties": false,
   "properties": {
+    "instanceId" : {
+      "type": "string"
+    },
     "ordering": {
       "type": "integer",
       "minimum": 1,
       "maximum": 99
     },
     "target": {
-      "type": "object",
-      "javaType": "com.sos.inventory.model.descriptor.joc.Target",
-      "required": [
-        "connection",
-        "authentication",
-        "packageLocation"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "connection": {
-          "$ref": "common/connection-schema.json"
-        },
-        "authentication": {
-          "$ref": "common/authentication-schema.json"
-        },
-        "packageLocation": {
-          "type": "string"
-        },
-        "execPre": {
-          "type": "string"
-        },
-        "execPost": {
-          "type": "string"
-        },
-        "makeService": {
-          "type": "boolean"
-        }
-      }
+      "$ref": "../common/target-schema.json"
     },
     "media": {
-      "$ref": "common/media-schema.json"
+      "$ref": "../common/media-schema.json"
     },
     "installation": {
-      "$ref": "joc/jocInstallation-schema.json"
+      "$ref": "jocInstallation-schema.json"
     },
     "configuration": {
       "type": "object",
@@ -61,7 +38,7 @@
           "type": "string"
         },
         "certificates": {
-          "$ref": "common/certificates-schema.json"
+          "$ref": "../common/certificates-schema.json"
         },
         "jocCert": {
           "type": "string"

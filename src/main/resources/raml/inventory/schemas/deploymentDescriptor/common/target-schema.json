@@ -1,0 +1,33 @@
+{
+  "title": "Deployment Descriptor Target Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.common.Target",
+  "description": "JS7 Deployment Descriptor Target Schema",
+  "type": "object",
+  "required": [
+    "connection",
+    "authentication",
+    "packageLocation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "connection": {
+      "$ref": "connection-schema.json"
+    },
+    "authentication": {
+      "$ref": "authentication-schema.json"
+    },
+    "packageLocation": {
+      "type": "string"
+    },
+    "execPre": {
+      "type": "string"
+    },
+    "execPost": {
+      "type": "string"
+    },
+    "makeService": {
+      "type": "boolean"
+    }
+  }
+}

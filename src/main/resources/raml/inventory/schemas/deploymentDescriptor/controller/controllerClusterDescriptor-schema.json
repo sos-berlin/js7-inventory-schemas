@@ -5,15 +5,25 @@
   "description": "JS7 Controller Cluster Descriptor Schema",
   "type": "object",
   "required": [
-    "jocRef"
+    "jocRef",
+    "controllerId",
+    "primary"
   ],
+  "additionalProperties": false,
   "properties": {
     "jocRef": {
       "type": "string",
       "description": "jocClusterId of the JOC the controller should be managed by."
-    }
-  },
-  "additionalProperties": {
+    }, 
+    "controllerId" : {
+      "type": "string",
+      "description": "jocClusterId of the JOC the controller should be managed by."
+    },
+    "primary" : {
       "$ref": "controllerDescriptor-schema.json"
+    },
+    "secondary" : {
+      "$ref": "controllerDescriptor-schema.json"
+    }
   }
 }
