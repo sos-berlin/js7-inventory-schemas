@@ -87,7 +87,7 @@
       "$ref": "controller/controllerClusterDescriptor-schema.json"
     },
     "joc": {
-      "$ref": "joc/jocClusterDescriptor-schema.json"
+      "$ref": "joc/jocDescriptor-schema.json"
     }
   }
 }
