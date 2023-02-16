@@ -1,0 +1,71 @@
+{
+  "title": "Joc Instance of a Deployment Descriptor",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.joc.JocInstanceDescriptor",
+  "description": "JS7 JOC Instance Descriptor Schema",
+  "type": "object",
+  "required": [
+    "instanceId",
+    "ordering",
+    "media",
+    "installation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "instanceId" : {
+      "type": "string"
+    },
+    "ordering": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99
+    },
+    "target": {
+      "$ref": "../common/target-schema.json"
+    },
+    "media": {
+      "$ref": "../common/media-schema.json"
+    },
+    "installation": {
+      "$ref": "jocInstallation-schema.json"
+    },
+    "configuration": {
+      "type": "object",
+      "javaType": "com.sos.inventory.model.descriptor.joc.Configuration",
+      "additionalProperties": false,
+      "properties": {
+        "responseDir": {
+          "type": "string"
+        },
+        "certificates": {
+          "$ref": "../common/certificates-schema.json"
+        },
+        "jocCert": {
+          "type": "string"
+        },
+        "templates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "startFiles": {
+          "type": "object",
+          "javaType": "com.sos.inventory.model.descriptor.joc.StartFiles",
+          "additionalProperties": false,
+          "properties": {
+            "httpIni": {
+              "type": "string"
+            },
+            "httpsIni": {
+              "type": "string"
+            },
+            "sslIni": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
