@@ -78,16 +78,35 @@
       }
     },
     "agents": {
-      "type": "array",
-      "items": {
-        "$ref": "agent/agentDescriptor-schema.json"
+      "type": "object",
+      "javaType": "com.sos.inventory.model.descriptor.agent.AgentsDescriptor",
+      "additionalProperties": false,
+      "required": [
+        "controllerRefs"
+      ],
+      "properties": {
+        "controllerRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "agent/controllerRefDescriptor-schema.json"
+          }
+        }
       }
     },
     "controllers": {
-      "$ref": "controller/controllerClusterDescriptor-schema.json"
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "controller/controllerClusterDescriptor-schema.json"
+      }
     },
     "joc": {
-      "$ref": "joc/jocDescriptor-schema.json"
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "joc/jocDescriptor-schema.json"
+      }
     }
   }
 }

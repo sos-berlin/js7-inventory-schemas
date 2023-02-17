@@ -26,14 +26,8 @@
     "configuration": {
       "type": "object",
       "javaType": "com.sos.inventory.model.descriptor.agent.Configuration",
-      "required": [
-        "controllerRef"
-      ],
       "additionalProperties": false,
       "properties": {
-        "controllerRef": {
-          "type": "string"
-        },
         "certificates": {
           "$ref": "../common/certificates-schema.json"
         },
