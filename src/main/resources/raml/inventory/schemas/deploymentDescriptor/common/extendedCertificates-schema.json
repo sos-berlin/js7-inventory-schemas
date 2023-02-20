@@ -1,0 +1,23 @@
+{
+  "title": "Deployment Descriptor for extended Certificates Schema",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.descriptor.common.ExtendedCertificates",
+  "description": "JS7 Deployment Descriptor Certificates Schema",
+  "type": "object",
+  "extends" : {
+    "$ref": "certificates-schema.json"
+  },
+  "required": [
+    "keyStore",
+    "keyStorePassword",
+    "keyPassword",
+    "trustStore",
+    "trustStorePassword"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "cert": {
+      "type": "string"
+    }
+  }
+}

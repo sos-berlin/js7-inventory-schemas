@@ -28,6 +28,9 @@
     },
     "makeService": {
       "type": "boolean"
+    },
+    "forceSudo": {
+        "type": "boolean"
     }
   }
 }

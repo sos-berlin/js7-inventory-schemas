@@ -25,10 +25,7 @@
       "additionalProperties": false,
       "properties": {
         "certificates": {
-          "$ref": "../common/certificates-schema.json"
-        },
-        "controllerCert": {
-          "type": "string"
+          "$ref": "../common/extendedCertificates-schema.json"
         },
         "templates": {
           "type": "array",

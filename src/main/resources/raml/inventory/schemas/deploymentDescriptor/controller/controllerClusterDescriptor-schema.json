@@ -16,8 +16,7 @@
       "description": "jocClusterId of the JOC the controller should be managed by."
     }, 
     "controllerId" : {
-      "type": "string",
-      "description": "jocClusterId of the JOC the controller should be managed by."
+      "type": "string"
     },
     "primary" : {
       "$ref": "controllerDescriptor-schema.json"
