@@ -6,16 +6,12 @@
   "type": "object",
   "required": [
     "instanceId",
-    "ordering",
     "media",
     "installation"
   ],
   "additionalProperties": false,
   "properties": {
     "instanceId" : {
-      "type": "string"
-    },
-    "ordering": {
       "type": "integer",
       "minimum": 1,
       "maximum": 99
@@ -38,10 +34,7 @@
           "type": "string"
         },
         "certificates": {
-          "$ref": "../common/certificates-schema.json"
-        },
-        "jocCert": {
-          "type": "string"
+          "$ref": "../common/extendedCertificates-schema.json"
         },
         "templates": {
           "type": "array",
