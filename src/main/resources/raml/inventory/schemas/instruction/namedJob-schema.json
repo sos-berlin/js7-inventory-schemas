@@ -3,23 +3,20 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.instruction.NamedJob",
   "type": "object",
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
   "required": [
   	"jobName",
   	"label"
   ],
-  "extends" : {
-    "$ref": "instruction-schema.json"
-  },
-  
   "description": "instruction with fixed property 'TYPE':'Execute.Named'",
   "properties": {
   	"jobName": {
-      "type": "string",
-      "minLength": 1
+      "$ref": "../common/string255Required-schema.json"
     },
     "label": {
-      "type": "string",
-      "minLength": 1
+      "$ref": "../common/string255Required-schema.json"
     },
     "defaultArguments": {
       "$ref": "../job/env-schema.json"

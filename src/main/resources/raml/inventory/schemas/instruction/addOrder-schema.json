@@ -18,7 +18,10 @@
   "properties": {
   	"workflowName" : {
   		"alias": "workflowPath",
-  		"type" : "string"
+  		"type": "string",
+  		"pattern": "^[^<>]*$",
+  		"maxLength": 255,
+  		"minLength": 1
   	},
     "arguments": {
     	"$ref": "../common/variables-schema.json"
@@ -28,12 +31,18 @@
     	"default": false
 	},
     "startPosition": {
-     	"$ref": "../common/position-schema.json"
+     	"anyOf": [
+    		{"$ref": "../common/position-schema.json"},
+    		{"$ref": "../common/string255Required-schema.json"}
+    	]
     },
 	"endPositions": {
 		"type": "array",
 		"items": {
-     		"$ref": "../common/position-schema.json"
+     		"anyOf": [
+    			{"$ref": "../common/position-schema.json"},
+    			{"$ref": "../common/string255Required-schema.json"}
+    		]
      	}
     }
   },
