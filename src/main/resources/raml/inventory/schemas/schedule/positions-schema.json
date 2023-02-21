@@ -7,12 +7,18 @@
  	 
 	"properties": {
 		"startPosition": {
-     		"$ref": "../common/position-schema.json"
+     		"anyOf": [
+    			{"$ref": "../common/position-schema.json"},
+    			{"$ref": "../common/string255Required-schema.json"}
+    		]
     	},
 		"endPositions": {
 			"type": "array",
 			"items": {
-     			"$ref": "../common/position-schema.json"
+     			"anyOf": [
+    				{"$ref": "../common/position-schema.json"},
+    				{"$ref": "../common/string255Required-schema.json"}
+    			]
      		}
     	}
 	},

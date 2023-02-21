@@ -16,6 +16,9 @@
     "positionString": {
       "$ref": "../common/string255-schema.json"
     },
+    "label": {
+      "$ref": "../common/string255-schema.json"
+    },
     "state": {
       "$ref": "instructionState-schema.json"
     }
