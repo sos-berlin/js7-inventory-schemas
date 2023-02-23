@@ -24,7 +24,7 @@
   "description": "instruction with fixed property 'TYPE':'Lock'",
   "properties": {
     "lockName": {
-		"desription": "DEPRECATED since 2.5.0",
+		"description": "DEPRECATED since 2.5.0",
         "alias": "lockId,lockPath",
 		"type": "string",
     	"pattern": "^[^<>]*$",
@@ -32,7 +32,7 @@
     	"minLength": 1
     },
     "count": {
-        "desription": "DEPRECATED since 2.5.0",
+        "description": "DEPRECATED since 2.5.0",
         "$ref": "../common/nonNegativeInteger-schema.json"
     },
     "lockedWorkflow": {
