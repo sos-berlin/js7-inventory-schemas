@@ -6,13 +6,13 @@
   "anyOf": [
         {
             "required": [
-                "lockName",
+                "demands",
   				"lockedWorkflow"
             ]
         },
-        {
+       	{
             "required": [
-                "demands",
+                "lockName",
   				"lockedWorkflow"
             ]
         }
