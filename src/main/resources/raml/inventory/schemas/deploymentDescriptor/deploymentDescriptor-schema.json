@@ -3,6 +3,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.descriptor.DeploymentDescriptor",
   "description": "JS7 Deployment Descriptor Schema",
+  "schemaVersion" : "${release.version}",
   "type": "object",
   "javaInterfaces": [
     "com.sos.joc.model.common.IConfigurationObject",
@@ -74,6 +75,36 @@
         },
         "licenseBinFile": {
           "type": "string"
+        }
+      }
+    },
+    "certificates": {
+      "type" : "object",
+      "additionalProperties": false,
+      "properties": {
+        "controller" : {
+          "type" : "object",
+          "additionalProperties": false,
+          "properties": {
+            "primaryControllerCert": {
+              "type": "string"
+            },
+            "secondaryControllerCert": {
+              "type": "string"
+            }
+          }
+        },
+        "joc": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "primaryJocCert": {
+              "type": "string"
+            },
+            "secondaryJocCert": {
+              "type": "string"
+            }
+          }
         }
       }
     },
