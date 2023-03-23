@@ -23,6 +23,7 @@
     "AddOrder",
     "Cycle",
     "StickySubagent",
-    "Options"
+    "Options",
+    "Break"
   ]
 }
