@@ -22,6 +22,8 @@
     "ImplicitEnd",
     "AddOrder",
     "Cycle",
-    "StickySubagent"
+    "StickySubagent",
+    "Options",
+    "Break"
   ]
 }
