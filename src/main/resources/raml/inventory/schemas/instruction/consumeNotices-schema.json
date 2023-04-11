@@ -21,7 +21,6 @@
     	"alias": "boardPaths",
     	"type": "string",
     	"pattern": "^[^<>]*$",
-    	"maxLength": 255,
     	"minLength": 1
     },
     "subworkflow": {
