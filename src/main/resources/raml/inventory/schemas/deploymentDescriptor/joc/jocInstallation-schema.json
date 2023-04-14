@@ -12,16 +12,14 @@
       "required": [
         "httpPort",
         "home",
-        "data",
-        "setupDir"
+        "data"
       ]
     },
     {
       "required": [
         "httpsPort",
         "home",
-        "data",
-        "setupDir"
+        "data"
       ]
     }
   ],
