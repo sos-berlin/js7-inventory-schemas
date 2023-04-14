@@ -31,6 +31,12 @@
     },
     "forceSudo": {
         "type": "boolean"
+    },
+    "serviceName": {
+        "type": "string"
+    },
+    "serviceDir": {
+        "type": "string"
     }
   }
 }
