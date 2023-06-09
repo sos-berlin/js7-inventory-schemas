@@ -9,12 +9,11 @@
   
   "description": "instruction with fixed property 'TYPE':'Finish'",
   "properties": {
-    "message": {
+  	"message": {
       "type": "string"
     },
     "unsuccessful": {
-      "type": "boolean",
-      "default": false
+      "type": "boolean"
     }
   },
   "additionalProperties": false
