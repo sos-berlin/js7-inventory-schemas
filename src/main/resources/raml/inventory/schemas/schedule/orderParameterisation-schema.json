@@ -14,7 +14,11 @@
 		},
 		"positions": {
      		"$ref": "positions-schema.json"
+    	},
+    	"forceJobAdmission": {
+    		"type": "boolean"	
     	}
-	}
+	},
+	"additionalProperties": false
 }
  
