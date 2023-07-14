@@ -1,0 +1,16 @@
+{
+  "title": "executable types",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.job.InternalExecutableType",
+  "type": "string",
+  "enum": [
+    "JITL",
+    "Java",
+    "JavaScript"
+  ],
+  "javaEnumNames": [
+    "JITL",
+    "Java",
+    "JavaScript"
+  ]
+}
