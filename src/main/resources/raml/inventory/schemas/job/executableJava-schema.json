@@ -7,11 +7,12 @@
     "$ref": "executable-schema.json"
   },
   "required": [
-  	"className"
+    "className"
   ],
   "propertyOrder": [
     "TYPE",
-    "className"
+    "className",
+    "script"
   ],
   "description": "executable with fixed property 'TYPE':'InternalExecutable'",
   "properties": {
@@ -19,7 +20,13 @@
 	  "type": "string",
 	  "minLength": 1
 	},
-	"jobArguments": {
+	"internalType": {
+	  "$ref" : "internalExecutableType-schema.json" 
+	},
+	"script": {
+	  "type": "string"
+	},
+    "jobArguments": {
       "$ref": "../common/variables-schema.json"
     },
     "returnCodeMeaning": {

@@ -84,9 +84,6 @@
 			"type": "boolean",
 			"default": false
 		},
-		"jobClassName": {
-			"$ref": "../common/string255-schema.json"
-		},
 		"jobTemplate": {
 			"$ref": "jobTemplateRef-schema.json"
 		},
