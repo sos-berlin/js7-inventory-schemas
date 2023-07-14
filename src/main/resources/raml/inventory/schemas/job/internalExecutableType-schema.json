@@ -6,11 +6,13 @@
   "enum": [
     "JITL",
     "Java",
-    "JavaScript"
+    "JavaScript_Graal",
+    "JavaScript_Node"
   ],
   "javaEnumNames": [
     "JITL",
     "Java",
-    "JavaScript"
+    "JavaScript_Graal",
+    "JavaScript_Node"
   ]
 }
