@@ -20,6 +20,12 @@
     				{"$ref": "../common/string255Required-schema.json"}
     			]
      		}
+    	},
+    	"blockPosition": {
+     		"anyOf": [
+    			{"$ref": "../common/blockPosition-schema.json"},
+    			{"$ref": "../common/string255Required-schema.json"}
+    		]
     	}
 	},
     "additionalProperties": false
