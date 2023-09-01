@@ -10,6 +10,15 @@
   "properties": {
     "type": {
       "$ref": "listParameterType-schema.json"
+    },
+    "default": {
+      "description": "this value has to have the data type of the 'type' attribute",
+      "anyOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" }
+      ],
+      "javaType": "java.lang.Object"
     }
   },
   "additionalProperties": false
