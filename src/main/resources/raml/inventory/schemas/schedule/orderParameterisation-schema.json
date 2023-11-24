@@ -7,7 +7,9 @@
  	 
 	"properties": {
 		"orderName": {
-			"$ref": "../common/string255-schema.json"
+		    "type": "string",
+			"pattern": "^[^<>]*$",
+			"maxLength": 30
 		},
 		"variables": {
 			"$ref": "../common/variables-schema.json"
