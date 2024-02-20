@@ -1,0 +1,16 @@
+{
+  "title": "Frequencies for report",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.report.Frequency",
+  "type": "string",
+  "enum": [
+    "WEEKLY",
+    "TWO_WEEKS",
+    "MONTHLY",
+    "THREE_MONTHS",
+    "SIX_MONTHS",
+    "YEARLY",
+    "THREE_YEARS"
+  ]
+}
+

@@ -1,0 +1,54 @@
+{
+	"title": "report",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.report.Report",
+	"type": "object",
+	"javaInterfaces": [
+        "com.sos.joc.model.common.IConfigurationObject",
+        "com.sos.joc.model.common.IReleaseObject",
+        "com.sos.inventory.model.common.IInventoryObject"
+    ],
+    "required": [
+        "templateId",
+        "frequencies",
+        "hits"    
+    ],
+    "properties": {
+        "version": {
+            "$ref": "../common/version-schema.json"
+        },
+        "title": {
+            "$ref": "../common/string255-schema.json"
+        },
+        "templateId": {
+            "$ref": "../common/nonNegativeInteger-schema.json"
+        },
+        "frequencies": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+                "$ref": "frequency-schema.json"
+            }
+        },
+        "hits": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+        },
+        "controllerId": {
+            "pattern": "^[^/\\<>?!&:;()\"|*^]*$",
+            "maxLength": 100
+        },
+        "monthFrom": {
+            "aliases": "dateFrom",
+            "type": "string"
+            
+        },
+        "monthTo": {
+            "type": "string"
+            
+        }
+    },
+    "additionalProperties": false
+}
