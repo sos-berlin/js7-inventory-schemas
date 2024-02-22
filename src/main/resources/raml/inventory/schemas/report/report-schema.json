@@ -38,6 +38,7 @@
             "maximum": 100
         },
         "controllerId": {
+            "type": "string",
             "pattern": "^[^/\\<>?!&:;()\"|*^]*$",
             "maxLength": 100
         },
