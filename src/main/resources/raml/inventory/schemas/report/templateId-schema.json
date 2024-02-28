@@ -1,0 +1,19 @@
+{
+  "title": "Template identifier for report",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.report.TemplateId",
+  "type": "string",
+  "enum": [
+    "WORKFLOWS_FREQUENTLY_FAILED",
+    "JOBS_FREQUENTLY_FAILED",
+    "AGENTS_PARALLEL_JOB_EXECUTIONS",
+    "JOBS_HIGH_LOW_EXECUTION_PERIODS",
+    "JOBS_EXECUTIONS_FREQUENCY",
+    "ORDERS_EXECUTIONS_FREQUENCY",
+    "WORKFLOWS_LONGEST_EXECUTION_TIMES",
+    "JOBS_LONGEST_EXECUTION_TIMES",
+    "PERIODS_MOST_ORDER_EXECUTIONS",
+    "PERIODS_MOST_JOB_EXECUTIONS"
+  ]
+}
+
