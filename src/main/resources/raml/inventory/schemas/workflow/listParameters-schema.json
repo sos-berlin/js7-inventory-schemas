@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "javaType": "com.sos.inventory.model.workflow.ListParameters",
   "type": "object",
-  "description": "parameters only for parameter type 'List'",
+  "description": "parameters only for parameter type 'List' or 'Map'",
   "additionalProperties": {
     "$ref": "listParameter-schema.json"
   }
