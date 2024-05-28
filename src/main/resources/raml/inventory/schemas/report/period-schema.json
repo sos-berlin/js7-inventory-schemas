@@ -1,0 +1,21 @@
+{
+	"title": "report period",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.report.ReportPeriod",
+	"type": "object",
+	"properties": {
+        "length": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 60,
+            "default": 5
+        },
+        "step": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 60,
+            "default": 5
+        }
+    },
+    "additionalProperties": false
+}

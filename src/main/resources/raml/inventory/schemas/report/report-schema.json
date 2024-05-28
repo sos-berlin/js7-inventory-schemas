@@ -51,6 +51,9 @@
             "type": "string",
             "pattern": "^([+-]*\\d+\\s*[MmQqYy]|\\d{4}-(0[1-9]|1[0-2]))$"
             
+        },
+        "period": {
+            "$ref": "period-schema.json"
         }
     },
     "additionalProperties": false
