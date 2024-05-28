@@ -17,6 +17,13 @@
 		"positions": {
      		"$ref": "positions-schema.json"
     	},
+    	"tags": {
+     		"type": "array",
+    		"uniqueItems": true,
+    		"items": {
+    			"$ref": "../common/string255Required-schema.json"	
+    		}
+    	},
     	"forceJobAdmission": {
     		"type": "boolean"	
     	}
