@@ -56,13 +56,7 @@
             "$ref": "period-schema.json"
         },
         "sort": {
-			"type": "string",
-            "javaType": "com.sos.inventory.model.report.ReportOrder",
-            "enum": [
-            	"HIGHEST",
-            	"LOWEST"
-            ],
-			"default": "HIGHEST"
+            "$ref": "sort-schema.json"
         }
     },
     "additionalProperties": false
