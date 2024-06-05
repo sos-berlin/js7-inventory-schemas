@@ -56,7 +56,7 @@
             "$ref": "period-schema.json"
         },
         "sort": {
-            "$ref": "sort-schema.json"
+            "$ref": "reportOrder-schema.json"
         }
     },
     "additionalProperties": false
