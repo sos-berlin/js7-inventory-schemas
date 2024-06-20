@@ -85,6 +85,13 @@
     },
     "documentationName": {
       "$ref": "../common/string255-schema.json"
+    },
+    "tags": {
+     	"type": "array",
+    	"uniqueItems": true,
+    	"items": {
+    		"$ref": "../common/string255Required-schema.json"	
+    	}
     }
   },
   "additionalProperties": false
