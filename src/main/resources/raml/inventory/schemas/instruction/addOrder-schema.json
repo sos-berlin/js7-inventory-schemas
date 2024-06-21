@@ -54,6 +54,13 @@
     "forceJobAdmission": {
     	"type": "boolean",
     	"default": false	
+    },
+    "tags": {
+     	"type": "array",
+    	"uniqueItems": true,
+    	"items": {
+    		"$ref": "../common/string255Required-schema.json"	
+    	}
     }
   },
   "additionalProperties": false
