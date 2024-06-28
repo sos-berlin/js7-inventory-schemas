@@ -5,6 +5,8 @@
   "type": "string",
   "enum": [
     "NORMAL",
-    "CRITICAL"
+    "CRITICAL",
+    "MINOR",
+    "MAJOR"
   ]
 }
