@@ -114,7 +114,11 @@
 		},
 		"notification": {
 			"$ref": "notification/notification-schema.json"
-		}
+		},
+    	"isNotRestartable": {
+      		"type": "boolean",
+      		"default": false
+    	}
 	},
 	"additionalProperties": false
 }

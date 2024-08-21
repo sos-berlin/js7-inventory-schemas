@@ -90,7 +90,11 @@
 		},
 		"hash": {
 			"$ref": "../common/string255-schema.json"
-		}
+		},
+    	"isNotRestartable": {
+      		"type": "boolean",
+      		"default": false
+    	}
 	},
 	"additionalProperties": false
 }
