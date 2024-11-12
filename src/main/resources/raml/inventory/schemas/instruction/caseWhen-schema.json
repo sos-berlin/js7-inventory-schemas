@@ -1,0 +1,27 @@
+{
+  "title": "CaseWhen",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.CaseWhen",
+  "type": "object",
+  "required": [
+  	"whens"
+  ],
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+  
+  "properties": {
+  	"whens": {
+      "alias": "ifThens",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+      	"$ref": "when-schema.json"
+      }	
+    },
+    "else": {
+      "$ref": "optionalInstructions-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

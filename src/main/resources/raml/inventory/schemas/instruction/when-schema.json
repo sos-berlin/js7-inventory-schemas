@@ -1,17 +1,13 @@
 {
-  "title": "if",
+  "title": "when",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "javaType": "com.sos.inventory.model.instruction.IfElse",
+  "javaType": "com.sos.inventory.model.instruction.When",
   "type": "object",
-  "extends" : {
-    "$ref": "caseWhen-schema.json"
-  },
   "required": [
   	"predicate",
-  	"then"
+    "then"
   ],
   
-  "description": "instruction with fixed property 'TYPE':'If'",
   "properties": {
   	"predicate": {
       "type": "string",

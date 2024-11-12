@@ -24,6 +24,7 @@
     "Cycle",
     "StickySubagent",
     "Options",
-    "Break"
+    "Break",
+    "CaseWhen"
   ]
 }
