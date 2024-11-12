@@ -118,14 +118,7 @@
     	"isNotRestartable": {
       		"type": "boolean",
       		"default": false
-    	},
-        "jobTags": {
-        	"type": "array",
-			"uniqueItems": true,
-			"items": {
-				"$ref": "../common/string255Required-schema.json"
-			}	
-        }
+    	}
 	},
 	"additionalProperties": false
 }
