@@ -1,49 +1,77 @@
 {
-  "title": "month",
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "javaType": "com.sos.inventory.model.calendar.Months",
-  "type": "object",
-  "anyOf": [
-    { "required": ["months", "weekdays"] },
-    { "required": ["months", "monthdays"] },
-    { "required": ["months", "ultimos"] }
-  ],
-  "properties": {
-    "months": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "integer",
-        "minimum": 1,
-        "maximum": 12
-      }
-    },
-    "from": {
-      "$ref": "date-schema.json"
-    },
-    "to": {
-      "$ref": "date-schema.json"
-    },
-    "weekdays": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "weekDays-schema.json"
-      }
-    },
-    "monthdays": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "monthDays-schema.json"
-      }
-    },
-    "ultimos": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "monthDays-schema.json"
-      }
-    }
-  }
+	"title": "month",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"javaType": "com.sos.inventory.model.calendar.Months",
+	"type": "object",
+	"anyOf": [
+		{
+			"required": [
+				"months",
+				"weekdays"
+			]
+		},
+		{
+			"required": [
+				"months",
+				"monthdays"
+			]
+		},
+		{
+			"required": [
+				"months",
+				"ultimos"
+			]
+		},
+		{
+			"required": [
+				"months",
+				"repetitions"
+			]
+		}
+	],
+	"properties": {
+		"months": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "integer",
+				"minimum": 1,
+				"maximum": 12
+			}
+		},
+		"from": {
+			"$ref": "date-schema.json"
+		},
+		"to": {
+			"$ref": "date-schema.json"
+		},
+		"weekdays": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "weekDays-schema.json"
+			}
+		},
+		"monthdays": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "monthDays-schema.json"
+			}
+		},
+		"ultimos": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "monthDays-schema.json"
+			}
+		},
+		"repetitions": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"$ref": "every-schema.json"
+			}
+		}
+	}
 }
