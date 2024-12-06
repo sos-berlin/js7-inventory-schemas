@@ -1,0 +1,12 @@
+{
+  "title": "WhenNotAnnouced Enum",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.WhenNotAnnouced",
+  "type": "string",
+  "enum": [
+    "Wait",
+    "DontWait",
+    "SkipWhenNoNotice"
+  ],
+  "default": "Wait"
+}

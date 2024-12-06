@@ -8,14 +8,10 @@
     "com.sos.joc.model.common.IDeployObject",
    	"com.sos.inventory.model.common.IInventoryObject"
   ],
-  "required": [
-    "postOrderToNoticeId",
-    "expectOrderToNoticeId",
-    "endOfLife"
-  ],
   "propertyOrder": [
     "TYPE",
     "version",
+    "boardType",
     "postOrderToNoticeId",
     "endOfLife",
     "expectOrderToNoticeId",
@@ -29,6 +25,9 @@
     "TYPE": {
 		"$ref": "../deploy/deployType-schema.json",
 		"default": "Board" 
+    },
+    "boardType": {
+        "$ref": "boardType-schema.json"
     },
     "postOrderToNoticeId": {
         "description": "Expression that returns a NoticeId for the PostNotice statement.",

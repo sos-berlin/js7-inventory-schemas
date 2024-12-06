@@ -9,6 +9,7 @@
     "Lock",
     "FileWatch",
     "JobResource",
+    "PlannableBoard",
     "Board"
   ],
   "javaEnumNames": [
@@ -17,6 +18,7 @@
     "Lock",
     "FileWatch",
     "JobResource",
+    "PlannableBoard",
     "Board"
   ],
   "default": "Workflow"

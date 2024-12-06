@@ -1,0 +1,11 @@
+{
+  "title": "boardType",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.board.BoardType",
+  "type": "string",
+  "enum": [
+    "GLOBAL",
+    "PLANNABLE"
+  ],
+  "default": "GLOBAL"
+}
