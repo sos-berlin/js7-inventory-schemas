@@ -21,9 +21,6 @@
     	"type": "string",
     	"pattern": "^[^<>]*$",
     	"minLength": 1
-    },
-    "whenNotAnnounced": {
-        "$ref": "whenNotAnnounced-schema.json"  
     }
   },
   "additionalProperties": false

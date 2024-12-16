@@ -25,9 +25,6 @@
     },
     "subworkflow": {
     	"$ref": "emptyInstructions-schema.json"	
-    },
-    "whenNotAnnounced": {
-        "$ref": "whenNotAnnounced-schema.json"  
     }
   },
   "additionalProperties": false
