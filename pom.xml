@@ -4,7 +4,7 @@
 
   <groupId>com.sos-berlin</groupId>
     <artifactId>js7-inventory-schemas</artifactId>
-    <version>1.7.3</version>
+    <version>1.7.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <scm>
