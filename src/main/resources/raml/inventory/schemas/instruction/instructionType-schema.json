@@ -25,6 +25,7 @@
     "StickySubagent",
     "Options",
     "Break",
-    "CaseWhen"
+    "CaseWhen",
+    "Sleep"
   ]
 }
