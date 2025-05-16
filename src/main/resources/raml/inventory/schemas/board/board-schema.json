@@ -35,7 +35,7 @@
     	"type": "string"
     },
     "endOfLife": {
-		"description": "Expression that returns for the PostNotice statement the time until when the note should be valid, expressed as number of milliseconds since 1970-01-01, 0 o'clock, UTC. Then JS7 will delete the note.",
+		"description": "Only relevant foe global boards: Expression that returns for the PostNotice statement the time until when the note should be valid, expressed as number of milliseconds since 1970-01-01, 0 o'clock, UTC. Then JS7 will delete the note.",
     	"type": "string"
 	},
     "expectOrderToNoticeId": {
