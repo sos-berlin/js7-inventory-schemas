@@ -3,6 +3,9 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"javaType": "com.sos.inventory.model.job.AdmissionTimePeriod",
 	"type": "object",
+	"required": [
+	    "duration"
+	],
 	"properties": {
 		"TYPE": {
 			"$ref" : "admissionTimePeriodType-schema.json"
