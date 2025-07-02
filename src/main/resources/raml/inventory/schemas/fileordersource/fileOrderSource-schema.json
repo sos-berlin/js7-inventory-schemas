@@ -35,7 +35,9 @@
     "timeZone",
     "delay",
     "title",
-    "documentationName"
+    "priority",
+    "documentationName",
+    "tags"
   ],
   
   
@@ -82,6 +84,10 @@
     },
     "title": {
       "$ref": "../common/string255-schema.json"
+    },
+    "priority": {
+        "type": "integer",
+        "default": 0  
     },
     "documentationName": {
       "$ref": "../common/string255-schema.json"
