@@ -12,6 +12,29 @@
 		"items": {
 			"$ref": "admissionTimePeriod-schema.json"
 		}
+    },
+    "restrictedSchemes":  {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "javaType": "com.sos.inventory.model.job.AdmissionRestrictedSchemes",
+            "required": [
+                "restriction",
+                "period"
+            ],
+            "properties": {
+                "restriction": {
+                    "$ref": "admissionRestrictedScheme-schema.json"
+                },
+                "periods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "admissionTimePeriod-schema.json"
+                    }
+                }
+            },
+            "additionalProperties": false
+        }
     }
   },
   "additionalProperties": false
