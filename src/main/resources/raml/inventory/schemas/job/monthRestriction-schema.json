@@ -7,9 +7,9 @@
 		"months"
 	],
 	"extends" : {
-    	"$ref": "admissionRestrictedScheme-schema.json"
+    	"$ref": "admissionRestriction-schema.json"
   	},
-  	"description": "admission restricted scheme with fixed property 'TYPE':'MonthRestriction'",
+  	"description": "admission restriction with fixed property 'TYPE':'MonthRestriction'",
 	"properties": {
         "months": {
             "description": "1 .. 12",

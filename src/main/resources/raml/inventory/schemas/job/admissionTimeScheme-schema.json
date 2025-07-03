@@ -17,14 +17,14 @@
         "type": "array",
         "items": {
             "type": "object",
-            "javaType": "com.sos.inventory.model.job.AdmissionRestrictedSchemes",
+            "javaType": "com.sos.inventory.model.job.AdmissionRestrictedScheme",
             "required": [
                 "restriction",
                 "period"
             ],
             "properties": {
                 "restriction": {
-                    "$ref": "admissionRestrictedScheme-schema.json"
+                    "$ref": "admissionRestriction-schema.json"
                 },
                 "periods": {
                     "type": "array",

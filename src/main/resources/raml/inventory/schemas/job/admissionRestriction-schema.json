@@ -1,7 +1,7 @@
 {
-    "title": "admission restricted scheme",
+    "title": "admission restriction",
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "javaType": "com.sos.inventory.model.job.AdmissionRestrictedScheme",
+    "javaType": "com.sos.inventory.model.job.AdmissionRestriction",
     "type": "object",
     "properties": {
         "TYPE": {

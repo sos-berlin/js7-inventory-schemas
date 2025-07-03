@@ -1,9 +1,9 @@
 
 package com.sos.inventory.model.job;
 
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
-import org.apache.commons.lang.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -22,8 +22,7 @@ import com.sos.inventory.model.common.ClassHelper;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "TYPE",
-    "duration"
+    "TYPE"
 })
 @JsonTypeInfo(
 		use = JsonTypeInfo.Id.NAME, 
@@ -32,7 +31,7 @@ import com.sos.inventory.model.common.ClassHelper;
 		visible = true)
 @JsonSubTypes({ 
         @JsonSubTypes.Type(value = MonthRestriction.class, name = "MonthRestriction")})
-public abstract class AdmissionRestrictedScheme
+public abstract class AdmissionRestriction
     extends ClassHelper
 {
 
@@ -45,20 +44,20 @@ public abstract class AdmissionRestrictedScheme
      */
     @JsonProperty("TYPE")
     @JsonIgnore
-    private AdmissionRestrictedType tYPE;
+    private AdmissionRestrictionType tYPE;
     
     /**
      * No args constructor for use in serialization
      * 
      */
-    public AdmissionRestrictedScheme() {
+    public AdmissionRestriction() {
     }
 
     /**
      * 
      * @param tYPE
      */
-    public AdmissionRestrictedScheme(AdmissionRestrictionType tYPE) {
+    public AdmissionRestriction(AdmissionRestrictionType tYPE) {
         super();
         this.tYPE = tYPE;
     }
@@ -103,10 +102,10 @@ public abstract class AdmissionRestrictedScheme
         if (other == this) {
             return true;
         }
-        if ((other instanceof AdmissionRestrictedScheme) == false) {
+        if ((other instanceof AdmissionRestriction) == false) {
             return false;
         }
-        AdmissionRestrictedScheme rhs = ((AdmissionRestrictedScheme) other);
+        AdmissionRestriction rhs = ((AdmissionRestriction) other);
         return new EqualsBuilder().appendSuper(super.equals(other)).append(tYPE, rhs.tYPE).isEquals();
     }
 
