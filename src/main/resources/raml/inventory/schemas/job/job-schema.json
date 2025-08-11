@@ -56,6 +56,10 @@
 			"type": "boolean",
 			"default": false
 		},
+        "killAtEndOfAdmissionPeriod": {
+            "type": "boolean",
+            "default": false
+        },
 		"returnCodeMeaning": {
 			"description": "deprecated: moved to ShellScriptExecutable",
 			"$ref": "jobReturnCode-schema.json"
