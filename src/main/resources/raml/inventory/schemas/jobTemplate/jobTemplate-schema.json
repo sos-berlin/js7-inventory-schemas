@@ -33,6 +33,10 @@
 			"type": "boolean",
 			"default": false
 		},
+        "killAtEndOfAdmissionPeriod": {
+            "type": "boolean",
+            "default": false
+        },
 		"parallelism": {
    	  		"type": "integer",
 			"minimum": 1,
