@@ -20,7 +20,7 @@
             "javaType": "com.sos.inventory.model.job.AdmissionRestrictedScheme",
             "required": [
                 "restriction",
-                "period"
+                "periods"
             ],
             "properties": {
                 "restriction": {
