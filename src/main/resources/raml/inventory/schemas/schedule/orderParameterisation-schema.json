@@ -25,6 +25,7 @@
     		}
     	},
     	"forceJobAdmission": {
+    	    "alias": "forceAdmission",
     		"type": "boolean"	
     	},
         "priority": {

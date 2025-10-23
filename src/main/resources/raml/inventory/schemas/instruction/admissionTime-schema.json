@@ -1,0 +1,29 @@
+{
+  "title": "AdmissionTime",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.AdmissionTime",
+  "type": "object",
+  "required": [
+  	"admissionTimeScheme",
+    "block"
+  ],
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+  
+  "description": "instruction with fixed property 'TYPE':'AdmissionTime'",
+  "propertyOrder": [
+    "TYPE",
+    "admissionTimeScheme",
+    "block"
+  ],
+  "properties": {
+        "admissionTimeScheme" : {
+            "$ref" : "../job/admissionTimeScheme-schema.json"
+        },
+        "block": {
+            "$ref": "instructions-schema.json" 
+        }
+  },
+  "additionalProperties": false
+}
