@@ -21,6 +21,11 @@
         "admissionTimeScheme" : {
             "$ref" : "../job/admissionTimeScheme-schema.json"
         },
+        "skipIfNoAdmissionForOrderDay": {
+            "alias": "skipIfNoAdmissionStartForOrderDay",
+            "type": "boolean",
+            "default": false
+        },
         "block": {
             "$ref": "instructions-schema.json" 
         }
