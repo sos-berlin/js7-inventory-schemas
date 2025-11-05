@@ -4,6 +4,7 @@
 	"javaType": "com.sos.inventory.model.job.AdmissionTimePeriod",
 	"type": "object",
 	"required": [
+	    "TYPE",
 	    "duration"
 	],
 	"properties": {

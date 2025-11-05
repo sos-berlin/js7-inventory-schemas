@@ -3,19 +3,21 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"javaType": "com.sos.inventory.model.job.MonthRestriction",
 	"type": "object",
-	"required": [
-		"months"
-	],
 	"extends" : {
     	"$ref": "admissionRestriction-schema.json"
   	},
+  	"required": [
+        "TYPE",
+        "months"
+    ],
   	"description": "admission restriction with fixed property 'TYPE':'MonthRestriction'",
 	"properties": {
         "months": {
             "description": "1 .. 12",
             "type" : "array",
 			"minItems": 1,
-			"uniqueItems": true,
+			"maxItems": 11,
+            "uniqueItems": true,
 			"items": {
                 "type": "integer",
                 "minimum": 1,

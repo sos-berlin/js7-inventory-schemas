@@ -3,6 +3,9 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "javaType": "com.sos.inventory.model.job.AdmissionRestriction",
     "type": "object",
+    "required": [
+        "TYPE"
+    ],
     "properties": {
         "TYPE": {
             "$ref" : "admissionRestrictionType-schema.json"

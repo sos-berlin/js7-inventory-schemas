@@ -3,12 +3,14 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"javaType": "com.sos.inventory.model.job.MonthlyWeekdayPeriod",
 	"type": "object",
-	"required": [
-		"secondOfWeeks"
-	],
 	"extends" : {
     	"$ref": "admissionTimePeriod-schema.json"
   	},
+    "required": [
+        "TYPE",
+        "duration",
+        "secondOfWeeks"
+    ],
   	"description": "admission time period with fixed property 'TYPE':'MonthlyWeekdayPeriod'",
 	"properties": {
 		"secondOfWeeks" : {
