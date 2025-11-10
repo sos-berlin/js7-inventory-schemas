@@ -7,12 +7,14 @@
     "JITL",
     "Java",
     "JavaScript_Graal",
+    "Python_Graal",
     "JavaScript_Node"
   ],
   "javaEnumNames": [
     "JITL",
     "Java",
     "JavaScript_Graal",
+    "Python_Graal",
     "JavaScript_Node"
   ]
 }
