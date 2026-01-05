@@ -4,7 +4,7 @@
 
   <groupId>com.sos-berlin</groupId>
     <artifactId>js7-inventory-schemas</artifactId>
-    <version>1.8.3-SNAPSHOT</version>
+    <version>1.9.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <scm>
@@ -16,7 +16,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <build.timestamp>${maven.build.timestamp}</build.timestamp>
-    <release.version>1.6.0</release.version>
   </properties>
 
   <build>
