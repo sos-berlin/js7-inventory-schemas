@@ -16,6 +16,7 @@
     "version",
     "versionId",
     "timeZone",
+    "dayOffset",
     "title",
     "documentationName",
     "orderPreparation",
