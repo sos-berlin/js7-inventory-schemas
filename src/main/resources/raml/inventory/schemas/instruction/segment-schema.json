@@ -1,0 +1,28 @@
+{
+  "title": "Segment",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "javaType": "com.sos.inventory.model.instruction.Segment",
+  "type": "object",
+  "extends" : {
+    "$ref": "instruction-schema.json"
+  },
+
+  "required": [
+    "TYPE",
+    "label",
+    "block"
+  ],
+  
+  "description": "instruction with fixed property 'TYPE':'Segment'",
+  "propertyOrder": [
+  	"TYPE",
+  	"label",
+    "block"
+  ],
+  "properties": {
+    "block": {
+    	"$ref": "instructions-schema.json"
+    }
+  },
+  "additionalProperties": false
+}

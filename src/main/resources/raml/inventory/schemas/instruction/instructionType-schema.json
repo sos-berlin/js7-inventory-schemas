@@ -27,6 +27,7 @@
     "Break",
     "CaseWhen",
     "Sleep",
-    "AdmissionTime"
+    "AdmissionTime",
+    "Segment"
   ]
 }
