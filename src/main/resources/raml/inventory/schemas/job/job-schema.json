@@ -122,7 +122,12 @@
     	"isNotRestartable": {
       		"type": "boolean",
       		"default": false
-    	}
+    	},
+        "maxWaitForStdouterr": {
+            "description": "in seconds",
+            "type": "integer",
+            "minimum": 1
+        }
 	},
 	"additionalProperties": false
 }
