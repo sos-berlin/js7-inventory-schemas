@@ -45,12 +45,10 @@
           "maxLength": 100
         },
         "title": {
-          "type": "string",
-          "maxLength": 100
+          "$ref": "../common/string255-schema.json"
         },
         "account": {
-          "type": "string",
-          "maxLength": 30
+          "$ref": "../common/string255-schema.json"
         },
         "scheduled": {
           "type": "string",
@@ -71,10 +69,10 @@
       ],
       "properties": {
         "licenseKeyFile": {
-          "type": "string"
+          "$ref": "../common/string255-schema.json"
         },
         "licenseBinFile": {
-          "type": "string"
+          "$ref": "../common/string255-schema.json"
         }
       }
     },
