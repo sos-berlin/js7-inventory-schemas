@@ -40,6 +40,11 @@
     "message": {
       "description": "a message if the value doesn't match the facet",
       "type": "string"
+    },
+    "display": {
+      "description": "displays this parameters in 'add order' dialog etc. even it has a default value",
+      "type": "boolean",
+      "default": false
     }
   },
   "additionalProperties": false
