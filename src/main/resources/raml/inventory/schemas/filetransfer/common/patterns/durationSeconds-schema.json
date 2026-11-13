@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Duration in seconds, human-readable format (e.g. 30s, 1m, 1h 30m). Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^([0-9]+|[0-9]+[smh](\\s+[0-9]+[smh])*|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$"
+}

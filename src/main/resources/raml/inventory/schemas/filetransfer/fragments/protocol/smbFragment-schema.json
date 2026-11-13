@@ -1,0 +1,202 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "SMB Fragment",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.SmbFragment",
+	"extends": {
+		"$ref": "abstractProtocolFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractProtocolFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"required": [
+		"connection",
+		"authentication"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"alternativeRef": {
+			"$ref": "refs/smbAlternativeFragmentRef-schema.json"
+		},
+		"connection": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbConnection",
+			"type": "object",
+			"description": "SMB connection settings.",
+			"additionalProperties": false,
+			"required": [
+				"hostname"
+			],
+			"properties": {
+				"hostname": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"port": {
+					"$ref": "../../common/patterns/number-schema.json"
+				},
+				"sharename": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"authentication": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbAuthentication",
+			"type": "object",
+			"description": "SMB authentication. Provide exactly one of 'anonymous', 'guest', 'ntlm', 'kerberos', 'spnego'.",
+			"additionalProperties": false,
+			"oneOf": [
+				{
+					"required": [
+						"anonymous"
+					],
+					"not": {
+						"required": [
+							"guest",
+							"ntlm",
+							"kerberos",
+							"spnego"
+						]
+					}
+				},
+				{
+					"required": [
+						"guest"
+					],
+					"not": {
+						"required": [
+							"anonymous",
+							"ntlm",
+							"kerberos",
+							"spnego"
+						]
+					}
+				},
+				{
+					"required": [
+						"ntlm"
+					],
+					"not": {
+						"required": [
+							"anonymous",
+							"guest",
+							"kerberos",
+							"spnego"
+						]
+					}
+				},
+				{
+					"required": [
+						"kerberos"
+					],
+					"not": {
+						"required": [
+							"anonymous",
+							"guest",
+							"ntlm",
+							"spnego"
+						]
+					}
+				},
+				{
+					"required": [
+						"spnego"
+					],
+					"not": {
+						"required": [
+							"anonymous",
+							"guest",
+							"ntlm",
+							"kerberos"
+						]
+					}
+				}
+			],
+			"properties": {
+				"anonymous": {
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbAuthAnonymous",
+					"type": "object",
+					"description": "Anonymous authentication (no credentials).",
+					"additionalProperties": false,
+					"properties": {}
+				},
+				"guest": {
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbAuthGuest",
+					"type": "object",
+					"description": "Guest authentication.",
+					"additionalProperties": false,
+					"properties": {
+						"account": {
+							"$ref": "../../common/patterns/string-schema.json"
+						}
+					}
+				},
+				"ntlm": {
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbAuthNtlm",
+					"type": "object",
+					"description": "NTLM authentication.",
+					"additionalProperties": false,
+					"required": [
+						"account",
+						"password"
+					],
+					"properties": {
+						"account": {
+							"$ref": "../../common/patterns/string-schema.json"
+						},
+						"password": {
+							"$ref": "../../common/patterns/password-schema.json"
+						},
+						"domain": {
+							"$ref": "../../common/patterns/string-schema.json"
+						}
+					}
+				},
+				"kerberos": {
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbAuthKerberos",
+					"type": "object",
+					"description": "Kerberos authentication.",
+					"additionalProperties": false,
+					"properties": {
+						"account": {
+							"$ref": "../../common/patterns/string-schema.json"
+						},
+						"password": {
+							"$ref": "../../common/patterns/password-schema.json"
+						},
+						"domain": {
+							"$ref": "../../common/patterns/string-schema.json"
+						},
+						"loginContextName": {
+							"$ref": "../../common/patterns/string-schema.json"
+						}
+					}
+				},
+				"spnego": {
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.smb.SmbAuthSpnego",
+					"type": "object",
+					"description": "SPNEGO authentication.",
+					"additionalProperties": false,
+					"properties": {
+						"account": {
+							"$ref": "../../common/patterns/string-schema.json"
+						},
+						"password": {
+							"$ref": "../../common/patterns/password-schema.json"
+						},
+						"domain": {
+							"$ref": "../../common/patterns/string-schema.json"
+						},
+						"loginContextName": {
+							"$ref": "../../common/patterns/string-schema.json"
+						}
+					}
+				}
+			}
+		},
+		"configurationFile": {
+			"$ref": "../../common/patterns/string-schema.json"
+		}
+	}
+}

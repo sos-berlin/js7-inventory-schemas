@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Polling",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.Polling",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"pollInterval": {
+			"$ref": "../../common/patterns/durationSeconds-schema.json"
+		},
+		"pollTimeout": {
+			"$ref": "../../common/patterns/durationMinutes-schema.json"
+		},
+		"minFiles": {
+			"$ref": "../../common/patterns/number-schema.json"
+		},
+		"waitForSourceFolder": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"pollingServer": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"pollingServerDuration": {
+			"$ref": "../../common/patterns/durationSeconds-schema.json"
+		},
+		"pollForever": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		}
+	}
+}

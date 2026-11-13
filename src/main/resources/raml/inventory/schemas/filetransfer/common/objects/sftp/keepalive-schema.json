@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "SSH keep-alive",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.sftp.SftpKeepAlive",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"interval"
+	],
+	"properties": {
+		"interval": {
+			"$ref": "../../patterns/durationSeconds-schema.json"
+		},
+		"maxAliveCount": {
+			"$ref": "../../patterns/positiveNumber-schema.json"
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Transfer Options",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.TransferOptions",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"bufferSize": {
+			"$ref": "../common/patterns/number-schema.json"
+		},
+		"transactional": {
+			"$ref": "../common/patterns/boolean-schema.json"
+		},
+		"retryOnConnectionError": {
+			"$ref": "../common/objects/retryOnConnectionError-schema.json"
+		}
+	}
+}

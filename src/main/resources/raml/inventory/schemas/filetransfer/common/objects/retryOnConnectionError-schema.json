@@ -1,0 +1,18 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Retry On Connection Error",
+	"javaType": "com.sos.inventory.model.filetransfer.common.RetryOnConnectionError",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"retryCountMax"
+	],
+	"properties": {
+		"retryCountMax": {
+			"$ref": "../patterns/number-schema.json"
+		},
+		"retryInterval": {
+			"$ref": "../patterns/durationSeconds-schema.json"
+		}
+	}
+}

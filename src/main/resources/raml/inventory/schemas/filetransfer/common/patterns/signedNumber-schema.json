@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "A non-negative integer, -1, or a single variable reference such as ${VAR}. Used for MaxFiles.",
+	"type": "string",
+	"pattern": "^(-1|[0-9]+|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$"
+}

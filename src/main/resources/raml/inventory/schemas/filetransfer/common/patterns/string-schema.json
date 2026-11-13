@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Any non-empty string. May contain variable references such as ${VAR} that are resolved at runtime.",
+	"type": "string",
+	"minLength": 1
+}

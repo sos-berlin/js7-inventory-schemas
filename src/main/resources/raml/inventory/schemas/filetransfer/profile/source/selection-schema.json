@@ -1,0 +1,118 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Selection",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.Selection",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"filePath": {
+			"$ref": "#/definitions/filePathSelection"
+		},
+		"fileSpec": {
+			"$ref": "#/definitions/fileSpecSelection"
+		},
+		"fileList": {
+			"$ref": "#/definitions/fileListSelection"
+		}
+	},
+	"oneOf": [
+		{
+			"required": [
+				"filePath"
+			],
+			"not": {
+				"required": [
+					"fileSpec",
+					"fileList"
+				]
+			}
+		},
+		{
+			"required": [
+				"fileSpec"
+			],
+			"not": {
+				"required": [
+					"filePath",
+					"fileList"
+				]
+			}
+		},
+		{
+			"required": [
+				"fileList"
+			],
+			"not": {
+				"required": [
+					"filePath",
+					"fileSpec"
+				]
+			}
+		}
+	],
+	"definitions": {
+		"filePathSelection": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.source.FilePathSelection",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"filePath"
+			],
+			"properties": {
+				"filePath": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"directory": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"recursive": {
+					"$ref": "../../common/patterns/boolean-schema.json"
+				}
+			}
+		},
+		"fileSpecSelection": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.source.FileSpecSelection",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"fileSpec"
+			],
+			"properties": {
+				"fileSpec": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"directory": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"excludedDirectories": {
+					"type": "array",
+					"items": {
+						"$ref": "../../common/patterns/string-schema.json"
+					}
+				},
+				"recursive": {
+					"$ref": "../../common/patterns/boolean-schema.json"
+				}
+			}
+		},
+		"fileListSelection": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.source.FileListSelection",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"fileList"
+			],
+			"properties": {
+				"fileList": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"directory": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"recursive": {
+					"$ref": "../../common/patterns/boolean-schema.json"
+				}
+			}
+		}
+	}
+}

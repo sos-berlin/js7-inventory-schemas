@@ -1,0 +1,24 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "WebDAV Alternative Fragment Reference",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.refs.WebdavAlternativeFragmentRef",
+	"extends": {
+		"$ref": "abstractAlternativeFragmentRef-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractAlternativeFragmentRef-schema.json"
+		},
+		{
+			"properties": {
+				"type": {
+					"enum": [
+						"WEBDAV"
+					]
+				}
+			}
+		}
+	],
+	"type": "object",
+	"additionalProperties": false
+}

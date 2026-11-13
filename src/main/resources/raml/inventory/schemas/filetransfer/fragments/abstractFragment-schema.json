@@ -1,0 +1,11 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Abstract base for all fragments: CredentialStore / Decryprion / Proxy / Protocol",
+	"description": "Abstract base for all fragments. Do not instantiate directly.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.AFragment",
+	"extends": {
+		"$ref": "../abstractFiletransfer-schema.json"
+	},
+	"type": "object",
+	"additionalProperties": false
+}

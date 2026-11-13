@@ -1,0 +1,11 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "FTP transfer mode. Fixed values: binary, ascii. Or a single variable reference such as ${VAR}.",
+	"description": "default: binary",
+	"type": "string",
+	"pattern": "^(binary|ascii|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$",
+	"x-ui-options": [
+		"binary",
+		"ascii"
+	]
+}

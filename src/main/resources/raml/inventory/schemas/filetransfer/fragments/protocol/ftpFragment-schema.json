@@ -1,0 +1,86 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "FTP - Connection and authentication settings for the FTP fragments.",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.FtpFragment",
+	"extends": {
+		"$ref": "abstractFtpFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractFtpFragment-schema.json"
+		}
+	],
+	"oneOf": [
+		{
+			"not": {
+				"anyOf": [
+					{
+						"required": [
+							"ftp"
+						]
+					},
+					{
+						"required": [
+							"ftps"
+						]
+					}
+				]
+			}
+		},
+		{
+			"required": [
+				"ftp"
+			],
+			"not": {
+				"required": [
+					"ftps"
+				]
+			}
+		},
+		{
+			"required": [
+				"ftps"
+			],
+			"not": {
+				"required": [
+					"ftp"
+				]
+			}
+		}
+	],
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"ftp": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.ftp.FtpOptions",
+			"type": "object",
+			"description": "FTP-specific options.",
+			"additionalProperties": false,
+			"properties": {
+				"passiveMode": {
+					"$ref": "../../common/patterns/boolean-schema.json",
+					"default": "false"
+				}
+			}
+		},
+		"ftps": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.ftp.FtpsOptions",
+			"type": "object",
+			"description": "FTPS-specific options.",
+			"additionalProperties": false,
+			"required": [
+				"ssl"
+			],
+			"properties": {
+				"securityMode": {
+					"$ref": "../../common/patterns/ftp/ftps-securityMode-schema.json",
+					"default": "explicit"
+				},
+				"ssl": {
+					"$ref": "common-defs-schema.json#/$defs/ssl"
+				}
+			}
+		}
+	}
+}

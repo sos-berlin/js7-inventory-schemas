@@ -1,0 +1,66 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Jump Fragment",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.JumpFragment",
+	"extends": {
+		"$ref": "abstractProtocolFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractProtocolFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"required": [
+		"connection",
+		"authentication"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"proxyRef": {
+			"$ref": "refs/proxyFragmentRefAny-schema.json"
+		},
+		"alternativeRef": {
+			"$ref": "refs/jumpAlternativeFragmentRef-schema.json"
+		},
+		"connection": {
+			"$ref": "common-defs-schema.json#/$defs/basicConnection"
+		},
+		"authentication": {
+			"$ref": "../../common/objects/sftp/authentication-schema.json"
+		},
+		"socketTimeout": {
+			"$ref": "../../common/patterns/durationSeconds-schema.json"
+		},
+		"keepAlive": {
+			"$ref": "../../common/objects/sftp/keepalive-schema.json"
+		},
+		"strictHostkeyChecking": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"configurationFile": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"yadeClientCommand": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"tempDirectoryParent": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"jumpProcessing": {
+			"description": "SFTP processing options on the jump host.",
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.jump.JumpProcessing",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"processing": {
+					"$ref": "../../common/objects/processing-schema.json"
+				},
+				"platform": {
+					"$ref": "../../common/patterns/jump/platform-schema.json"
+				}
+			}
+		}
+	}
+}

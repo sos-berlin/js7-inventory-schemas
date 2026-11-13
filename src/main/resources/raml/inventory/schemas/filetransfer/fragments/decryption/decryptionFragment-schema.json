@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Decryption Fragment",
+	"description": "Decryption Fragment.",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.decryption.DecryptionFragment",
+	"extends": {
+		"$ref": "../abstractFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "../abstractFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"enciphermentPrivateKey"
+	],
+	"properties": {
+		"enciphermentPrivateKey": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"encryptionKey": {
+			"$ref": "../../common/patterns/string-schema.json"
+		}
+	}
+}

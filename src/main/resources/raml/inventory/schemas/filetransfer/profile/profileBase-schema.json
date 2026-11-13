@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Profile",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.ProfileBase",
+	"extends": {
+		"$ref": "../abstractFiletransfer-schema.json"
+	},
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"operation"
+	],
+	"properties": {
+		"alternativeRef": {
+			"$ref": "../common/patterns/string-schema.json"
+		},
+		"operation": {
+			"type": "string",
+			"enum": [
+				"COPY",
+				"MOVE",
+				"REMOVE",
+				"GETLIST"
+			]
+		}
+	}
+}

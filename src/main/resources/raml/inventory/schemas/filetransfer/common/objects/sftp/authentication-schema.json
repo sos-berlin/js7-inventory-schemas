@@ -1,0 +1,75 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "SSH Authentication",
+	"description": "SSH authentication. Provide 'account' plus exactly one of 'password', 'publicKey'.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.sftp.SftpAuthentication",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"account"
+	],
+	"properties": {
+		"account": {
+			"$ref": "../../patterns/string-schema.json"
+		},
+		"preferredAuthentications": {
+			"$ref": "../../patterns/sftp/preferredAuthentications-schema.json"
+		},
+		"requiredAuthentications": {
+			"$ref": "../../patterns/sftp/requiredAuthentications-schema.json"
+		},
+		"password": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.sftp.SftpAuthPassword",
+			"type": "object",
+			"description": "Password authentication.",
+			"additionalProperties": false,
+			"required": [
+				"password"
+			],
+			"properties": {
+				"password": {
+					"$ref": "../../patterns/password-schema.json"
+				}
+			}
+		},
+		"publicKey": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.sftp.SftpAuthPublicKey",
+			"type": "object",
+			"description": "Public key authentication.",
+			"additionalProperties": false,
+			"required": [
+				"file"
+			],
+			"properties": {
+				"file": {
+					"$ref": "../../patterns/string-schema.json"
+				},
+				"passphrase": {
+					"$ref": "../../patterns/password-schema.json"
+				}
+			}
+		}
+	},
+	"oneOf": [
+		{
+			"required": [
+				"password"
+			],
+			"not": {
+				"required": [
+					"publicKey"
+				]
+			}
+		},
+		{
+			"required": [
+				"publicKey"
+			],
+			"not": {
+				"required": [
+					"password"
+				]
+			}
+		}
+	]
+}

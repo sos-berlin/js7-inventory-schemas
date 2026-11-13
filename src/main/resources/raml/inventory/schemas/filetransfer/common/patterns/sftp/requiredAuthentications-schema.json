@@ -1,0 +1,10 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Required SFTP authentication methods: 'password,publickey' or 'publickey,password'. Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^(password,publickey|publickey,password|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$",
+	"x-ui-options": [
+		"password,publickey",
+		"publickey,password"
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Directives",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.Directives",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"disableErrorOnNoFilesFound": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"transferZeroByteFiles": {
+			"$ref": "transferZeroByteFiles-schema.json"
+		}
+	}
+}

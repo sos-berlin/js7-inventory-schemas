@@ -1,0 +1,45 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Source File Options",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.SourceFileOptions",
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"selection"
+	],
+	"properties": {
+		"selection": {
+			"$ref": "selection-schema.json"
+		},
+		"checkSteadyState": {
+			"$ref": "checkSteadyState-schema.json"
+		},
+		"directives": {
+			"$ref": "directives-schema.json"
+		},
+		"polling": {
+			"$ref": "polling-schema.json"
+		},
+		"resultSet": {
+			"$ref": "resultSet-schema.json"
+		},
+		"maxFiles": {
+			"$ref": "../../common/patterns/signedNumber-schema.json"
+		},
+		"minFileAge": {
+			"$ref": "../../common/patterns/durationAbsIsoOrDays-schema.json"
+		},
+		"maxFileAge": {
+			"$ref": "../../common/patterns/durationAbsIsoOrDays-schema.json"
+		},
+		"minFileSize": {
+			"$ref": "../../common/patterns/fileSize-schema.json"
+		},
+		"maxFileSize": {
+			"$ref": "../../common/patterns/fileSize-schema.json"
+		},
+		"checkIntegrityHash": {
+			"$ref": "checkIntegrityHash-schema.json"
+		}
+	}
+}

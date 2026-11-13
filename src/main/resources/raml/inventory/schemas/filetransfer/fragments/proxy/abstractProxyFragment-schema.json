@@ -1,0 +1,42 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Proxy Fragment",
+	"description": "Abstract base for all proxy fragments. Do not instantiate directly.",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.proxy.AProxyFragment",
+	"extends": {
+		"$ref": "../abstractFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "../abstractFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"protocol",
+		"connection"
+	],
+	"properties": {
+		"credentialStoreRef": {
+			"$ref": "../protocol/common-defs-schema.json#/$defs/credentialStoreRef"
+		},
+		"decryptionRef": {
+			"$ref": "../protocol/common-defs-schema.json#/$defs/decryptionRef"
+		},
+		"protocol": {
+			"type": "string",
+			"enum": [
+				"HTTP",
+				"SOCKS"
+			]
+		},
+		"connection": {
+			"$ref": "../protocol/common-defs-schema.json#/$defs/basicConnection"
+		},
+		"authentication": {
+			"$ref": "../protocol/common-defs-schema.json#/$defs/basicAuthentication"
+		}
+	}
+}

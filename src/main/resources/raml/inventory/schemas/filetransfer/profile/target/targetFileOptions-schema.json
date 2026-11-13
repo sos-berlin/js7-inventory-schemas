@@ -1,0 +1,97 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Target File Options",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.target.TargetFileOptions",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"appendFiles": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"atomicity": {
+			"$ref": "#/definitions/atomicity"
+		},
+		"checkSize": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"cumulateFiles": {
+			"$ref": "#/definitions/cumulateFiles"
+		},
+		"compressFiles": {
+			"$ref": "#/definitions/compressFiles"
+		},
+		"createIntegrityHashFile": {
+			"$ref": "#/definitions/createIntegrityHashFile"
+		},
+		"keepModificationDate": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"disableMakeDirectories": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"disableOverwriteFiles": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"resumeFiles": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		}
+	},
+	"definitions": {
+		"atomicity": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.target.Atomicity",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"atomicPrefix": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"atomicSuffix": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"compressFiles": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CompressFiles",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"compressedFileExtension": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"cumulateFiles": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CumulateFiles",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"cumulativeFilename",
+				"cumulativeFileSeparator"
+			],
+			"properties": {
+				"cumulativeFileDelete": {
+					"$ref": "../../common/patterns/boolean-schema.json"
+				},
+				"cumulativeFilename": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"cumulativeFileSeparator": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"createIntegrityHashFile": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CreateIntegrityHash",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"hashAlgorithm": {
+					"type": "string",
+					"enum": [
+						"md5"
+					]
+				}
+			}
+		}
+	}
+}

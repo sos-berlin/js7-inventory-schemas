@@ -1,0 +1,29 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Result Set",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.ResultSet",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"resultSetFile": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"checkResultSetCount": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.source.CheckResultSetCount",
+			"type": "object",
+			"additionalProperties": false,
+			"required": [
+				"expectedResultSetCount",
+				"raiseErrorIfResultSetIs"
+			],
+			"properties": {
+				"expectedResultSetCount": {
+					"$ref": "../../common/patterns/number-schema.json"
+				},
+				"raiseErrorIfResultSetIs": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		}
+	}
+}

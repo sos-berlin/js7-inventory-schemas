@@ -1,0 +1,24 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "SMB Protocol Fragment Reference",
+	"description": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.refs.SmbFragmentsRef",
+	"extends": {
+		"$ref": "fragmentRefBase-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "fragmentRefBase-schema.json"
+		}
+	],
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"processing": {
+			"$ref": "../../common/objects/processing-schema.json"
+		},
+		"rename": {
+			"$ref": "../common/rename-schema.json"
+		}
+	}
+}

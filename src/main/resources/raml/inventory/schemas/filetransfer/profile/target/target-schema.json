@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Target",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.Target",
+	"type": "object",
+	"description": "Target of a file transfer operation.",
+	"additionalProperties": false,
+	"required": [
+		"fragmentRef",
+		"directory"
+	],
+	"properties": {
+		"fragmentRef": {
+			"$ref": "../refs/fragmentRef-schema.json"
+		},
+		"directory": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"targetFileOptions": {
+			"$ref": "targetFileOptions-schema.json"
+		}
+	}
+}

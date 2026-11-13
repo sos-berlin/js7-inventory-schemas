@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Check Steady State",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.CheckSteadyState",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"interval": {
+			"$ref": "../../common/patterns/durationSeconds-schema.json"
+		},
+		"count": {
+			"$ref": "../../common/patterns/number-schema.json"
+		}
+	}
+}

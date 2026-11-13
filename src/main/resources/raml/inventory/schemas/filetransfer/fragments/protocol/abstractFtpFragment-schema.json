@@ -1,0 +1,57 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "FTP Base - Connection and authentication settings for the FTP / FTPS fragments.",
+	"description": "Abstract base for FTP / FTPS fragments. Do not instantiate directly.",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AFtpFragment",
+	"extends": {
+		"$ref": "abstractProtocolFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractProtocolFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"required": [
+		"connection",
+		"authentication"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"jumpRef": {
+			"$ref": "common-defs-schema.json#/$defs/jumpRef"
+		},
+		"proxyRef": {
+			"$ref": "refs/proxyFragmentRefAny-schema.json"
+		},
+		"alternativeRef": {
+			"$ref": "refs/ftpAlternativeFragmentRef-schema.json"
+		},
+		"connection": {
+			"$ref": "common-defs-schema.json#/$defs/basicConnection"
+		},
+		"authentication": {
+			"$ref": "common-defs-schema.json#/$defs/basicAuthentication"
+		},
+		"keepAlive": {
+			"description": "Optional FTP keep-alive settings. Omit the property to disable keep-alive.",
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.ftp.FtpKeepAlive",
+			"type": "object",
+			"required": [
+				"timeout"
+			],
+			"properties": {
+				"timeout": {
+					"$ref": "../../common/patterns/durationMillis-schema.json",
+					"default": "180s",
+					"description": "Keep-alive timeout."
+				}
+			}
+		},
+		"transferMode": {
+			"$ref": "../../common/patterns/ftp/transferMode-schema.json",
+			"default": "binary"
+		}
+	}
+}

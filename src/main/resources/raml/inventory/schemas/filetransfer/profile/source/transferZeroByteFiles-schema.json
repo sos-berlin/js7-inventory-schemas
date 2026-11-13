@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Transfer zero-byte files: 'true', 'false', 'strict', 'relaxed', or a single variable reference.",
+	"type": "string",
+	"pattern": "^(true|false|strict|relaxed|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$"
+}

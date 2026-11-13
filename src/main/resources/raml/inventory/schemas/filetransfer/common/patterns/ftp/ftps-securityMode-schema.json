@@ -1,0 +1,11 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "FTP security mode. Fixed values: explicit, implicit. Or a single variable reference such as ${VAR}.",
+	"description": "default: explicit",
+	"type": "string",
+	"pattern": "^(explicit|implicit|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$",
+	"x-ui-options": [
+		"explicit",
+		"implicit"
+	]
+}

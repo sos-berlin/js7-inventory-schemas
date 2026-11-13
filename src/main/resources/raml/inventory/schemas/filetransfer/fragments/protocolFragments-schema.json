@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Collection of all Protocol fragments.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.ProtocolFragments",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"fragments": {
+			"type": "array",
+			"description": "List of protocol fragments ( Azure Blob Storage, FTP/FTPS, HTTP/HTTPS, Jump, SFTP, SMB, WebDAV).",
+			"items": {
+				"$ref": "protocol/abstractProtocolFragment-schema.json"
+			}
+		}
+	}
+}

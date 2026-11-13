@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Comma-separated list of TLS protocol names (e.g. TLSv1.2,TLSv1.3). Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^([A-Za-z0-9., \\t]+|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$"
+}

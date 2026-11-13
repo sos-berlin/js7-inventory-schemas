@@ -1,0 +1,10 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Specifies the operating system platform of the Jump host: 'unix' or 'windows'. Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^(unix|windows|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$",
+	"x-ui-options": [
+		"unix",
+		"windows"
+	]
+}

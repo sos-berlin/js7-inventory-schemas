@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Profile Protocol Fragment Ref Type",
+	"description": "Type of a protocol fragment which can be referenced in a profile. Used as discriminator in profile source / target fragment references.",
+	"javaType": "com.sos.inventory.model.filetransfer.common.FragmentRefTypeForProfile",
+	"type": "string",
+	"enum": [
+		"AZURE_BLOB_STORAGE",
+		"FTP",
+		"SFTP",
+		"SMB",
+		"HTTP",
+		"WEBDAV",
+		"LOCAL"
+	],
+	"javaEnumNames": [
+		"AZURE_BLOB_STORAGE",
+		"FTP",
+		"SFTP",
+		"SMB",
+		"HTTP",
+		"WEBDAV",
+		"LOCAL"
+	]
+}

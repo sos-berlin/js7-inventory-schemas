@@ -1,0 +1,23 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Azure Protocol Fragment Reference",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.refs.AzureFragmentRef",
+	"extends": {
+		"$ref": "fragmentRefBase-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "fragmentRefBase-schema.json"
+		}
+	],
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"httpHeaders": {
+			"$ref": "../../common/objects/httpHeaders-schema.json"
+		},
+		"rename": {
+			"$ref": "../common/rename-schema.json"
+		}
+	}
+}

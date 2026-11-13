@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "A positive integer (>= 1). Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^([1-9][0-9]*|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$"
+}

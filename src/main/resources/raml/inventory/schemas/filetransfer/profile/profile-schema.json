@@ -1,0 +1,89 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Profile",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.Profile",
+	"extends": {
+		"$ref": "profileBase-schema.json"
+	},
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "profileBase-schema.json"
+		}
+	],
+	"oneOf": [
+		{
+			"properties": {
+				"operation": {
+					"enum": [
+						"COPY"
+					]
+				}
+			},
+			"required": [
+				"source",
+				"target"
+			]
+		},
+		{
+			"properties": {
+				"operation": {
+					"enum": [
+						"MOVE"
+					]
+				}
+			},
+			"required": [
+				"source",
+				"target"
+			]
+		},
+		{
+			"properties": {
+				"operation": {
+					"enum": [
+						"REMOVE"
+					]
+				}
+			},
+			"required": [
+				"source"
+			],
+			"not": {
+				"required": [
+					"target"
+				]
+			}
+		},
+		{
+			"properties": {
+				"operation": {
+					"enum": [
+						"GETLIST"
+					]
+				}
+			},
+			"required": [
+				"source"
+			],
+			"not": {
+				"required": [
+					"target"
+				]
+			}
+		}
+	],
+	"additionalProperties": false,
+	"properties": {
+		"source": {
+			"$ref": "source/source-schema.json"
+		},
+		"target": {
+			"$ref": "target/target-schema.json"
+		},
+		"transferOptions": {
+			"$ref": "transferOptions-schema.json"
+		}
+	}
+}

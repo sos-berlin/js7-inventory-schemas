@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "File Transfer base",
+	"description": "Abstract base for File Transfer Inventory releasable configuration objects",
+	"_comment": "This schema is for validation only. Manual Java class. Do not regenerate.",
+	"javaType": "com.sos.inventory.model.filetransfer.AFileTransfer",
+	"type": "object",
+	"javaInterfaces": [
+		"com.sos.joc.model.common.IConfigurationObject",
+		"com.sos.joc.model.common.IReleaseObject",
+		"com.sos.inventory.model.common.IInventoryObject"
+	],
+	"properties": {
+		"version": {
+			"$ref": "../common/version-schema.json"
+		},
+		"path": {
+			"$ref": "../common/path-schema.json"
+		},
+		"title": {
+			"$ref": "../common/string255-schema.json"
+		},
+		"documentationName": {
+			"$ref": "../common/string255-schema.json"
+		}
+	},
+	"additionalProperties": false
+}

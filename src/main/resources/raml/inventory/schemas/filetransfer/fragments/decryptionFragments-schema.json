@@ -1,0 +1,16 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Collection of all Decryption fragments.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.DecryptionFragments",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"fragments": {
+			"type": "array",
+			"description": "List of decryption fragments.",
+			"items": {
+				"$ref": "decryption/decryptionFragment-schema.json"
+			}
+		}
+	}
+}

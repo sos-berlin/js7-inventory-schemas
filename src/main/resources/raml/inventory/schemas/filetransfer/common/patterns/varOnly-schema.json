@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "A single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^\\$\\{[A-Za-z_][A-Za-z0-9_]*\\}$"
+}

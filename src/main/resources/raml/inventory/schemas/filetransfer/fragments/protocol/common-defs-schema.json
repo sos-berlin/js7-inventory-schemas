@@ -1,0 +1,150 @@
+{
+	"title": "Reusable schema building blocks shared by all YADE protocol fragment schemas. Not intended to be used standalone.",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$defs": {
+		"credentialStoreRef": {
+			"description": "Name of a credential store fragment to use for authentication.",
+			"$ref": "../../../common/string255Required-schema.json"
+		},
+		"decryptionRef": {
+			"description": "Name of a decryption fragment to use for encrypted values.",
+			"$ref": "../../../common/string255Required-schema.json"
+		},
+		"jumpRef": {
+			"description": "Name of a JUMP  fragment.",
+			"$ref": "../../../common/string255Required-schema.json"
+		},
+		"basicConnection": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.common.BasicConnection",
+			"type": "object",
+			"required": [
+				"hostname"
+			],
+			"properties": {
+				"hostname": {
+					"description": "Remote host name or IP address.",
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"port": {
+					"description": "TCP port. Protocol-specific defaults apply (e.g. 21 for FTP/FTPS, 22 for SFTP).",
+					"$ref": "../../common/patterns/number-schema.json"
+				},
+				"connectTimeout": {
+					"description": "Connection timeout.",
+					"$ref": "../../common/patterns/durationSeconds-schema.json",
+					"default": "0"
+				}
+			},
+			"additionalProperties": false
+		},
+		"urlConnection": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.common.UrlConnection",
+			"type": "object",
+			"required": [
+				"url"
+			],
+			"properties": {
+				"url": {
+					"description": "Full URL including scheme and path.",
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"connectTimeout": {
+					"description": "Connection timeout.",
+					"$ref": "../../common/patterns/durationSeconds-schema.json",
+					"default": "0"
+				}
+			},
+			"additionalProperties": false
+		},
+		"basicAuthentication": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.common.BasicAuthentication",
+			"type": "object",
+			"required": [
+				"account"
+			],
+			"properties": {
+				"account": {
+					"description": "User account name.",
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"password": {
+					"description": "Password.",
+					"$ref": "../../common/patterns/password-schema.json"
+				}
+			},
+			"additionalProperties": false
+		},
+		"keyStore": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.common.ssl.KeyStore",
+			"type": "object",
+			"required": [
+				"file"
+			],
+			"properties": {
+				"type": {
+					"$ref": "../../common/patterns/keyStoreType-schema.json",
+					"default": "JKS"
+				},
+				"file": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"password": {
+					"$ref": "../../common/patterns/password-schema.json"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ssl": {
+			"description": "TLS configuration. Choose either a trusted store or an untrusted server.",
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.common.ssl.Ssl",
+			"type": "object",
+			"oneOf": [
+				{
+					"required": [
+						"trusted"
+					],
+					"not": {
+						"required": [
+							"untrusted"
+						]
+					}
+				},
+				{
+					"required": [
+						"untrusted"
+					],
+					"not": {
+						"required": [
+							"trusted"
+						]
+					}
+				}
+			],
+			"properties": {
+				"trusted": {
+					"type": "object",
+					"properties": {
+						"trustStore": {
+							"$ref": "#/$defs/keyStore"
+						},
+						"keyStore": {
+							"$ref": "#/$defs/keyStore"
+						}
+					}
+				},
+				"untrusted": {
+					"type": "object",
+					"properties": {
+						"disableCertificateHostnameVerification": {
+							"$ref": "../../common/patterns/boolean-schema.json"
+						}
+					}
+				},
+				"enabledProtocols": {
+					"$ref": "../../common/patterns/ssl/enabledProtocols-schema.json"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "SSH processing options.",
+	"javaType": "com.sos.inventory.model.filetransfer.common.Processing",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"preProcessing": {
+			"javaType": "com.sos.inventory.model.filetransfer.common.PreProcessing",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"commandBeforeFile": {
+					"$ref": "../patterns/string-schema.json"
+				},
+				"commandBeforeOperation": {
+					"$ref": "../patterns/string-schema.json"
+				}
+			}
+		},
+		"postProcessing": {
+			"javaType": "com.sos.inventory.model.filetransfer.common.PostProcessing",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"commandAfterFile": {
+					"$ref": "../patterns/string-schema.json"
+				},
+				"commandAfterOperationOnSuccess": {
+					"$ref": "../patterns/string-schema.json"
+				},
+				"commandAfterOperationOnError": {
+					"$ref": "../patterns/string-schema.json"
+				},
+				"commandAfterOperationFinal": {
+					"$ref": "../patterns/string-schema.json"
+				},
+				"commandBeforeRename": {
+					"$ref": "../patterns/string-schema.json"
+				}
+			}
+		},
+		"commandDelimiter": {
+			"$ref": "../patterns/string-schema.json",
+			"default": ";"
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Byte count, human-readable file size (e.g. 1KB, 1.5MB, 1,5GB). Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"pattern": "^([0-9]+|(([0-9]+([.,][0-9]+)?)\\s*([Gg][Bb]|[Mm][Bb]|[Kk][Bb]|[Bb])(\\s+([0-9]+([.,][0-9]+)?)\\s*([Gg][Bb]|[Mm][Bb]|[Kk][Bb]|[Bb]))*)|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$"
+}

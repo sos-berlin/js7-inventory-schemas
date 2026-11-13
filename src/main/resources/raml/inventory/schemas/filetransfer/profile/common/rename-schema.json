@@ -1,0 +1,19 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Rename",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.common.Rename",
+	"type": "object",
+	"description": "Rename rule. Usable by any profile.",
+	"additionalProperties": false,
+	"required": [
+		"replaceWhat"
+	],
+	"properties": {
+		"replaceWhat": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"replaceWith": {
+			"$ref": "../../common/patterns/string-schema.json"
+		}
+	}
+}

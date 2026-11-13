@@ -1,0 +1,40 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "WebDAV Base - Connection and authentication settings for the WEBDAV / WEBDAVS protocol fragments.",
+	"description": "Abstract base for WENDAV / WEBDAV fragments. Do not instantiate directly.",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AWebdavFragment",
+	"extends": {
+		"$ref": "abstractProtocolFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractProtocolFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"required": [
+		"connection"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"jumpRef": {
+			"$ref": "common-defs-schema.json#/$defs/jumpRef"
+		},
+		"proxyRef": {
+			"$ref": "refs/proxyFragmentRefHttpOnly-schema.json"
+		},
+		"alternativeRef": {
+			"$ref": "refs/webdavAlternativeFragmentRef-schema.json"
+		},
+		"connection": {
+			"$ref": "common-defs-schema.json#/$defs/urlConnection"
+		},
+		"authentication": {
+			"$ref": "common-defs-schema.json#/$defs/basicAuthentication"
+		},
+		"httpHeaders": {
+			"$ref": "../../common/objects/httpHeaders-schema.json"
+		}
+	}
+}

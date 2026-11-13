@@ -1,0 +1,104 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Azure - Connection and authentication settings for the Azure Blob Storage protocol fragments.",
+	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AzureBlobStorageFragment",
+	"extends": {
+		"$ref": "abstractProtocolFragment-schema.json"
+	},
+	"allOf": [
+		{
+			"$ref": "abstractProtocolFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"required": [
+		"connection",
+		"authentication"
+	],
+	"additionalProperties": false,
+	"properties": {
+		"jumpRef": {
+			"$ref": "common-defs-schema.json#/$defs/jumpRef"
+		},
+		"proxyRef": {
+			"$ref": "refs/proxyFragmentRefHttpOnly-schema.json"
+		},
+		"alternativeRef": {
+			"$ref": "refs/azureBlobStorageAlternativeFragmentRef-schema.json"
+		},
+		"connection": {
+			"$ref": "common-defs-schema.json#/$defs/urlConnection"
+		},
+		"authentication": {
+			"description": "Azure Blob Storage authentication. Provide either 'sharedKey' or 'sasToken'.",
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.azure.AzureBSAuthentication",
+			"type": "object",
+			"oneOf": [
+				{
+					"required": [
+						"sharedKey"
+					],
+					"not": {
+						"required": [
+							"sasToken"
+						]
+					}
+				},
+				{
+					"required": [
+						"sasToken"
+					],
+					"not": {
+						"required": [
+							"sharedKey"
+						]
+					}
+				}
+			],
+			"additionalProperties": false,
+			"properties": {
+				"accountName": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"containerName": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"apiVersion": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"sharedKey": {
+					"description": "Shared key authentication.",
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.azure.AzureBSAuthSharedKey",
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"accountKey": {
+							"$ref": "../../common/patterns/string-schema.json"
+						}
+					},
+					"required": [
+						"accountKey"
+					]
+				},
+				"sasToken": {
+					"description": "SAS token authentication.",
+					"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.azure.AzureBSAuthSasToken",
+					"type": "object",
+					"additionalProperties": false,
+					"properties": {
+						"accountKey": {
+							"$ref": "../../common/patterns/password-schema.json"
+						},
+						"token": {
+							"$ref": "../../common/patterns/password-schema.json"
+						}
+					},
+					"required": [
+						"token"
+					]
+				}
+			}
+		}
+	}
+}

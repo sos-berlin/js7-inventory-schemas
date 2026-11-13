@@ -1,0 +1,15 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Check Integrity Hash",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.CheckIntegrityHash",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"hashAlgorithm": {
+			"type": "string",
+			"enum": [
+				"md5"
+			]
+		}
+	}
+}
