@@ -6,7 +6,7 @@
 	"description": "Source of a file transfer operation.",
 	"additionalProperties": false,
 	"required": [
-		"fragmentRef",
+		"fragment",
 		"sourceFileOptions"
 	],
 	"properties": {
