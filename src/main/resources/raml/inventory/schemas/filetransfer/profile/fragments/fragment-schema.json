@@ -1,0 +1,137 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Fragment Reference",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.Fragment",
+	"type": "object",
+	"additionalProperties": false,
+	"oneOf": [
+		{
+			"required": [
+				"azureBlobStorage"
+			],
+			"not": {
+				"required": [
+					"ftp",
+					"http",
+					"local",
+					"sftp",
+					"smb",
+					"webdav"
+				]
+			}
+		},
+		{
+			"required": [
+				"ftp"
+			],
+			"not": {
+				"required": [
+					"azureBlobStorage",
+					"http",
+					"local",
+					"sftp",
+					"smb",
+					"webdav"
+				]
+			}
+		},
+		{
+			"required": [
+				"http"
+			],
+			"not": {
+				"required": [
+					"azureBlobStorage",
+					"ftp",
+					"local",
+					"sftp",
+					"smb",
+					"webdav"
+				]
+			}
+		},
+		{
+			"required": [
+				"local"
+			],
+			"not": {
+				"required": [
+					"azureBlobStorage",
+					"ftp",
+					"http",
+					"sftp",
+					"smb",
+					"webdav"
+				]
+			}
+		},
+		{
+			"required": [
+				"sftp"
+			],
+			"not": {
+				"required": [
+					"azureBlobStorage",
+					"ftp",
+					"http",
+					"local",
+					"smb",
+					"webdav"
+				]
+			}
+		},
+		{
+			"required": [
+				"smb"
+			],
+			"not": {
+				"required": [
+					"azureBlobStorage",
+					"ftp",
+					"http",
+					"local",
+					"sftp",
+					"webdav"
+				]
+			}
+		},
+		{
+			"required": [
+				"webdav"
+			],
+			"not": {
+				"required": [
+					"azureBlobStorage",
+					"ftp",
+					"http",
+					"local",
+					"sftp",
+					"smb"
+				]
+			}
+		}
+	],
+	"properties": {
+		"azureBlobStorage": {
+			"$ref": "azureBlobStorageFragmentRef-schema.json"
+		},
+		"ftp": {
+			"$ref": "ftpFragmentRef-schema.json"
+		},
+		"http": {
+			"$ref": "httpFragmentRef-schema.json"
+		},
+		"local": {
+			"$ref": "localFragment-schema.json"
+		},
+		"sftp": {
+			"$ref": "sftpFragmentRef-schema.json"
+		},
+		"smb": {
+			"$ref": "smbFragmentRef-schema.json"
+		},
+		"webdav": {
+			"$ref": "webdavFragmentRef-schema.json"
+		}
+	}
+}

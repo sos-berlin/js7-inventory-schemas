@@ -1,10 +1,10 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Profile",
-	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for and documentation validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.profile.Profile",
 	"extends": {
-		"$ref": "profileBase-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.profile.ProfileBase"
 	},
 	"type": "object",
 	"allOf": [
@@ -84,6 +84,9 @@
 		},
 		"transferOptions": {
 			"$ref": "transferOptions-schema.json"
+		},
+		"notificationTriggers": {
+			"$ref": "notificationTriggers-schema.json"
 		}
 	}
 }

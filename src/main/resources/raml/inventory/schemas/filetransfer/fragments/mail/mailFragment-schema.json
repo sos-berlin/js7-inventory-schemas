@@ -1,0 +1,64 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Mail Fragment",
+	"description": "Email notification settings.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.fragments.mail.MailFragment",
+	"extends": {
+		"javaType": "com.sos.inventory.model.filetransfer.fragments.AFragment"
+	},
+	"allOf": [
+		{
+			"$ref": "../abstractFragment-schema.json"
+		}
+	],
+	"type": "object",
+	"additionalProperties": false,
+	"required": [
+		"jobResourceNames"
+	],
+	"properties": {
+		"jobResourceNames": {
+			"type": "array",
+			"description": "Names of Job Resources that provide mail settings.",
+			"items": {
+				"$ref": "../../common/patterns/string-schema.json"
+			}
+		},
+		"header": {
+			"javaType": "com.sos.inventory.model.filetransfer.fragments.mail.MailFragmentHeader",
+			"type": "object",
+			"description": "Mail header settings.",
+			"additionalProperties": false,
+			"properties": {
+				"from": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"to": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"cc": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"bcc": {
+					"$ref": "../../common/patterns/string-schema.json"
+				},
+				"subject": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"attachment": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"body": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"contentType": {
+			"$ref": "../../common/patterns/mail/contentType-schema.json"
+		},
+		"encoding": {
+			"$ref": "../../common/patterns/mail/encoding-schema.json"
+		}
+	}
+}

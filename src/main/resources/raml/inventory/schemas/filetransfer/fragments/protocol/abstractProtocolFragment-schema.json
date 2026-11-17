@@ -2,10 +2,10 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Protocol Fragment",
 	"description": "Abstract base for all protocol fragments. Do not instantiate directly.",
-	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AProtocolFragment",
 	"extends": {
-		"$ref": "../abstractFragment-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.fragments.AFragment"
 	},
 	"allOf": [
 		{
@@ -15,11 +15,11 @@
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
-		"credentialStoreRef": {
-			"$ref": "common-defs-schema.json#/$defs/credentialStoreRef"
+		"credentialStoreFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"decryptionRef": {
-			"$ref": "common-defs-schema.json#/$defs/decryptionRef"
+		"decryptionFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		}
 	}
 }

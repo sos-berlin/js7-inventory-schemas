@@ -1,10 +1,10 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "HTTP Protocol Fragment Reference",
-	"description": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
-	"javaType": "com.sos.inventory.model.filetransfer.profile.refs.HttpsFragmentRef",
+	"description": "allOf is present for and documentation validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.HttpFragmentRef",
 	"extends": {
-		"$ref": "fragmentRefBase-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.FragmentRefBase"
 	},
 	"allOf": [
 		{

@@ -2,14 +2,14 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Fragment Reference Base",
 	"description": "Base for all fragment references. Do not instantiate directly.",
-	"javaType": "com.sos.inventory.model.filetransfer.profile.refs.FragmentRefBase",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.FragmentRefBase",
 	"type": "object",
 	"additionalProperties": false,
 	"required": [
-		"ref"
+		"name"
 	],
 	"properties": {
-		"ref": {
+		"name": {
 			"description": "Name of the referenced protocol fragment.",
 			"$ref": "../../../common/string255Required-schema.json"
 		}

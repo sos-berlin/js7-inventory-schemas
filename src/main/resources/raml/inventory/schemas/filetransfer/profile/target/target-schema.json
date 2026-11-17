@@ -10,8 +10,8 @@
 		"directory"
 	],
 	"properties": {
-		"fragmentRef": {
-			"$ref": "../refs/fragmentRef-schema.json"
+		"fragment": {
+			"$ref": "../fragments/fragment-schema.json"
 		},
 		"directory": {
 			"$ref": "../../common/patterns/string-schema.json"

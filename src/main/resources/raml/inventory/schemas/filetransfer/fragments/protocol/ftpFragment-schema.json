@@ -1,10 +1,10 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "FTP - Connection and authentication settings for the FTP fragments.",
-	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.FtpFragment",
 	"extends": {
-		"$ref": "abstractFtpFragment-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AFtpFragment"
 	},
 	"allOf": [
 		{

@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Local Protocol Fragment Reference",
+	"description": "Local source/target options",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.Local",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"credentialStoreFragmentName": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"decryptionFragmentName": {
+			"$ref": "../../common/patterns/string-schema.json"
+		},
+		"processing": {
+			"$ref": "../../common/objects/processing-schema.json"
+		},
+		"rename": {
+			"$ref": "../common/rename-schema.json"
+		}
+	}
+}

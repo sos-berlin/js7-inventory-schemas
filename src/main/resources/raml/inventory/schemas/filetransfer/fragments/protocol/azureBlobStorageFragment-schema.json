@@ -1,10 +1,10 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "Azure - Connection and authentication settings for the Azure Blob Storage protocol fragments.",
-	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AzureBlobStorageFragment",
 	"extends": {
-		"$ref": "abstractProtocolFragment-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AProtocolFragment"
 	},
 	"allOf": [
 		{
@@ -18,14 +18,14 @@
 	],
 	"additionalProperties": false,
 	"properties": {
-		"jumpRef": {
-			"$ref": "common-defs-schema.json#/$defs/jumpRef"
+		"jumpFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"proxyRef": {
-			"$ref": "refs/proxyFragmentRefHttpOnly-schema.json"
+		"httpProxyFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"alternativeRef": {
-			"$ref": "refs/azureBlobStorageAlternativeFragmentRef-schema.json"
+		"alternativeAzureBlobStorageFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
 		"connection": {
 			"$ref": "common-defs-schema.json#/$defs/urlConnection"

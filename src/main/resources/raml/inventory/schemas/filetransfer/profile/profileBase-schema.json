@@ -11,7 +11,7 @@
 		"operation"
 	],
 	"properties": {
-		"alternativeRef": {
+		"alternativeProfileName": {
 			"$ref": "../common/patterns/string-schema.json"
 		},
 		"operation": {

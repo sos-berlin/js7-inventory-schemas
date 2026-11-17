@@ -1,0 +1,68 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Notification triggers. At least one of onError, onSuccess, onEmptyFiles must be set.",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.NotificationTriggers",
+	"type": "object",
+	"additionalProperties": false,
+	"anyOf": [
+		{
+			"required": [
+				"onError"
+			]
+		},
+		{
+			"required": [
+				"onSuccess"
+			]
+		},
+		{
+			"required": [
+				"onEmptyFiles"
+			]
+		}
+	],
+	"properties": {
+		"onError": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.NotificationTriggerOnError",
+			"type": "object",
+			"description": "Notification on error.",
+			"additionalProperties": false,
+			"required": [
+				"mailFragmentName"
+			],
+			"properties": {
+				"mailFragmentName": {
+					"$ref": "../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"onSuccess": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.NotificationTriggerOnSuccess",
+			"type": "object",
+			"description": "Notification on success.",
+			"additionalProperties": false,
+			"required": [
+				"mailFragmentName"
+			],
+			"properties": {
+				"mailFragmentName": {
+					"$ref": "../common/patterns/string-schema.json"
+				}
+			}
+		},
+		"onEmptyFiles": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.NotificationTriggerOnEmptyFiles",
+			"type": "object",
+			"description": "Notification when no files are found.",
+			"additionalProperties": false,
+			"required": [
+				"mailFragmentName"
+			],
+			"properties": {
+				"mailFragmentName": {
+					"$ref": "../common/patterns/string-schema.json"
+				}
+			}
+		}
+	}
+}

@@ -2,16 +2,8 @@
 	"title": "Reusable schema building blocks shared by all YADE protocol fragment schemas. Not intended to be used standalone.",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"$defs": {
-		"credentialStoreRef": {
-			"description": "Name of a credential store fragment to use for authentication.",
-			"$ref": "../../../common/string255Required-schema.json"
-		},
-		"decryptionRef": {
-			"description": "Name of a decryption fragment to use for encrypted values.",
-			"$ref": "../../../common/string255Required-schema.json"
-		},
-		"jumpRef": {
-			"description": "Name of a JUMP  fragment.",
+		"fragmentNameRef": {
+			"description": "Name of a referenced fragment to use.",
 			"$ref": "../../../common/string255Required-schema.json"
 		},
 		"basicConnection": {

@@ -1,10 +1,10 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "SFTP Fragment",
-	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.SftpFragment",
 	"extends": {
-		"$ref": "abstractProtocolFragment-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AProtocolFragment"
 	},
 	"allOf": [
 		{
@@ -16,16 +16,35 @@
 		"connection",
 		"authentication"
 	],
+	"anyOf": [
+		{
+			"not": {
+				"required": [
+					"httpProxyFragmentName"
+				]
+			}
+		},
+		{
+			"not": {
+				"required": [
+					"socksProxyFragmentName"
+				]
+			}
+		}
+	],
 	"additionalProperties": false,
 	"properties": {
-		"jumpRef": {
-			"$ref": "common-defs-schema.json#/$defs/jumpRef"
+		"jumpFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"proxyRef": {
-			"$ref": "refs/proxyFragmentRefAny-schema.json"
+		"httpProxyFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"alternativeRef": {
-			"$ref": "refs/sftpAlternativeFragmentRef-schema.json"
+		"socksProxyFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
+		},
+		"alternativeSftpFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
 		"connection": {
 			"$ref": "common-defs-schema.json#/$defs/basicConnection"

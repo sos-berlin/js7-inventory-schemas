@@ -10,8 +10,8 @@
 		"sourceFileOptions"
 	],
 	"properties": {
-		"fragmentRef": {
-			"$ref": "../refs/fragmentRef-schema.json"
+		"fragment": {
+			"$ref": "../fragments/fragment-schema.json"
 		},
 		"sourceFileOptions": {
 			"$ref": "sourceFileOptions-schema.json"

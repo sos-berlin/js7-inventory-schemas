@@ -2,10 +2,10 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "WebDAV Base - Connection and authentication settings for the WEBDAV / WEBDAVS protocol fragments.",
 	"description": "Abstract base for WENDAV / WEBDAV fragments. Do not instantiate directly.",
-	"_comment": "allOf is present for validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AWebdavFragment",
 	"extends": {
-		"$ref": "abstractProtocolFragment-schema.json"
+		"javaType": "com.sos.inventory.model.filetransfer.fragments.protocol.AProtocolFragment"
 	},
 	"allOf": [
 		{
@@ -18,14 +18,14 @@
 	],
 	"additionalProperties": false,
 	"properties": {
-		"jumpRef": {
-			"$ref": "common-defs-schema.json#/$defs/jumpRef"
+		"jumpFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"proxyRef": {
-			"$ref": "refs/proxyFragmentRefHttpOnly-schema.json"
+		"httpProxyFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
-		"alternativeRef": {
-			"$ref": "refs/webdavAlternativeFragmentRef-schema.json"
+		"alternativeWebdavFragmentName": {
+			"$ref": "common-defs-schema.json#/$defs/fragmentNameRef"
 		},
 		"connection": {
 			"$ref": "common-defs-schema.json#/$defs/urlConnection"

@@ -1,0 +1,12 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Specifies the mail body encoding: '7bit', 'Quoted-Printable' or 'Base64'. Or a single variable reference such as ${VAR}.",
+	"type": "string",
+	"default": "7bit",
+	"pattern": "^(7bit|Quoted-Printable|Base64|\\$\\{[A-Za-z_][A-Za-z0-9_]*\\})$",
+	"x-ui-options": [
+		"7bit",
+		"Quoted-Printable",
+		"Base64"
+	]
+}

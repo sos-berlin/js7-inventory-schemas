@@ -1,0 +1,8 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Specifies the MIME type of the mail body.",
+	"description": "Any non-empty string. May contain variable references such as ${VAR} that are resolved at runtime.",
+	"type": "string",
+	"default": "text/plain",
+	"minLength": 1
+}
