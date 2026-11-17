@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "FTP Protocol Fragment Reference",
-	"description": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for validator and documentation only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.FtpFragmentRef",
 	"extends": {
 		"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.FragmentRefBase"
