@@ -16,8 +16,8 @@
 		"directory": {
 			"$ref": "../../common/patterns/string-schema.json"
 		},
-		"targetFileOptions": {
-			"$ref": "targetFileOptions-schema.json"
+		"options": {
+			"$ref": "options-schema.json"
 		}
 	}
 }

@@ -7,14 +7,17 @@
 	"additionalProperties": false,
 	"required": [
 		"fragment",
-		"sourceFileOptions"
+		"selection"
 	],
 	"properties": {
 		"fragment": {
 			"$ref": "../fragments/fragment-schema.json"
 		},
-		"sourceFileOptions": {
-			"$ref": "sourceFileOptions-schema.json"
+		"selection": {
+			"$ref": "selection-schema.json"
+		},
+		"options": {
+			"$ref": "options-schema.json"
 		}
 	}
 }

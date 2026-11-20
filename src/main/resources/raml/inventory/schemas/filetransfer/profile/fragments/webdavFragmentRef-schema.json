@@ -1,7 +1,7 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"title": "WebDAV Protocol Fragment Reference",
-	"description": "allOf is present for and documentation validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
+	"_comment": "allOf is present for and documentation validator only. jsonschema2pojo uses 'extends' for code generation. allOf ensures the validator applies the base required fields.",
 	"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.WebdavFragmentRef",
 	"extends": {
 		"javaType": "com.sos.inventory.model.filetransfer.profile.fragments.FragmentRefBase"

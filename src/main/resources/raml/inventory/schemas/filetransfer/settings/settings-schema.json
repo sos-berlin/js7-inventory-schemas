@@ -1,0 +1,120 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "File Transfer Job Resource additional settings",
+	"javaType": "com.sos.inventory.model.filetransfer.settings.Settings",
+	"type": "object",
+	"properties": {
+		"profileName": {
+			"title": "Name of the File Transfer Job Resource profile",
+			"$ref": "../../common/string255Required-schema.json"
+		},
+		"useJumpInitialSourceTargetConnectionErrorCode": {
+			"type": "boolean"
+		},
+		"credentialStoreFragments": {
+			"title": "Map of credential store fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.CredentialStoreFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/cs/credentialStoreFragment-schema.json"
+			}
+		},
+		"decryptionFragments": {
+			"title": "Map of decryption fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.DecryptionFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/decryption/decryptionFragment-schema.json"
+			}
+		},
+		"mailFragments": {
+			"title": "Map of mail fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.MailFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/mail/mailFragment-schema.json"
+			}
+		},
+		"httpProxyFragments": {
+			"title": "Map of HTTP proxy fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.HttpProxyFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/proxy/httpProxyFragment-schema.json"
+			}
+		},
+		"socksProxyFragments": {
+			"title": "Map of SOCKS proxy fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.SocksProxyFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/proxy/socksProxyFragment-schema.json"
+			}
+		},
+		"jumpFragments": {
+			"title": "Map of Jump fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.JumpFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/jumpFragment-schema.json"
+			}
+		},
+		"azureBlobStorageFragments": {
+			"title": "Map of Azure Blob Stora fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.AzureBlobStorageFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/azureBlobStorageFragment-schema.json"
+			}
+		},
+		"ftpFragments": {
+			"title": "Map of FTP fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.FtpFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/ftpFragment-schema.json"
+			}
+		},
+		"httpFragments": {
+			"title": "Map of HTTP fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.HttpFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/httpFragment-schema.json"
+			}
+		},
+		"sftpFragments": {
+			"title": "Map of SFTP fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.SftpFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/sftpFragment-schema.json"
+			}
+		},
+		"smbFragments": {
+			"title": "Map of SMB fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.SmbFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/smbFragment-schema.json"
+			}
+		},
+		"webdavFragments": {
+			"title": "Map of WebDAV fragments.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.WebdavFragments",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../fragments/protocol/webdavFragment-schema.json"
+			}
+		},
+		"alternativeProfiles": {
+			"title": "Map of alternative.",
+			"javaType": "com.sos.inventory.model.filetransfer.settings.AlternativeProfiles",
+			"type": "object",
+			"additionalProperties": {
+				"$ref": "../profile/profile-schema.json"
+			}
+		}
+	},
+	"additionalProperties": false
+}

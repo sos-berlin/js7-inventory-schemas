@@ -1,27 +1,18 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Source File Options",
-	"javaType": "com.sos.inventory.model.filetransfer.profile.source.SourceFileOptions",
+	"title": "Source Options",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.source.SourceOptions",
 	"type": "object",
 	"additionalProperties": false,
-	"required": [
-		"selection"
-	],
 	"properties": {
-		"selection": {
-			"$ref": "selection-schema.json"
+		"disableErrorOnNoFilesFound": {
+			"$ref": "../../common/patterns/boolean-schema.json"
 		},
 		"checkSteadyState": {
 			"$ref": "checkSteadyState-schema.json"
 		},
-		"directives": {
-			"$ref": "directives-schema.json"
-		},
-		"polling": {
-			"$ref": "polling-schema.json"
-		},
-		"resultSet": {
-			"$ref": "resultSet-schema.json"
+		"checkIntegrityHash": {
+			"$ref": "checkIntegrityHash-schema.json"
 		},
 		"maxFiles": {
 			"$ref": "../../common/patterns/signedNumber-schema.json"
@@ -38,8 +29,14 @@
 		"maxFileSize": {
 			"$ref": "../../common/patterns/fileSize-schema.json"
 		},
-		"checkIntegrityHash": {
-			"$ref": "checkIntegrityHash-schema.json"
+		"polling": {
+			"$ref": "polling-schema.json"
+		},
+		"resultSet": {
+			"$ref": "resultSet-schema.json"
+		},
+		"transferZeroByteFiles": {
+			"$ref": "transferZeroByteFiles-schema.json"
 		}
 	}
 }

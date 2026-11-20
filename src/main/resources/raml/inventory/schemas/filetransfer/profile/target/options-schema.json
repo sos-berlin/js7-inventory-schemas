@@ -1,42 +1,13 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"title": "Target File Options",
-	"javaType": "com.sos.inventory.model.filetransfer.profile.target.TargetFileOptions",
+	"title": "Target Options",
+	"javaType": "com.sos.inventory.model.filetransfer.profile.target.TargetOptions",
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
 		"appendFiles": {
 			"$ref": "../../common/patterns/boolean-schema.json"
 		},
-		"atomicity": {
-			"$ref": "#/definitions/atomicity"
-		},
-		"checkSize": {
-			"$ref": "../../common/patterns/boolean-schema.json"
-		},
-		"cumulateFiles": {
-			"$ref": "#/definitions/cumulateFiles"
-		},
-		"compressFiles": {
-			"$ref": "#/definitions/compressFiles"
-		},
-		"createIntegrityHashFile": {
-			"$ref": "#/definitions/createIntegrityHashFile"
-		},
-		"keepModificationDate": {
-			"$ref": "../../common/patterns/boolean-schema.json"
-		},
-		"disableMakeDirectories": {
-			"$ref": "../../common/patterns/boolean-schema.json"
-		},
-		"disableOverwriteFiles": {
-			"$ref": "../../common/patterns/boolean-schema.json"
-		},
-		"resumeFiles": {
-			"$ref": "../../common/patterns/boolean-schema.json"
-		}
-	},
-	"definitions": {
 		"atomicity": {
 			"javaType": "com.sos.inventory.model.filetransfer.profile.target.Atomicity",
 			"type": "object",
@@ -50,15 +21,8 @@
 				}
 			}
 		},
-		"compressFiles": {
-			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CompressFiles",
-			"type": "object",
-			"additionalProperties": false,
-			"properties": {
-				"compressedFileExtension": {
-					"$ref": "../../common/patterns/string-schema.json"
-				}
-			}
+		"checkSize": {
+			"$ref": "../../common/patterns/boolean-schema.json"
 		},
 		"cumulateFiles": {
 			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CumulateFiles",
@@ -80,6 +44,16 @@
 				}
 			}
 		},
+		"compressFiles": {
+			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CompressFiles",
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"compressedFileExtension": {
+					"$ref": "../../common/patterns/string-schema.json"
+				}
+			}
+		},
 		"createIntegrityHashFile": {
 			"javaType": "com.sos.inventory.model.filetransfer.profile.target.CreateIntegrityHash",
 			"type": "object",
@@ -92,6 +66,18 @@
 					]
 				}
 			}
+		},
+		"keepModificationDate": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"disableMakeDirectories": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"disableOverwriteFiles": {
+			"$ref": "../../common/patterns/boolean-schema.json"
+		},
+		"resumeFiles": {
+			"$ref": "../../common/patterns/boolean-schema.json"
 		}
 	}
 }
